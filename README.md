@@ -1,5 +1,5 @@
 ## Repositorio creado para la materia Programador de Aplicaciones Móviles.
-INTEGRANTES:
+##INTEGRANTES:
 Tamara Sorsaburu -
 María Soledad Del Valle Caro -
 Juan Carlos Ojeda -
@@ -8,4 +8,4 @@ Emmanuel cantarino -
 Evana Sabatella -
 Estela Margarita Bravo -
 Claudio Ranses Fernandez -
-Romina Navarrete 
+Romina Navarrete - 
