@@ -13,17 +13,29 @@
         android:theme="@style/Theme.ServiceDelAutomotor"
         tools:targetApi="31">
         <activity
+            android:name=".activity_confirma_ayuda"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+
+            <!-- la etiqueta meta-data tag si requiere una version de API 15 o menor -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <!-- <activity
             android:name=".SiniestrosActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity">
-        <!-- la etiqueta meta-data tag si requiere una version de API 15 o menor -->
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity" />
-        </activity>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity> -->
+
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+
+            android:name=".SiniestrosActivity"
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
