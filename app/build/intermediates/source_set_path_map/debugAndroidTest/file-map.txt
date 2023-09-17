@@ -1,0 +1,6 @@
+com.example.servicedelautomotor.test.app-core-1.5.0-0 C:\Users\usuario\.gradle\caches\transforms-3\4e5fe80f5f76ff43c422bdb6dae0e007\transformed\core-1.5.0\res
+com.example.servicedelautomotor.test.app-annotation-experimental-1.3.0-1 C:\Users\usuario\.gradle\caches\transforms-3\b94a00eb5102d1bfa8da9b85cd6fadfc\transformed\annotation-experimental-1.3.0\res
+com.example.servicedelautomotor.test.app-androidTest-2 C:\Users\usuario\AndroidStudioProjects\ServiceDelAutomotor\app\build\generated\res\resValues\androidTest\debug
+com.example.servicedelautomotor.test.app-mergeDebugAndroidTestResources-3 C:\Users\usuario\AndroidStudioProjects\ServiceDelAutomotor\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.servicedelautomotor.test.app-mergeDebugAndroidTestResources-4 C:\Users\usuario\AndroidStudioProjects\ServiceDelAutomotor\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.servicedelautomotor.test.app-merged_res-5 C:\Users\usuario\AndroidStudioProjects\ServiceDelAutomotor\app\build\intermediates\merged_res\debugAndroidTest
