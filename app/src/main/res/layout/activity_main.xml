@@ -15,7 +15,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
         app:srcCompat="@mipmap/logo" />
+
+
 
     <TextView
         android:id="@+id/textView"
@@ -84,7 +87,9 @@
                         android:layout_width="87dp"
                         android:layout_height="77dp"
                         android:layout_margin="10dp"
+
                         android:src="@mipmap/btn"
+
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +99,9 @@
                         android:id="@+id/imageView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:src="@mipmap/lavado"
+
                         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
                         app:layout_constraintEnd_toEndOf="@+id/imageView2"
                         app:layout_constraintStart_toStartOf="@+id/imageView2"
@@ -128,7 +135,9 @@
                         android:layout_width="87dp"
                         android:layout_height="77dp"
                         android:layout_margin="10dp"
+
                         android:src="@mipmap/btn"
+
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -138,7 +147,9 @@
                         android:id="@+id/imageView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:src="@mipmap/mecanic"
+
                         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
                         app:layout_constraintEnd_toEndOf="@+id/imageView4"
                         app:layout_constraintStart_toStartOf="@+id/imageView4"
@@ -173,7 +184,10 @@
                         android:layout_width="87dp"
                         android:layout_height="77dp"
                         android:layout_margin="10dp"
+
                         android:src="@mipmap/btn"
+
+
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -183,7 +197,9 @@
                         android:id="@+id/imageView7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:src="@mipmap/s"
+
                         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
                         app:layout_constraintEnd_toEndOf="@+id/imageView6"
                         app:layout_constraintStart_toStartOf="@+id/imageView6"
@@ -226,7 +242,9 @@
                         android:layout_width="87dp"
                         android:layout_height="77dp"
                         android:layout_margin="10dp"
+
                         android:src="@mipmap/btn"
+
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -236,7 +254,9 @@
                         android:id="@+id/imageView9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:src="@mipmap/crash"
+
                         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
                         app:layout_constraintEnd_toEndOf="@+id/imageView8"
                         app:layout_constraintStart_toStartOf="@+id/imageView8"
@@ -270,7 +290,9 @@
                         android:layout_width="87dp"
                         android:layout_height="77dp"
                         android:layout_margin="10dp"
+
                         android:src="@mipmap/btn"
+
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -281,6 +303,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@mipmap/calendar"
+
                         app:layout_constraintBottom_toBottomOf="@+id/imageView10"
                         app:layout_constraintEnd_toEndOf="@+id/imageView10"
                         app:layout_constraintStart_toStartOf="@+id/imageView10"
@@ -315,7 +338,9 @@
                         android:layout_width="87dp"
                         android:layout_height="77dp"
                         android:layout_margin="10dp"
+
                         android:src="@mipmap/btn"
+
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -325,7 +350,9 @@
                         android:id="@+id/imageView13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:src="@mipmap/auto"
+
                         app:layout_constraintBottom_toBottomOf="@+id/imageView12"
                         app:layout_constraintEnd_toEndOf="@+id/imageView12"
                         app:layout_constraintStart_toStartOf="@+id/imageView12"
@@ -368,7 +395,9 @@
                         android:layout_width="87dp"
                         android:layout_height="77dp"
                         android:layout_margin="10dp"
+
                         android:src="@mipmap/btn"
+
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -378,7 +407,9 @@
                         android:id="@+id/imageView15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:src="@mipmap/user"
+
                         app:layout_constraintBottom_toBottomOf="@+id/imageView14"
                         app:layout_constraintEnd_toEndOf="@+id/imageView14"
                         app:layout_constraintStart_toStartOf="@+id/imageView14"
@@ -412,7 +443,9 @@
                         android:layout_width="87dp"
                         android:layout_height="77dp"
                         android:layout_margin="10dp"
+
                         android:src="@mipmap/btn"
+
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -422,7 +455,10 @@
                         android:id="@+id/imageView17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:src="@mipmap/settings"
+
+
                         app:layout_constraintBottom_toBottomOf="@+id/imageView16"
                         app:layout_constraintEnd_toEndOf="@+id/imageView16"
                         app:layout_constraintStart_toStartOf="@+id/imageView16"
@@ -457,7 +493,9 @@
                         android:layout_width="87dp"
                         android:layout_height="77dp"
                         android:layout_margin="10dp"
+
                         android:src="@mipmap/btn"
+
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -467,7 +505,9 @@
                         android:id="@+id/imageView19"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:src="@mipmap/carservice"
+
                         app:layout_constraintBottom_toBottomOf="@+id/imageView18"
                         app:layout_constraintEnd_toEndOf="@+id/imageView18"
                         app:layout_constraintStart_toStartOf="@+id/imageView18"
