@@ -5,11 +5,7 @@
     <string name="btn2">Mécanico</string>
     <string name="btn3">Grúa</string>
     <string name="btn4">Mis Turnos</string>
-<<<<<<< HEAD
     <string name="btn5">Siniestros</string>
-=======
-    <string name="btn5">Sinistros</string>
->>>>>>> 649f0af95e0da9e1c00d21f661b3d5b5d617baa3
     <string name="btn6">Mi perfil</string>
     <string name="btn7">Configuración</string>
     <string name="btn8">Mi Auto</string>
