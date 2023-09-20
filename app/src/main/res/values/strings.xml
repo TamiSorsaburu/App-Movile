@@ -1,5 +1,32 @@
 <resources>
     <string name="app_name">ServiceDelAutomotor</string>
+
+    <string name="botón_volver">Volver</string>
+
+
+    //siniestros
+    <string name="siniestros_title">Solicitando grúa</string>
+    <string name="btn_ubicacion">Activar ubicación</string>
+    <string name="ubicacion">Su ubicación es:</string>
+    <string name="ubicacion_cliente">Av.Corrientes 300</string>
+    <string name="demora">Demora estimada:</string>
+
+    //confirma-ayuda
+    <string name="ayudaTitulo">Nuestro profesional esta en camino!</string>
+    <string name="tiempo">30:00 min aprox</string>
+    <string name="botón_confirmar">Confirmar</string>
+    <string name="select_siniestro_title">Siniestros</string>
+
+
+    //select-siniestro
+    <string name="opcion_policia">Policía</string>
+    <string name="botón_policia">911</string>
+    <string name="opcion_ambulancia">Ambulancia</string>
+    <string name="opcion_bomberos">Bomberos</string>
+    <string name="opcion_defensa">Defensa civíl</string>
+
+
+
     <!--string home-->
     <string name="btn1">Servicios</string>
     <string name="btn2">Mécanico</string>
@@ -11,4 +38,5 @@
     <string name="btn8">Mi Auto</string>
     <string name="btn9">Contáctanos</string>
     <!--Fin String home-->
+
 </resources>
