@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ServiceDelAutomotor</string>
+    <!--string home-->
+    <string name="btn1">Servicios</string>
+    <string name="btn2">Mécanico</string>
+    <string name="btn3">Grúa</string>
+    <string name="btn4">Mis Turnos</string>
+    <string name="btn5">Siniestros</string>
+    <string name="btn6">Mi perfil</string>
+    <string name="btn7">Configuración</string>
+    <string name="btn8">Mi Auto</string>
+    <string name="btn9">Contáctanos</string>
+    <!--Fin String home-->
+</resources>
