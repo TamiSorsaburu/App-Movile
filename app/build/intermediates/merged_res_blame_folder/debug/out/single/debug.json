@@ -160,6 +160,10 @@
         "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/calendar.png"
     },
     {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_register.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_register.xml"
+    },
+    {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/ic_launcher_round.webp"
     },

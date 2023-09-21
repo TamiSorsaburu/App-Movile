@@ -3251,6 +3251,7 @@ id ignoreRequest
 id image
 id imageLogo
 id imageLogoLogin
+id imageLogoRegister
 id imageView
 id imageView10
 id imageView11
@@ -3395,6 +3396,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id registerButton
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3496,8 +3498,10 @@ id text
 id text2
 id textAutomotor
 id textCuenta
+id textCuenta2
 id textDel
 id textEnd
+id textIniciaSesion
 id textLogin
 id textRegister
 id textService
@@ -3547,6 +3551,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userConfirmPassword
+id userCorreo
 id userPassword
 id userUser
 id vertical_only
@@ -3684,6 +3690,7 @@ layout activity_confirma_ayuda
 layout activity_dashboard
 layout activity_iniciar_sesion
 layout activity_main
+layout activity_register
 layout activity_select_siniestro
 layout activity_siniestros
 layout custom_dialog
@@ -3835,8 +3842,8 @@ string btn7
 string btn8
 string btn9
 string btn_login
+string btn_register
 string btn_ubicacion
-string button_send
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -3969,14 +3976,21 @@ string siniestros_title
 string status_bar_notification_info_overflow
 string text_automotor
 string text_cuenta
+string text_cuenta2
 string text_del
+string text_description_btnLogin
 string text_forget
+string text_hint_confirmPassword
+string text_hint_correo
+string text_hint_nameUser
+string text_hint_password
+string text_hint_user
 string text_inicia_sesion
 string text_login
 string text_recover
 string text_register
+string text_registrarse
 string text_service
-string text_user
 string tiempo
 string ubicacion
 string ubicacion_cliente

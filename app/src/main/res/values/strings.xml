@@ -36,20 +36,36 @@
     <string name="btn7">Configuración</string>
     <string name="btn8">Mi Auto</string>
     <string name="btn9">Contáctanos</string>
+    <!--Fin String home-->
+
+    <!--string presentacion-->
     <string name="text_service">SERVICE</string>
     <string name="text_del">DEL</string>
     <string name="text_automotor">AUTOMOTOR</string>
     <string name="text_cuenta">No tienes una cuenta?</string>
     <string name="text_register">Regístrate</string>
     <string name="btn_login">INICIAR SESIÓN</string>
-    <string name="button_send">SIGUIENTE</string>
+    <string name="text_recover">Recuperar</string>
+    <!--Fin string presentacion-->
+
+    <!--string login-->
     <string name="text_login">Iniciar Sesión</string>
     <string name="text_hint_user">Email o Nombre de Usuario</string>
-    <string name="text_inicia_sesion">Inicia sesión</string>
     <string name="text_forget">Olvidó su contraseña?</string>
-    <string name="text_recover">Recuperar</string>
     <string name="text_description_btnLogin">Botón para iniciar sesión en la aplicación</string>
     <string name="text_hint_password">Contraseña</string>
-    <!--Fin String home-->
+    <!--Fin string login-->
+
+    <!--string register-->
+    <string name="btn_register">REGISTRARSE</string>
+    <string name="text_inicia_sesion">Inicia sesión</string>
+    <string name="text_registrarse">Registrarse</string>
+    <string name="text_hint_nameUser">Nombre de Usuario</string>
+    <string name="text_hint_correo">Correo</string>
+    <string name="text_hint_confirmPassword">Confirmar contraseña</string>
+    <string name="text_cuenta2">Ya tienes cuenta?</string>
+    <!--Fin string register-->
+
+
 
 </resources>
