@@ -43,6 +43,9 @@
     <string name="text_register">Regístrate</string>
     <string name="btn_login">INICIAR SESIÓN</string>
     <string name="button_send">SIGUIENTE</string>
+    <string name="text_login">Iniciar Sesión</string>
+    <string name="text_user">Email o Nombre de Usuario</string>
+    <string name="text_inicia_sesion">Inicia sesión</string>
     <!--Fin String home-->
 
 </resources>
