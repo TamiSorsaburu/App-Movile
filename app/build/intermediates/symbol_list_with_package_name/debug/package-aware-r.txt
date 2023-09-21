@@ -3970,8 +3970,10 @@ string status_bar_notification_info_overflow
 string text_automotor
 string text_cuenta
 string text_del
+string text_forget
 string text_inicia_sesion
 string text_login
+string text_recover
 string text_register
 string text_service
 string text_user

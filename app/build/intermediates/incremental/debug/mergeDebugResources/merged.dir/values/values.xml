@@ -2129,8 +2129,10 @@
     <string name="text_automotor">AUTOMOTOR</string>
     <string name="text_cuenta">No tienes una cuenta?</string>
     <string name="text_del">DEL</string>
+    <string name="text_forget">Olvidó su contraseña?</string>
     <string name="text_inicia_sesion">Inicia sesión</string>
     <string name="text_login">Iniciar Sesión</string>
+    <string name="text_recover">Recuperar</string>
     <string name="text_register">Regístrate</string>
     <string name="text_service">SERVICE</string>
     <string name="text_user">Email o Nombre de Usuario</string>
