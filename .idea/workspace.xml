@@ -11,13 +11,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f0ea6df-3cc5-4b16-b279-18b38cb8537d" name="Changes" comment="Resuelto conflicto en AndroidManifest.xml y activity_main.xml" />
+    <list default="true" id="8f0ea6df-3cc5-4b16-b279-18b38cb8537d" name="Changes" comment="Se crea activity iniciar sesión" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R58RC28M46A]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -114,6 +114,9 @@
       <recent name="C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\res\mipmap-hdpi" />
       <recent name="C:\Users\usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\res\drawable" />
       <recent name="C:\Users\usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\res\mipmap-hdpi" />
+    </key>
+    <key name="android.template.-2077470030">
+      <recent name="com.example.servicedelautomotor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\res\mipmap-hdpi" />
@@ -273,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695308165282</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Se crea activity iniciar sesión">
+      <created>1695313480793</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695313480793</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -302,6 +312,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se agrega activity presentacion y dashboard al repositorio" />
     <MESSAGE value="Resuelto conflicto en AndroidManifest.xml y activity_main.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resuelto conflicto en AndroidManifest.xml y activity_main.xml" />
+    <MESSAGE value="Se crea activity iniciar sesión" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se crea activity iniciar sesión" />
   </component>
 </project>
