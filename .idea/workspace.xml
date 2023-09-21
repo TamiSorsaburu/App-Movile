@@ -11,7 +11,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f0ea6df-3cc5-4b16-b279-18b38cb8537d" name="Changes" comment="Se crea activity iniciar sesión" />
+    <list default="true" id="8f0ea6df-3cc5-4b16-b279-18b38cb8537d" name="Changes" comment="Se agrega fondo a la activity iniciar sesion">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background_main_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_iniciar_sesion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_iniciar_sesion.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -283,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695313480793</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Se agrega fondo a la activity iniciar sesion">
+      <created>1695313673666</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695313673666</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -313,6 +325,7 @@
     <MESSAGE value="Se agrega activity presentacion y dashboard al repositorio" />
     <MESSAGE value="Resuelto conflicto en AndroidManifest.xml y activity_main.xml" />
     <MESSAGE value="Se crea activity iniciar sesión" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se crea activity iniciar sesión" />
+    <MESSAGE value="Se agrega fondo a la activity iniciar sesion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrega fondo a la activity iniciar sesion" />
   </component>
 </project>
