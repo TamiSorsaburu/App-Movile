@@ -1984,8 +1984,8 @@
     <string name="btn8">Mi Auto</string>
     <string name="btn9">Contáctanos</string>
     <string name="btn_login">INICIAR SESIÓN</string>
+    <string name="btn_register">REGISTRARSE</string>
     <string name="btn_ubicacion">Activar ubicación</string>
-    <string name="button_send">SIGUIENTE</string>
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
@@ -2128,14 +2128,21 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="text_automotor">AUTOMOTOR</string>
     <string name="text_cuenta">No tienes una cuenta?</string>
+    <string name="text_cuenta2">Ya tienes cuenta?</string>
     <string name="text_del">DEL</string>
+    <string name="text_description_btnLogin">Botón para iniciar sesión en la aplicación</string>
     <string name="text_forget">Olvidó su contraseña?</string>
+    <string name="text_hint_confirmPassword">Confirmar contraseña</string>
+    <string name="text_hint_correo">Correo</string>
+    <string name="text_hint_nameUser">Nombre de Usuario</string>
+    <string name="text_hint_password">Contraseña</string>
+    <string name="text_hint_user">Email o Nombre de Usuario</string>
     <string name="text_inicia_sesion">Inicia sesión</string>
     <string name="text_login">Iniciar Sesión</string>
     <string name="text_recover">Recuperar</string>
     <string name="text_register">Regístrate</string>
+    <string name="text_registrarse">Registrarse</string>
     <string name="text_service">SERVICE</string>
-    <string name="text_user">Email o Nombre de Usuario</string>
     <string name="tiempo">30:00 min aprox</string>
     <string name="ubicacion">Su ubicación es:</string>
     <string name="ubicacion_cliente">Av.Corrientes 300</string>

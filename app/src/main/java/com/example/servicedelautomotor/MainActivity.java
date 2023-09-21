@@ -19,4 +19,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void textRegister(View view) {
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
+    }
+
 }

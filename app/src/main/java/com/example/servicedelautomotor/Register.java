@@ -20,7 +20,7 @@ public class Register extends AppCompatActivity {
     }
 
     public void textLogin(View view) {
-        Intent intent = new Intent(this, Dashboard.class);
+        Intent intent = new Intent(this, Iniciar_sesion.class);
         startActivity(intent);
     }
 }
