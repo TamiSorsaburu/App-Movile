@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceDelAutomotor"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Iniciar_sesion"
+            android:exported="false" />
         <activity
             android:name=".SelectSiniestro"
             android:exported="false"
@@ -21,17 +23,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
         <activity
-               android:name=".activity_confirma_ayuda"
-               android:exported="false"
-               android:parentActivityName=".MainActivity">
-
-               <meta-data
-                   android:name="android.support.PARENT_ACTIVITY"
-                   android:value=".MainActivity" />
+            android:name=".activity_confirma_ayuda"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
-
         <activity
             android:name=".SiniestrosActivity"
             android:exported="false"
@@ -40,14 +39,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-        <activity android:name=".Dashboard"
+        <activity
+            android:name=".Dashboard"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

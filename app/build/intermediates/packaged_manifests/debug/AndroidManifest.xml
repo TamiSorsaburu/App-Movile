@@ -27,6 +27,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceDelAutomotor" >
         <activity
+            android:name="com.example.servicedelautomotor.Iniciar_sesion"
+            android:exported="false" />
+        <activity
+            android:name="com.example.servicedelautomotor.SelectSiniestro"
+            android:exported="false"
+            android:parentActivityName="com.example.servicedelautomotor.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.servicedelautomotor.activity_confirma_ayuda"
+            android:exported="false"
+            android:parentActivityName="com.example.servicedelautomotor.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.servicedelautomotor.SiniestrosActivity"
+            android:exported="false"
+            android:parentActivityName="com.example.servicedelautomotor.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
             android:name="com.example.servicedelautomotor.Dashboard"
             android:parentActivityName="com.example.servicedelautomotor.MainActivity" >
             <meta-data

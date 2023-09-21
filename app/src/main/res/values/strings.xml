@@ -26,7 +26,6 @@
     <string name="opcion_defensa">Defensa civíl</string>
 
 
-
     <!--string home-->
     <string name="btn1">Servicios</string>
     <string name="btn2">Mécanico</string>
@@ -44,6 +43,13 @@
     <string name="text_register">Regístrate</string>
     <string name="btn_login">INICIAR SESIÓN</string>
     <string name="button_send">SIGUIENTE</string>
+    <string name="text_login">Iniciar Sesión</string>
+    <string name="text_hint_user">Email o Nombre de Usuario</string>
+    <string name="text_inicia_sesion">Inicia sesión</string>
+    <string name="text_forget">Olvidó su contraseña?</string>
+    <string name="text_recover">Recuperar</string>
+    <string name="text_description_btnLogin">Botón para iniciar sesión en la aplicación</string>
+    <string name="text_hint_password">Contraseña</string>
     <!--Fin String home-->
 
 </resources>
