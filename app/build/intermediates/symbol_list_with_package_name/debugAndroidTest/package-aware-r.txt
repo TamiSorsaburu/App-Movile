@@ -1,3 +1,0 @@
-com.example.servicedelautomotor.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme

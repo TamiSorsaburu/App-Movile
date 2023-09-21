@@ -37,6 +37,13 @@
     <string name="btn7">Configuración</string>
     <string name="btn8">Mi Auto</string>
     <string name="btn9">Contáctanos</string>
+    <string name="text_service">SERVICE</string>
+    <string name="text_del">DEL</string>
+    <string name="text_automotor">AUTOMOTOR</string>
+    <string name="text_cuenta">No tienes una cuenta?</string>
+    <string name="text_register">Regístrate</string>
+    <string name="btn_login">INICIAR SESIÓN</string>
+    <string name="button_send">SIGUIENTE</string>
     <!--Fin String home-->
 
 </resources>
