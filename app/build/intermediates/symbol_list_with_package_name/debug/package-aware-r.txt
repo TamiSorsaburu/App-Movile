@@ -3525,7 +3525,6 @@ id textTop
 id textView
 id textView10
 id textView11
-id textView12
 id textView13
 id textView2
 id textView3
