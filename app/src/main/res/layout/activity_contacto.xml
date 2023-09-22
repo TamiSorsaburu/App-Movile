@@ -23,13 +23,18 @@
         tools:ignore="ExtraText">
 
         <LinearLayout
+            android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="28dp"
             android:orientation="vertical"
             android:padding="24dp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="28dp">
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
 
             <TextView
                 android:id="@+id/textRegister"
@@ -43,9 +48,65 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:layout_marginBottom="87dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+            app:layout_editor_absoluteY="480dp">
+
+            <TextView
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Siguenos en nuestras redes sociales"
+                android:textAlignment="center"
+                android:textColor="@color/negro"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="520dp"></TextView>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="53dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="132dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView21"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+            app:srcCompat="@mipmap/facebook" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="53dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="132dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView20"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+            app:srcCompat="@mipmap/instagram" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -67,10 +128,21 @@
             android:layout_marginEnd="24dp"
             android:background="@drawable/background_btn_principal"
             android:orientation="vertical"
-            android:padding="40dp"
+            android:padding="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/ubicacion"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableLeft="@mipmap/google_maps"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:text="Sucursal central Av de Mayo 300"
+                android:textAlignment="textEnd"
+                android:textColor="@color/blanco" />
 
         </LinearLayout>
 
@@ -84,11 +156,22 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/background_btn_principal"
             android:orientation="vertical"
-            android:padding="40dp"
+            android:padding="20dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <TextView
+                android:id="@+id/numberPhone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableLeft="@mipmap/mobile_taxi_service"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:text="(11)11111111"
+                android:textAlignment="textEnd"
+                android:textColor="@color/blanco" />
 
         </LinearLayout>
 
@@ -102,11 +185,22 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/background_btn_principal"
             android:orientation="vertical"
-            android:padding="40dp"
+            android:padding="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableLeft="@mipmap/mail"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:text="servicedelautomotor@gmail.com"
+                android:textAlignment="textEnd"
+                android:textColor="@color/blanco" />
 
         </LinearLayout>
 
