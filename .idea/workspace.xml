@@ -11,8 +11,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f0ea6df-3cc5-4b16-b279-18b38cb8537d" name="Changes" comment="Se corrige compilacion de intent en activity registro e inicio de sesion">
+    <list default="true" id="8f0ea6df-3cc5-4b16-b279-18b38cb8537d" name="Changes" comment="Se agrega background a activity Contacto">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background_btn_contacto.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background_btn_principal.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background_main_contacto.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_contacto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contacto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695340250720</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Se agrega activity Contacto">
+      <created>1695342120090</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1695342120090</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -380,6 +392,8 @@
     <MESSAGE value="Se modifica activity register" />
     <MESSAGE value="Se agrega compilacion de intent en activity register" />
     <MESSAGE value="Se corrige compilacion de intent en activity registro e inicio de sesion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se corrige compilacion de intent en activity registro e inicio de sesion" />
+    <MESSAGE value="Se agrega activity Contacto" />
+    <MESSAGE value="Se agrega background a activity Contacto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrega background a activity Contacto" />
   </component>
 </project>

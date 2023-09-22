@@ -66,5 +66,8 @@
     <string name="text_cuenta2">Ya tienes cuenta?</string>
     <!--Fin string register-->
 
+    <!--string contacto-->
+    <string name="text_contacto">Visítenos, llámenos o envíenos email</string>
+    <!--Fin string contacto-->
 
 </resources>
