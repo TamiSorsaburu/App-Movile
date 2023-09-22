@@ -15,7 +15,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonLogin(View view) {
-        Intent intent = new Intent(this, Dashboard.class);
+        Intent intent = new Intent(this, Iniciar_sesion.class);
         startActivity(intent);
     }
+
+    public void textRegister(View view) {
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
+    }
+
 }
