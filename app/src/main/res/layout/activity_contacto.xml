@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/background_main_login"
@@ -27,10 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="16dp"
             android:orientation="vertical"
             android:padding="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -49,46 +48,37 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayout5"
+
+        <TextView
+            android:id="@+id/footer1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="400dp"
-            android:layout_marginBottom="87dp"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="24dp"
+            android:layout_marginBottom="100dp"
+            android:fontFamily="@font/roboto"
+            android:text="Siguenos en nuestras redes sociales"
+            android:textAlignment="center"
+            android:textColor="@color/negro"
+            android:textSize="15dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
-            app:layout_editor_absoluteY="480dp">
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
 
-            <TextView
-                android:id="@+id/footer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:text="Siguenos en nuestras redes sociales"
-                android:textAlignment="center"
-                android:textColor="@color/negro"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="44dp"
-                tools:layout_editor_absoluteY="520dp"></TextView>
-        </LinearLayout>
+        </TextView>
 
         <ImageView
             android:id="@+id/imageView20"
             android:layout_width="53dp"
             android:layout_height="45dp"
             android:layout_marginStart="132dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageView21"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/footer1"
             app:srcCompat="@mipmap/facebook" />
 
         <ImageView
@@ -96,12 +86,13 @@
             android:layout_width="53dp"
             android:layout_height="45dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="132dp"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView20"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/footer1"
             app:srcCompat="@mipmap/instagram" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -124,11 +115,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/background_btn_principal"
             android:orientation="vertical"
             android:padding="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">

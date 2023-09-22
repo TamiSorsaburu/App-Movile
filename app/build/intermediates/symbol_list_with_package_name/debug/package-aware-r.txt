@@ -2911,6 +2911,9 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable background_btn
+drawable background_btn_contacto
+drawable background_btn_principal
+drawable background_main_contacto
 drawable background_main_login
 drawable background_main_menu
 drawable blurredblack
@@ -3153,6 +3156,7 @@ id compress
 id confirm_button
 id constraint
 id constraintLayout
+id constraintLayout2
 id container
 id content
 id contentPanel
@@ -3204,6 +3208,7 @@ id editTextText
 id editTextText2
 id edit_query
 id elastic
+id email
 id embed
 id end
 id endToStart
@@ -3225,6 +3230,7 @@ id fitXY
 id fixed
 id flip
 id floating
+id footer1
 id forever
 id fragment_container_view_tag
 id frost
@@ -3264,6 +3270,8 @@ id imageView17
 id imageView18
 id imageView19
 id imageView2
+id imageView20
+id imageView21
 id imageView3
 id imageView4
 id imageView5
@@ -3289,6 +3297,10 @@ id legacy
 id line1
 id line3
 id linear
+id linearLayout
+id linearLayout2
+id linearLayout3
+id linearLayout4
 id listMode
 id list_item
 id loginButton
@@ -3370,6 +3382,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id numberPhone
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3512,6 +3525,7 @@ id textTop
 id textView
 id textView10
 id textView11
+id textView12
 id textView13
 id textView2
 id textView3
@@ -3546,6 +3560,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id ubicacion
 id unchecked
 id uniform
 id unlabeled
@@ -3687,6 +3702,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_confirma_ayuda
+layout activity_contacto
 layout activity_dashboard
 layout activity_iniciar_sesion
 layout activity_main
@@ -3777,13 +3793,18 @@ mipmap calendar
 mipmap carservice
 mipmap crash
 mipmap defensa
+mipmap facebook
 mipmap fuego
+mipmap google_maps
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap instagram
 mipmap lavado
 mipmap logo
+mipmap mail
 mipmap mecanic
 mipmap mecanico3
+mipmap mobile_taxi_service
 mipmap poli
 mipmap presentacion
 mipmap resentacion
@@ -3975,6 +3996,7 @@ string side_sheet_behavior
 string siniestros_title
 string status_bar_notification_info_overflow
 string text_automotor
+string text_contacto
 string text_cuenta
 string text_cuenta2
 string text_del

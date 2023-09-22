@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:2:1-63:12
+ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:2:1-66:12
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\Usuario\.gradle\caches\transforms-3\30ca03709d246a483ae15e1ca9bcb685\transformed\material-1.9.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Usuario\.gradle\caches\transforms-3\9d1c6998e9b2f0dd5b87c078f3c7c5f2\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Usuario\.gradle\caches\transforms-3\4c33034b1d8f0968e991589aa4f14485\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -55,8 +55,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Usuario
 	xmlns:android
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:5:5-61:19
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:5:5-61:19
+ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:5:5-64:19
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:5:5-64:19
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\Usuario\.gradle\caches\transforms-3\30ca03709d246a483ae15e1ca9bcb685\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\Usuario\.gradle\caches\transforms-3\30ca03709d246a483ae15e1ca9bcb685\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Usuario\.gradle\caches\transforms-3\9d1c6998e9b2f0dd5b87c078f3c7c5f2\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -93,70 +93,76 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Us
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:13:9-57
 	android:dataExtractionRules
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.example.servicedelautomotor.Register
+activity#com.example.servicedelautomotor.Contacto
 ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:15:9-17:40
 	android:exported
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:17:13-37
 	android:name
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:16:13-37
-activity#com.example.servicedelautomotor.Iniciar_sesion
+activity#com.example.servicedelautomotor.Register
 ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:18:9-20:40
 	android:exported
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:20:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:19:13-43
-activity#com.example.servicedelautomotor.SelectSiniestro
-ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:21:9-28:20
-	android:parentActivityName
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:24:13-55
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:19:13-37
+activity#com.example.servicedelautomotor.Iniciar_sesion
+ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:21:9-23:40
 	android:exported
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:22:13-44
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:22:13-43
+activity#com.example.servicedelautomotor.SelectSiniestro
+ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:24:9-31:20
+	android:parentActivityName
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:27:13-55
+	android:exported
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:25:13-44
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:25:13-27:49
+ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:28:13-30:49
 	android:value
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:27:17-46
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:30:17-46
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:26:17-63
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:29:17-63
 activity#com.example.servicedelautomotor.activity_confirma_ayuda
-ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:29:9-36:20
+ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:32:9-39:20
 	android:parentActivityName
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:32:13-55
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:35:13-55
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:31:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:30:13-52
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:33:13-52
 activity#com.example.servicedelautomotor.SiniestrosActivity
-ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:37:9-44:20
+ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:40:9-47:20
 	android:parentActivityName
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:40:13-55
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:43:13-55
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:39:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:38:13-47
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:41:13-47
 activity#com.example.servicedelautomotor.Dashboard
-ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:45:9-51:20
+ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:48:9-54:20
 	android:parentActivityName
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:47:13-55
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:50:13-55
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:46:13-38
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:49:13-38
 activity#com.example.servicedelautomotor.MainActivity
-ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:52:9-60:20
+ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:55:9-63:20
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:54:13-36
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:57:13-36
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:53:13-41
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:56:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:55:13-59:29
+ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:58:13-62:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:56:17-69
+ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:59:17-69
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:56:25-66
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:59:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:58:17-77
+ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:61:17-77
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:58:27-74
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml:61:27-74
 uses-sdk
 INJECTED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\AndroidManifest.xml
