@@ -64,6 +64,20 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+            android:name="com.example.servicedelautomotor.Mecanico"
+            android:parentActivityName="com.example.servicedelautomotor.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.servicedelautomotor.FormMecanico"
+            android:parentActivityName="com.example.servicedelautomotor.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
             android:name="com.example.servicedelautomotor.MainActivity"
             android:exported="true" >
             <intent-filter>

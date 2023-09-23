@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">ServiceDelAutomotor</string>
-
     <string name="botón_volver">Volver</string>
-
 
     //siniestros
     <string name="siniestros_title">Solicitando grúa</string>
@@ -17,7 +15,6 @@
     <string name="botón_confirmar">Confirmar</string>
     <string name="select_siniestro_title">Siniestros</string>
 
-
     //select-siniestro
     <string name="opcion_policia">Policía</string>
     <string name="botón_policia">911</string>
@@ -25,26 +22,46 @@
     <string name="opcion_bomberos">Bomberos</string>
     <string name="opcion_defensa">Defensa civíl</string>
 
-
-
     <!--string home-->
-    <string name="btn1">Servicios</string>
-    <string name="btn2">Mécanico</string>
-    <string name="btn3">Grúa</string>
-    <string name="btn4">Mis Turnos</string>
-    <string name="btn5">Siniestros</string>
-    <string name="btn6">Mi perfil</string>
-    <string name="btn7">Configuración</string>
-    <string name="btn8">Mi Auto</string>
-    <string name="btn9">Contáctanos</string>
+    <string name="btnServicio">Servicios</string>
+    <string name="btnMecanico">Mécanico</string>
+    <string name="btnGrua">Grúa</string>
+    <string name="btnTurnos">Mis Turnos</string>
+    <string name="btnSiniestros">Siniestros</string>
+    <string name="btnPerfil">Mi perfil</string>
+    <string name="btnConfiguracion">Setting</string>
+    <string name="btnMiAuto">Mi Auto</string>
+    <string name="btnContacto">Contácto</string>
+    <!--Fin String home-->
+
+    <!--string presentacion-->
     <string name="text_service">SERVICE</string>
     <string name="text_del">DEL</string>
     <string name="text_automotor">AUTOMOTOR</string>
     <string name="text_cuenta">No tienes una cuenta?</string>
     <string name="text_register">Regístrate</string>
     <string name="btn_login">INICIAR SESIÓN</string>
-    <string name="button_send">SIGUIENTE</string>
-    <!--Fin String home-->
+    <string name="text_recover">Recuperar</string>
+    <!--Fin string presentacion-->
+
+    <!--string login-->
+    <string name="text_login">Iniciar Sesión</string>
+    <string name="text_hint_user">Email o Nombre de Usuario</string>
+    <string name="text_forget">Olvidó su contraseña?</string>
+    <string name="text_description_btnLogin">Botón para iniciar sesión en la aplicación</string>
+    <string name="text_hint_password">Contraseña</string>
+    <!--Fin string login-->
+
+    <!--string register-->
+    <string name="btn_register">REGISTRARSE</string>
+    <string name="text_inicia_sesion">Inicia sesión</string>
+    <string name="text_registrarse">Registrarse</string>
+    <string name="text_hint_nameUser">Nombre de Usuario</string>
+    <string name="text_hint_correo">Correo</string>
+    <string name="text_hint_confirmPassword">Confirmar contraseña</string>
+    <string name="text_cuenta2">Ya tienes cuenta?</string>
+    <!--Fin string register-->
+
     <!--string mecanico-->
     //activity mecanico
     <string name="titulo">Guardia Mécanica</string>
@@ -55,7 +72,7 @@ para cualquier tipo de vehículo.</string>
     <string name="descripcion2">Si necesitas un diagnostico preciso solicita un mécanico y uno de nuestros porfesionales
         se dirigira a tu domicilio</string>
 
-    <string name="descripcion3">La consulta a tu domicilio tiene un costo fijo de $10.000 que se abonan en el momento.
+    <string name="descripcion3">La consulta a tu domicilio tiene un costo fijo de $20.000 que se abonan en el momento.
 El costo de la reparación depende del daño.</string>
 
     //activity formu mecanico
@@ -63,9 +80,9 @@ El costo de la reparación depende del daño.</string>
 
     <string name="inp1">Nombre</string>
     <string name="inp2">Apellido</string>
-    <string name="inp3">Modelo de Vehículo</string>
-    <string name="inp4">N° Celular</string>
-    <string name="inp5">Dirección</string>
+    <string name="inp3">N° Celular</string>
+    <string name="inp4">Dirección</string>
+    <string name="inp5">Modelo de Vehículo</string>
     <string name="inp6">Servicio : Mecánico de guardia</string>
     <string name="inp7">Consulta: $20,000</string>
     <string name="inp8">Día</string>
