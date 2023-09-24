@@ -4,20 +4,123 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/principal"
+    android:background="@mipmap/presentacion"
     tools:context=".MainActivity">
 
+  <ImageView
+      android:id="@+id/blurred"
+      android:layout_width="500dp"
+      android:layout_height="500dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="28dp"
+      android:src="@drawable/blurredblack"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.58"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.61"
+      tools:ignore="VisualLintBounds" />
 
-  <!--  <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Servicio del automotor"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="221dp"
-        tools:ignore="MissingConstraints" /> -->
+  <ImageView
+      android:id="@+id/imageLogo"
+      android:layout_width="270dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.47"
+      app:srcCompat="@mipmap/logo" />
 
+  <TextView
+      android:id="@+id/textService"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:fontFamily="@font/russo_one"
+      android:text="@string/text_service"
+      android:textColor="@color/secundario"
+      android:textSize="25dp"
+      app:layout_constraintEnd_toEndOf="@+id/imageLogo"
+      app:layout_constraintStart_toStartOf="@+id/imageLogo"
+      app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
 
+  <TextView
+      android:id="@+id/textDel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="3dp"
+      android:fontFamily="@font/russo_one"
+      android:text="@string/text_del"
+      android:textColor="@color/secundario"
+      android:textSize="25dp"
+      app:layout_constraintEnd_toEndOf="@+id/imageLogo"
+      app:layout_constraintStart_toStartOf="@+id/imageLogo"
+      app:layout_constraintTop_toBottomOf="@+id/textService" />
 
+  <TextView
+      android:id="@+id/textAutomotor"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="3dp"
+      android:fontFamily="@font/russo_one"
+      android:text="@string/text_automotor"
+      android:textColor="@color/secundario"
+      android:textSize="25dp"
+      app:layout_constraintEnd_toEndOf="@+id/imageLogo"
+      app:layout_constraintStart_toStartOf="@+id/imageLogo"
+      app:layout_constraintTop_toBottomOf="@+id/textDel" />
+
+  <Button
+      android:id="@+id/btn_login"
+      android:layout_width="180dp"
+      android:layout_height="50dp"
+      android:layout_marginTop="60dp"
+      android:background="@drawable/btn_color"
+      android:fontFamily="@font/roboto"
+      android:onClick="buttonLogin"
+      android:text="@string/btn_login"
+      android:textColor="@color/blanco"
+      android:textSize="21dp"
+      app:layout_constraintBottom_toTopOf="@+id/textCuenta"
+      app:layout_constraintEnd_toEndOf="@+id/imageLogo"
+      app:layout_constraintStart_toStartOf="@+id/imageLogo"
+      app:layout_constraintTop_toBottomOf="@+id/textAutomotor" />
+
+  <TextView
+      android:id="@+id/textCuenta"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="16dp"
+      android:fontFamily="@font/roboto"
+      android:text="@string/text_cuenta"
+      android:textColor="@color/blanco"
+      android:textSize="17dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/imageLogo"
+      app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+  <TextView
+      android:id="@+id/textRegister"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="16dp"
+      android:fontFamily="@font/roboto"
+      android:onClick="textRegister"
+      android:text="@string/text_register"
+      android:textColor="@color/secundario"
+      android:textSize="17dp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="@+id/imageLogo"
+      app:layout_constraintStart_toEndOf="@+id/textCuenta"
+      app:layout_constraintTop_toBottomOf="@+id/btn_login"
+      tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
