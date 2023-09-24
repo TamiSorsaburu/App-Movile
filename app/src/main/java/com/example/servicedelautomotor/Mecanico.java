@@ -13,7 +13,6 @@ public class Mecanico extends AppCompatActivity {
         setContentView(R.layout.activity_mecanico);
     }
 
-    //metodo boton confirmar
     public void confirmar(View v){
         Intent i = new Intent(this, FormMecanico.class);
         startActivity(i);

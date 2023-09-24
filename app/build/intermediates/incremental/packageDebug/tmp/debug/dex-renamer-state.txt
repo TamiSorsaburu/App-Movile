@@ -1,4 +1,4 @@
-#Sat Sep 23 16:03:50 ART 2023
+#Sun Sep 24 14:13:01 ART 2023
 base.0=D\:\\admin\\Desktop\\ProyectoGrupal\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=D\:\\admin\\Desktop\\ProyectoGrupal\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=D\:\\admin\\Desktop\\ProyectoGrupal\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex

@@ -52,7 +52,9 @@
 
         <activity
             android:name=".Mecanico"
-            android:parentActivityName=".MainActivity">
+            android:theme="@style/Base.Theme.ServiceDelAutomotor"
+            android:parentActivityName=".MainActivity"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />

@@ -78,17 +78,24 @@ El costo de la reparación depende del daño.</string>
     //activity formu mecanico
     <string name="titulo2">Ingrese sus datos personales</string>
 
-    <string name="inp1">Nombre</string>
-    <string name="inp2">Apellido</string>
-    <string name="inp3">N° Celular</string>
-    <string name="inp4">Dirección</string>
-    <string name="inp5">Modelo de Vehículo</string>
-    <string name="inp6">Servicio : Mecánico de guardia</string>
-    <string name="inp7">Consulta: $20,000</string>
-    <string name="inp8">Día</string>
+    <string name="inpNombre">Nombre</string>
+    <string name="inpApellido">Apellido</string>
+    <string name="inpCelular">N° Celular</string>
+    <string name="inpDireccion">Dirección</string>
+    <string name="inpVeihiculo">Modelo de Vehículo</string>
+    <string name="inpServicio">Servicio : Mecánico de guardia</string>
+    <string name="inpConsulta">Consulta: $20,000</string>
+    <string name="inpDia">Día</string>
+
+    <string name="titulo3">Seleccione su tipo de vehículo</string>
+
+    <string name="check1">auto</string>
+    <string name="check2">Camioneta</string>
+    <string name="check3">Camión</string>
+    <string name="check4">otro</string>
 
     <string name="descripcion4">Recorda que la visita tiene un costo fijo,
-la reparación del auto depende del daño.</string>
+la reparación del vehículo depende del daño.</string>
     <string name="cancelar">Cancelar</string>
     <!--fin string mécanico-->
 

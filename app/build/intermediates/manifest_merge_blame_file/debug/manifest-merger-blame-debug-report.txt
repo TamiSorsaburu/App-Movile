@@ -20,7 +20,7 @@
 15-->[androidx.core:core:1.9.0] C:\Users\usuario\.gradle\caches\transforms-3\28a7af075d5af218c19b63a2f54b1523\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:5:5-77:19
+17-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:5:5-79:19
 18        android:allowBackup="true"
 18-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -112,70 +112,72 @@
 64-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:27:17-46
 65        </activity>
 66        <activity
-66-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:53:9-59:20
+66-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:53:9-61:20
 67            android:name="com.example.servicedelautomotor.Mecanico"
 67-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:54:13-37
-68            android:parentActivityName="com.example.servicedelautomotor.MainActivity" >
-68-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:55:13-55
-69            <meta-data
-69-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:25:13-27:49
-70                android:name="android.support.PARENT_ACTIVITY"
-70-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:26:17-63
-71                android:value=".MainActivity" />
-71-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:27:17-46
-72        </activity>
-73        <activity
-73-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:61:9-67:20
-74            android:name="com.example.servicedelautomotor.FormMecanico"
-74-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:62:13-41
-75            android:parentActivityName="com.example.servicedelautomotor.MainActivity" >
-75-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:63:13-55
-76            <meta-data
-76-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:25:13-27:49
-77                android:name="android.support.PARENT_ACTIVITY"
-77-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:26:17-63
-78                android:value=".MainActivity" />
-78-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:27:17-46
-79        </activity>
-80        <activity
-80-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:68:9-76:20
-81            android:name="com.example.servicedelautomotor.MainActivity"
-81-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:69:13-41
-82            android:exported="true" >
-82-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:70:13-36
-83            <intent-filter>
-83-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:71:13-75:29
-84                <action android:name="android.intent.action.MAIN" />
-84-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:72:17-69
-84-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:72:25-66
-85
-86                <category android:name="android.intent.category.LAUNCHER" />
-86-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:74:17-77
-86-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:74:27-74
-87            </intent-filter>
-88        </activity>
-89
-90        <provider
-90-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-91            android:name="androidx.startup.InitializationProvider"
-91-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-92            android:authorities="com.example.servicedelautomotor.androidx-startup"
-92-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-93            android:exported="false" >
-93-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-94            <meta-data
-94-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-95                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-95-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-96                android:value="androidx.startup" />
-96-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-97            <meta-data
-97-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\4eb4b953398cff91e70e367f7f0f5a04\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-98                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-98-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\4eb4b953398cff91e70e367f7f0f5a04\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-99                android:value="androidx.startup" />
-99-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\4eb4b953398cff91e70e367f7f0f5a04\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-100        </provider>
-101    </application>
-102
-103</manifest>
+68            android:parentActivityName="com.example.servicedelautomotor.MainActivity"
+68-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:56:13-55
+69            android:theme="@style/Base.Theme.ServiceDelAutomotor" >
+69-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:55:13-66
+70            <meta-data
+70-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:25:13-27:49
+71                android:name="android.support.PARENT_ACTIVITY"
+71-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:26:17-63
+72                android:value=".MainActivity" />
+72-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:27:17-46
+73        </activity>
+74        <activity
+74-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:63:9-69:20
+75            android:name="com.example.servicedelautomotor.FormMecanico"
+75-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:64:13-41
+76            android:parentActivityName="com.example.servicedelautomotor.MainActivity" >
+76-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:65:13-55
+77            <meta-data
+77-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:25:13-27:49
+78                android:name="android.support.PARENT_ACTIVITY"
+78-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:26:17-63
+79                android:value=".MainActivity" />
+79-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:27:17-46
+80        </activity>
+81        <activity
+81-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:70:9-78:20
+82            android:name="com.example.servicedelautomotor.MainActivity"
+82-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:71:13-41
+83            android:exported="true" >
+83-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:72:13-36
+84            <intent-filter>
+84-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:73:13-77:29
+85                <action android:name="android.intent.action.MAIN" />
+85-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:74:17-69
+85-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:74:25-66
+86
+87                <category android:name="android.intent.category.LAUNCHER" />
+87-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:76:17-77
+87-->D:\admin\Desktop\ProyectoGrupal\app\src\main\AndroidManifest.xml:76:27-74
+88            </intent-filter>
+89        </activity>
+90
+91        <provider
+91-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+92            android:name="androidx.startup.InitializationProvider"
+92-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+93            android:authorities="com.example.servicedelautomotor.androidx-startup"
+93-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+94            android:exported="false" >
+94-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+95            <meta-data
+95-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+96                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+96-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+97                android:value="androidx.startup" />
+97-->[androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\9ec162b5cb5dad7a953e18733a42dbca\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+98            <meta-data
+98-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\4eb4b953398cff91e70e367f7f0f5a04\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+99                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+99-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\4eb4b953398cff91e70e367f7f0f5a04\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+100                android:value="androidx.startup" />
+100-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\4eb4b953398cff91e70e367f7f0f5a04\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+101        </provider>
+102    </application>
+103
+104</manifest>

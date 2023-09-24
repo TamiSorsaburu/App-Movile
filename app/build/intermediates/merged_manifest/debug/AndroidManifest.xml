@@ -65,7 +65,8 @@
         </activity>
         <activity
             android:name="com.example.servicedelautomotor.Mecanico"
-            android:parentActivityName="com.example.servicedelautomotor.MainActivity" >
+            android:parentActivityName="com.example.servicedelautomotor.MainActivity"
+            android:theme="@style/Base.Theme.ServiceDelAutomotor" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
