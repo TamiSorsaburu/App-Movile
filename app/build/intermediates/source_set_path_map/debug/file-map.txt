@@ -22,10 +22,10 @@ com.example.servicedelautomotor.app-lifecycle-process-2.4.1-20 C:\Users\Usuario\
 com.example.servicedelautomotor.app-coordinatorlayout-1.1.0-21 C:\Users\Usuario\.gradle\caches\transforms-3\eb0c0779952f6b1a21c7af401d57c178\transformed\coordinatorlayout-1.1.0\res
 com.example.servicedelautomotor.app-emoji2-views-helper-1.2.0-22 C:\Users\Usuario\.gradle\caches\transforms-3\f928d094b24a69bf70423242ffb2eef3\transformed\emoji2-views-helper-1.2.0\res
 com.example.servicedelautomotor.app-lifecycle-livedata-core-2.5.1-23 C:\Users\Usuario\.gradle\caches\transforms-3\fb7d661c6f404082df0085eeb829dce6\transformed\lifecycle-livedata-core-2.5.1\res
-com.example.servicedelautomotor.app-pngs-24 C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\build\generated\res\pngs\debug
-com.example.servicedelautomotor.app-resValues-25 C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\build\generated\res\resValues\debug
-com.example.servicedelautomotor.app-packageDebugResources-26 C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.servicedelautomotor.app-packageDebugResources-27 C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.servicedelautomotor.app-merged_res-28 C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\build\intermediates\merged_res\debug
-com.example.servicedelautomotor.app-debug-29 C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\debug\res
-com.example.servicedelautomotor.app-main-30 C:\Users\Usuario\AndroidStudioProjects\ServiceDelAutomotor\app\src\main\res
+com.example.servicedelautomotor.app-pngs-24 C:\Users\Usuario\AndroidStudioProjects\App-Movile\app\build\generated\res\pngs\debug
+com.example.servicedelautomotor.app-resValues-25 C:\Users\Usuario\AndroidStudioProjects\App-Movile\app\build\generated\res\resValues\debug
+com.example.servicedelautomotor.app-packageDebugResources-26 C:\Users\Usuario\AndroidStudioProjects\App-Movile\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.servicedelautomotor.app-packageDebugResources-27 C:\Users\Usuario\AndroidStudioProjects\App-Movile\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.servicedelautomotor.app-merged_res-28 C:\Users\Usuario\AndroidStudioProjects\App-Movile\app\build\intermediates\merged_res\debug
+com.example.servicedelautomotor.app-debug-29 C:\Users\Usuario\AndroidStudioProjects\App-Movile\app\src\debug\res
+com.example.servicedelautomotor.app-main-30 C:\Users\Usuario\AndroidStudioProjects\App-Movile\app\src\main\res
