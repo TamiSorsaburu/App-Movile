@@ -68,6 +68,7 @@
 
     <!--string contacto-->
     <string name="text_contacto">Visítenos, llámenos o envíenos email</string>
+    <string name="text_ubicacion_contacto">Sucursal central Av de Mayo 300</string>
     <!--Fin string contacto-->
 
 </resources>
