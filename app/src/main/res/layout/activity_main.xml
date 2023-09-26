@@ -39,7 +39,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="16dp"
-      android:fontFamily="@font/russo_one"
+
       android:text="@string/text_service"
       android:textColor="@color/secundario"
       android:textSize="25dp"
@@ -52,7 +52,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="3dp"
-      android:fontFamily="@font/russo_one"
+
       android:text="@string/text_del"
       android:textColor="@color/secundario"
       android:textSize="25dp"
@@ -65,7 +65,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="3dp"
-      android:fontFamily="@font/russo_one"
+
       android:text="@string/text_automotor"
       android:textColor="@color/secundario"
       android:textSize="25dp"
@@ -79,7 +79,7 @@
       android:layout_height="50dp"
       android:layout_marginTop="60dp"
       android:background="@drawable/btn_color"
-      android:fontFamily="@font/roboto"
+
       android:onClick="buttonLogin"
       android:text="@string/btn_login"
       android:textColor="@color/blanco"
@@ -95,7 +95,7 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
       android:layout_marginBottom="16dp"
-      android:fontFamily="@font/roboto"
+
       android:text="@string/text_cuenta"
       android:textColor="@color/blanco"
       android:textSize="17dp"
@@ -111,7 +111,7 @@
       android:layout_marginTop="8dp"
       android:layout_marginEnd="16dp"
       android:layout_marginBottom="16dp"
-      android:fontFamily="@font/roboto"
+
       android:onClick="textRegister"
       android:text="@string/text_register"
       android:textColor="@color/secundario"
