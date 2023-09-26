@@ -27,6 +27,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceDelAutomotor" >
         <activity
+            android:name="com.example.servicedelautomotor.Contacto"
+            android:exported="false" />
+        <activity
             android:name="com.example.servicedelautomotor.Register"
             android:exported="false" />
         <activity
