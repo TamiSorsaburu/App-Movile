@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="negro">#FF000000</color>
+    <color name="blanco">#FFFFFFFF</color>
+    <color name="principal">#0A0F33</color>
+    <color name="secundario">#F6BB46</color>
+    <color name="color_menu">#F9F8F4</color>
+    <color name="colorBtnPress">#F1CE86</color>
+    <color name="gris">#D4BABDBA</color>
 </resources>
