@@ -1,0 +1,246 @@
+[
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_defensa.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/defensa.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_poli.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/poli.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_main.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_s.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/s.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_crash.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/crash.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/font_roboto.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/font/roboto.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_btn_color.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/btn_color.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_dashboard.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_dashboard.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_select_siniestro.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_select_siniestro.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_ambulancia.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/ambulancia.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_btn.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/background_btn.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_mecanico3.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/mecanico3.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_azul.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/background_azul.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_btn_redondo.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/btn_redondo.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_main_menu.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/background_main_menu.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_iniciar_sesion.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_iniciar_sesion.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_lavado.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/lavado.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_carservice.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/carservice.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_estilo_bordes.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/estilo_bordes.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_form_mecanico.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_form_mecanico.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_home.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/home.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/font_russo_one.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/font/russo_one.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_presentacion.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/presentacion.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_flecha.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/flecha.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_mecanic.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/mecanic.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_tow_truck.jpg.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/tow_truck.jpg"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_mecani_ayuda.jpg.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/mecani_ayuda.jpg"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_main_login.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/background_main_login.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_logo.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/logo.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_user.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/user.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_custom_edittext.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/custom_edittext.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_blurredblack.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/blurredblack.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_mechanic.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/mechanic.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_dorado.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/background_dorado.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_fuego.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/fuego.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_calendar.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/calendar.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_register.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_confirma_ayuda.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_confirma_ayuda.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_auto.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/auto.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_siniestros.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_siniestros.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_blanco.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/background_blanco.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_settings.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/settings.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/xml_backup_rules.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_taler.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/taler.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_mecanico.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_mecanico.xml"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_btn.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/btn.png"
+    }
+]
