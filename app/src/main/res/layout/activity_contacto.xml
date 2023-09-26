@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
             android:fontFamily="@font/roboto"
-            android:text="Siguenos en nuestras redes sociales"
+            android:text="@string/text_redes_contacto"
             android:textAlignment="center"
             android:textColor="@color/negro"
             android:textSize="15dp"
@@ -133,7 +133,7 @@
                 android:drawableLeft="@mipmap/google_maps"
                 android:drawablePadding="10dp"
                 android:padding="10dp"
-                android:text="Sucursal central Av de Mayo 300"
+                android:text="@string/text_ubicacion_contacto"
                 android:textAlignment="textEnd"
                 android:textColor="@color/blanco" />
 
@@ -162,7 +162,7 @@
                 android:drawableLeft="@mipmap/mobile_taxi_service"
                 android:drawablePadding="10dp"
                 android:padding="10dp"
-                android:text="(11)11111111"
+                android:text="@string/text_telefono_contacto"
                 android:textAlignment="textEnd"
                 android:textColor="@color/blanco" />
 
@@ -191,7 +191,7 @@
                 android:drawableLeft="@mipmap/mail"
                 android:drawablePadding="10dp"
                 android:padding="10dp"
-                android:text="servicedelautomotor@gmail.com"
+                android:text="@string/text_mail_contacto"
                 android:textAlignment="textEnd"
                 android:textColor="@color/blanco" />
 
