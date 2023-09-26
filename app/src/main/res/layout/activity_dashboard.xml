@@ -43,7 +43,7 @@
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center_horizontal"
-                    android:text="QUE TAL"
+                    android:text="BIENVENIDO"
                     android:background="@drawable/blurredblack"
                     android:textColor="#F6BB46"
                     android:textSize="30sp" />
@@ -100,18 +100,18 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="12dp"
                 android:orientation="vertical"
-                tools:layout_margin="16dp"><!--servicio-->
+                tools:layout_margin="10dp"><!--servicio-->
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="91dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
                     android:background="@drawable/background_btn">
 
                     <ImageView
                         android:id="@+id/FondoServicio"
-                        android:layout_width="87dp"
-                        android:layout_height="77dp"
-                        android:layout_margin="10dp"
+                        android:layout_width="103dp"
+                        android:layout_height="86dp"
+                        android:layout_marginTop="1dp"
                         android:contentDescription="imagen"
                         android:onClick="botonServicios"
                         android:src="@mipmap/btn"
@@ -122,12 +122,12 @@
 
                     <ImageView
                         android:id="@+id/imgServicio"
-                        android:layout_width="67dp"
-                        android:layout_height="55dp"
+                        android:layout_width="75dp"
+                        android:layout_height="60dp"
                         android:layout_marginStart="14dp"
-                        android:layout_marginTop="18dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="24dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginBottom="14dp"
                         android:contentDescription="@string/btnServicio"
                         android:src="@mipmap/lavado"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -157,18 +157,21 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="12dp"
                 android:orientation="vertical"
-                tools:layout_margin="16dp"><!--mecanico-->
+                tools:layout_margin="10dp"><!--mecanico-->
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="91dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="92dp"
                     android:background="@drawable/background_btn">
 
                     <ImageView
                         android:id="@+id/FondoMecanico"
-                        android:layout_width="87dp"
-                        android:layout_height="77dp"
-                        android:layout_margin="10dp"
+                        android:layout_width="98dp"
+                        android:layout_height="85dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="6dp"
                         android:contentDescription="imagen"
                         android:onClick="botonServicios"
                         android:src="@mipmap/btn"
@@ -179,12 +182,12 @@
 
                     <ImageView
                         android:id="@+id/imgMecanico"
-                        android:layout_width="84dp"
-                        android:layout_height="84dp"
-                        android:layout_marginStart="3dp"
-                        android:layout_marginTop="6dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginBottom="7dp"
+                        android:layout_width="96dp"
+                        android:layout_height="87dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
                         android:contentDescription="@string/btnMecanico"
                         android:onClick="botonMecanico"
                         android:src="@mipmap/mecanic"
@@ -309,6 +312,7 @@
                         android:layout_marginEnd="6dp"
                         android:layout_marginBottom="14dp"
                         android:contentDescription="@string/btnSiniestros"
+                        android:onClick="botonSiniestro"
                         android:src="@mipmap/crash"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
