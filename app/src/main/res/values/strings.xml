@@ -62,22 +62,26 @@
     <string name="text_cuenta2">Ya tienes cuenta?</string>
     <!--Fin string register-->
 
+    <!--string contacto-->
+    <string name="text_contacto">Visítenos, llámenos o envíenos email</string>
+    <string name="text_ubicacion_contacto">Sucursal central Av de Mayo 300</string>
+    <string name="text_telefono_contacto">(11)11111111</string>
+    <string name="text_mail_contacto">servicedelautomotor@gmail.com</string>
+    <string name="text_redes_contacto">Siguenos en nuestras redes sociales</string>
+    <string name="text_logo_facebook">Logo de Facebook</string>
+    <string name="text_logo_instagram">Logo de Instagram</string>
+    <!--Fin string contacto-->
+
     <!--string mecanico-->
     //activity mecanico
     <string name="titulo">Guardia Mécanica</string>
 
-    <string name="descripcion1">Nuestro taller cuenta con  profesionales altamente capacitados
-para cualquier tipo de vehículo.</string>
-
-    <string name="descripcion2">Si necesitas un diagnostico preciso solicita un mécanico y uno de nuestros porfesionales
-        se dirigira a tu domicilio</string>
-
-    <string name="descripcion3">La consulta a tu domicilio tiene un costo fijo de $20.000 que se abonan en el momento.
-El costo de la reparación depende del daño.</string>
+    <string name="descripcion1">Nuestro taller cuenta con  profesionales altamente capacitados para cualquier tipo de vehículo.</string>
+    <string name="descripcion2">Si necesitas un diagnostico preciso solicita un mécanico y uno de nuestros porfesionales se dirigira a tu domicilio</string>
+    <string name="descripcion3">La consulta a tu domicilio tiene un costo fijo de $20.000 que se abonan en el momento. El costo de la reparación depende del daño.</string>
 
     //activity formu mecanico
     <string name="titulo2">Ingrese sus datos personales</string>
-
     <string name="inp1">Nombre</string>
     <string name="inp2">Apellido</string>
     <string name="inp3">N° Celular</string>
@@ -86,9 +90,7 @@ El costo de la reparación depende del daño.</string>
     <string name="inp6">Servicio : Mecánico de guardia</string>
     <string name="inp7">Consulta: $20,000</string>
     <string name="inp8">Día</string>
-
-    <string name="descripcion4">Recorda que la visita tiene un costo fijo,
-la reparación del auto depende del daño.</string>
+    <string name="descripcion4">Recorda que la visita tiene un costo fijo, la reparación del auto depende del daño.</string>
     <string name="cancelar">Cancelar</string>
     <!--fin string mécanico-->
 
