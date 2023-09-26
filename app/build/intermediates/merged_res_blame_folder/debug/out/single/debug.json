@@ -40,10 +40,6 @@
         "source": "com.example.servicedelautomotor.app-main-30:/drawable/btn_color.xml"
     },
     {
-        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_google_maps.png.flat",
-        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/google_maps.png"
-    },
-    {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-mdpi_ic_launcher.webp.flat",
         "source": "com.example.servicedelautomotor.app-main-30:/mipmap-mdpi/ic_launcher.webp"
     },
@@ -72,12 +68,20 @@
         "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/mecanico3.png"
     },
     {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_azul.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/background_azul.xml"
+    },
+    {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/xml_data_extraction_rules.xml.flat",
         "source": "com.example.servicedelautomotor.app-main-30:/xml/data_extraction_rules.xml"
     },
     {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "com.example.servicedelautomotor.app-main-30:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_btn_redondo.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/btn_redondo.xml"
     },
     {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_main_menu.xml.flat",
@@ -104,16 +108,12 @@
         "source": "com.example.servicedelautomotor.app-main-30:/drawable/estilo_bordes.xml"
     },
     {
-        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_btn_principal.xml.flat",
-        "source": "com.example.servicedelautomotor.app-main-30:/drawable/background_btn_principal.xml"
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_form_mecanico.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_form_mecanico.xml"
     },
     {
-        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_facebook.png.flat",
-        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/facebook.png"
-    },
-    {
-        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_instagram.png.flat",
-        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/instagram.png"
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_home.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/home.png"
     },
     {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -128,6 +128,10 @@
         "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/presentacion.png"
     },
     {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_flecha.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/flecha.png"
+    },
+    {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_mecanic.png.flat",
         "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/mecanic.png"
     },
@@ -138,10 +142,6 @@
     {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_mecani_ayuda.jpg.flat",
         "source": "com.example.servicedelautomotor.app-main-30:/drawable/mecani_ayuda.jpg"
-    },
-    {
-        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_mail.png.flat",
-        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/mail.png"
     },
     {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_main_login.xml.flat",
@@ -168,16 +168,16 @@
         "source": "com.example.servicedelautomotor.app-main-30:/drawable/blurredblack.png"
     },
     {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_mechanic.png.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/mechanic.png"
+    },
+    {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_dorado.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/background_dorado.xml"
+    },
+    {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_fuego.png.flat",
         "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/fuego.png"
-    },
-    {
-        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_resentacion.png.flat",
-        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/resentacion.png"
-    },
-    {
-        "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_mobile_taxi_service.png.flat",
-        "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/mobile_taxi_service.png"
     },
     {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_calendar.png.flat",
@@ -216,6 +216,10 @@
         "source": "com.example.servicedelautomotor.app-main-30:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_blanco.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/drawable/background_blanco.xml"
+    },
+    {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_ic_launcher_foreground.xml.flat",
         "source": "com.example.servicedelautomotor.app-main-30:/drawable/ic_launcher_foreground.xml"
     },
@@ -228,20 +232,12 @@
         "source": "com.example.servicedelautomotor.app-main-30:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_contacto.xml.flat",
-        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_contacto.xml"
-    },
-    {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_taler.png.flat",
         "source": "com.example.servicedelautomotor.app-main-30:/mipmap-hdpi/taler.png"
     },
     {
-        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_btn_contacto.xml.flat",
-        "source": "com.example.servicedelautomotor.app-main-30:/drawable/background_btn_contacto.xml"
-    },
-    {
-        "merged": "com.example.servicedelautomotor.app-merged_res-28:/drawable_background_main_contacto.xml.flat",
-        "source": "com.example.servicedelautomotor.app-main-30:/drawable/background_main_contacto.xml"
+        "merged": "com.example.servicedelautomotor.app-merged_res-28:/layout_activity_mecanico.xml.flat",
+        "source": "com.example.servicedelautomotor.app-main-30:/layout/activity_mecanico.xml"
     },
     {
         "merged": "com.example.servicedelautomotor.app-merged_res-28:/mipmap-hdpi_btn.png.flat",
