@@ -90,6 +90,11 @@ El costo de la reparación depende del daño.</string>
     <string name="descripcion4">Recorda que la visita tiene un costo fijo,
 la reparación del auto depende del daño.</string>
     <string name="cancelar">Cancelar</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="btnVer">Ver</string>
+    <string name="btnAgregar">Agregar</string>
+    <string name="btnEliminar">Eliminar</string>
     <!--fin string mécanico-->
 
 
