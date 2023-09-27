@@ -48,7 +48,7 @@
                 android:id="@+id/textLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
+
                 android:text="@string/text_login"
                 android:textAlignment="textStart"
                 android:textColor="@color/negro"
@@ -62,7 +62,7 @@
                 android:layout_marginTop="60dp"
                 android:background="@drawable/custom_edittext"
                 android:drawablePadding="8dp"
-                android:fontFamily="@font/roboto"
+
                 android:hint="@string/text_hint_user"
                 android:padding="8dp"
                 android:textColor="@color/negro"
@@ -78,7 +78,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/custom_edittext"
                 android:drawablePadding="8dp"
-                android:fontFamily="@font/roboto"
+
                 android:hint="@string/text_hint_password"
                 android:inputType="textPassword"
                 android:autofillHints="password"
@@ -93,7 +93,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="50dp"
                 android:background="@drawable/btn_color"
-                android:fontFamily="@font/roboto"
+
                 android:onClick="buttonLogin"
                 android:text="@string/btn_login"
                 android:textColor="@color/blanco"
@@ -112,7 +112,7 @@
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
-                    android:fontFamily="@font/roboto"
+
                     android:text="@string/text_forget"
                     android:textColor="@color/negro"
                     android:textSize="14sp"
@@ -128,7 +128,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:fontFamily="@font/roboto"
+
                     android:text="@string/text_recover"
                     android:textColor="@color/secundario"
                     android:textStyle="bold"

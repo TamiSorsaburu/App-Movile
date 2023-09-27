@@ -43,7 +43,7 @@
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center_horizontal"
-                    android:text="BIENVENIDO"
+                    android:text="QUE TAL"
                     android:background="@drawable/blurredblack"
                     android:textColor="#F6BB46"
                     android:textSize="30sp" />

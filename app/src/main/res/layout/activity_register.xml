@@ -47,7 +47,7 @@
                 android:id="@+id/textRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
+
                 android:text="@string/text_registrarse"
                 android:textAlignment="textStart"
                 android:textColor="@color/negro"
@@ -61,7 +61,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/custom_edittext"
                 android:drawablePadding="8dp"
-                android:fontFamily="@font/roboto"
+
                 android:hint="@string/text_hint_nameUser"
                 android:padding="8dp"
                 android:textColor="@color/negro"
@@ -76,7 +76,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/custom_edittext"
                 android:drawablePadding="8dp"
-                android:fontFamily="@font/roboto"
+
                 android:hint="@string/text_hint_correo"
                 android:padding="8dp"
                 android:textColor="@color/negro"
@@ -92,7 +92,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/custom_edittext"
                 android:drawablePadding="8dp"
-                android:fontFamily="@font/roboto"
+
                 android:hint="@string/text_hint_password"
                 android:inputType="textPassword"
                 android:autofillHints="password"
@@ -107,7 +107,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/custom_edittext"
                 android:drawablePadding="8dp"
-                android:fontFamily="@font/roboto"
+
                 android:hint="@string/text_hint_confirmPassword"
                 android:inputType="textPassword"
                 android:autofillHints="password"
@@ -123,7 +123,7 @@
                 android:layout_marginTop="50dp"
                 android:background="@drawable/btn_color"
                 android:contentDescription="@string/text_description_btnLogin"
-                android:fontFamily="@font/roboto"
+
                 android:onClick="buttonRegister"
                 android:text="@string/btn_register"
                 android:textColor="@color/blanco"
@@ -141,7 +141,7 @@
                     android:layout_marginStart="64dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
-                    android:fontFamily="@font/roboto"
+
                     android:text="@string/text_cuenta2"
                     android:textColor="@color/negro"
                     android:textSize="14sp"
@@ -158,7 +158,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:fontFamily="@font/roboto"
+
                     android:minHeight="48dp"
                     android:onClick="textLogin"
                     android:text="@string/text_inicia_sesion"

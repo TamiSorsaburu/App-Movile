@@ -31,20 +31,19 @@
       app:layout_constraintHorizontal_bias="0.496"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.444"
+      app:layout_constraintVertical_bias="0.47"
       app:srcCompat="@mipmap/logo" />
 
   <TextView
       android:id="@+id/textService"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
-      android:fontFamily="@font/russo_one"
+      android:layout_marginTop="16dp"
+
       android:text="@string/text_service"
       android:textColor="@color/secundario"
       android:textSize="25dp"
       app:layout_constraintEnd_toEndOf="@+id/imageLogo"
-      app:layout_constraintHorizontal_bias="0.503"
       app:layout_constraintStart_toStartOf="@+id/imageLogo"
       app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
 
@@ -52,13 +51,12 @@
       android:id="@+id/textDel"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="12dp"
-      android:fontFamily="@font/russo_one"
+      android:layout_marginTop="3dp"
+
       android:text="@string/text_del"
       android:textColor="@color/secundario"
       android:textSize="25dp"
       app:layout_constraintEnd_toEndOf="@+id/imageLogo"
-      app:layout_constraintHorizontal_bias="0.502"
       app:layout_constraintStart_toStartOf="@+id/imageLogo"
       app:layout_constraintTop_toBottomOf="@+id/textService" />
 
@@ -66,13 +64,12 @@
       android:id="@+id/textAutomotor"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:fontFamily="@font/russo_one"
+      android:layout_marginTop="3dp"
+
       android:text="@string/text_automotor"
       android:textColor="@color/secundario"
       android:textSize="25dp"
       app:layout_constraintEnd_toEndOf="@+id/imageLogo"
-      app:layout_constraintHorizontal_bias="0.504"
       app:layout_constraintStart_toStartOf="@+id/imageLogo"
       app:layout_constraintTop_toBottomOf="@+id/textDel" />
 
@@ -80,9 +77,9 @@
       android:id="@+id/btn_login"
       android:layout_width="180dp"
       android:layout_height="50dp"
-      android:layout_marginTop="80dp"
+      android:layout_marginTop="60dp"
       android:background="@drawable/btn_color"
-      android:fontFamily="@font/roboto"
+
       android:onClick="buttonLogin"
       android:text="@string/btn_login"
       android:textColor="@color/blanco"
@@ -98,7 +95,7 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
       android:layout_marginBottom="16dp"
-      android:fontFamily="@font/roboto"
+
       android:text="@string/text_cuenta"
       android:textColor="@color/blanco"
       android:textSize="17dp"
@@ -114,7 +111,7 @@
       android:layout_marginTop="8dp"
       android:layout_marginEnd="16dp"
       android:layout_marginBottom="16dp"
-      android:fontFamily="@font/roboto"
+
       android:onClick="textRegister"
       android:text="@string/text_register"
       android:textColor="@color/secundario"
