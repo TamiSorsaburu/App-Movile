@@ -20,20 +20,23 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public void botonSiniestro(View V){
-        Intent siniestro=new Intent(this, SiniestrosActivity.class);
+        Intent siniestro=new Intent(this, SelectSiniestro.class);
         startActivity(siniestro);
     }
 
+    public void botonGrua(View V){
+        Intent grua=new Intent(this, SiniestrosActivity.class);
+        startActivity(grua);
+    }
+
+    public void botonMisTurnos(View v){
+        Intent miTurno=new Intent(this, MisTurnos.class);
+        startActivity(miTurno);
+    }
     /*
     public void botonServicio(View V){
         Intent servicio=new Intent(this, Servicio.class);
         startActivity(servicio);
-    }*/
-
-     /*
-    public void botonGrua(View V){
-        Intent grua=new Intent(this, Grua.class);
-        startActivity(grua);
     }*/
 
      /*
@@ -49,9 +52,9 @@ public class Dashboard extends AppCompatActivity {
     }*/
 
      /*
-    public void botonConfiguracion(View V){
-        Intent configuracion=new Intent(this, SiniestrosActivity.class);
-        startActivity(configuracion);
+    public void botonPresupuesto(View V){
+        Intent presupuesto=new Intent(this, SiniestrosActivity.class);
+        startActivity(presupuesto);
     }*/
 
 }

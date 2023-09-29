@@ -12,10 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceDelAutomotor"
         tools:targetApi="31">
+
+        <activity
+            android:name=".MisTurnos"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".DetalleUsuario"
             android:exported="false">
-
         </activity>
         <activity
             android:name=".Register"
@@ -58,7 +66,6 @@
             android:name=".Mecanico"
             android:exported="true"
             android:parentActivityName=".MainActivity">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
@@ -67,7 +74,6 @@
             android:name=".FormMecanico"
             android:exported="true"
             android:parentActivityName=".MainActivity">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
