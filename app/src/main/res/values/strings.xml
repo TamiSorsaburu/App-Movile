@@ -62,6 +62,16 @@
     <string name="text_cuenta2">Ya tienes cuenta?</string>
     <!--Fin string register-->
 
+    <!--string contacto-->
+    <string name="text_contacto">Visítenos, llámenos o envíenos email</string>
+    <string name="text_ubicacion_contacto">Sucursal central Av de Mayo 300</string>
+    <string name="text_telefono_contacto">(11)11111111</string>
+    <string name="text_mail_contacto">servicedelautomotor@gmail.com</string>
+    <string name="text_redes_contacto">Siguenos en nuestras redes sociales</string>
+    <string name="text_logo_facebook">Logo de Facebook</string>
+    <string name="text_logo_instagram">Logo de Instagram</string>
+    <!--Fin string contacto-->
+
     <!--string mecanico-->
     //activity mecanico
     <string name="titulo">Guardia Mécanica</string>
@@ -93,7 +103,41 @@ la reparación del auto depende del daño.</string>
 
     <!--fin string mécanico-->
 
-   //listado-usuarios
+    //activity información personal
+    <string name="tituloip1">Información Personal</string>
+    <string name="tituloip2">Información Del Vehículo</string>
+    <string name="tituloip3">Información Personal</string>
+    <string name="inpip1">Nombre</string>
+    <string name="inpip2">Apellido</string>
+    <string name="inpip3">N° Celular</string>
+    <string name="inpip4">Provincia</string>
+    <string name="inpip5">Calle</string>
+    <string name="inpip6">Altura</string>
+    <string name="inpip7">Localidad</string>
+    <string name="inpip8">Marca</string>
+    <string name="inpip9">Modelo</string>
+    <string name="inpip10">Patente</string>
+    <string name="btn_ipeditar">Editar</string>
+    <string name="btn_ipguardar">Guardar</string>
+    <string name="btn_ipCancelar">Cancelar</string>
+
+
+    <!--fin string información personal-->
+
+    //activity información auto
+    <string name="tituloia1">Información de mi auto</string>
+    <string name="inpia1">Marca</string>
+    <string name="inpia2">Modelo</string>
+    <string name="inpia3">Patente</string>
+    <string name="inpia4">Kilometraje</string>
+    <string name="btn_iaeditar">Editar</string>
+    <string name="btn_iaguardar">Guardar</string>
+    <string name="btn_iacancelar">Cancelar</string>
+
+    <!--fin string información auto-->
+
+
+    //listado-usuarios
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
     <string name="btnVer">Ver</string>
