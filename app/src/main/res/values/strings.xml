@@ -50,6 +50,7 @@
     <string name="text_forget">Olvidó su contraseña?</string>
     <string name="text_description_btnLogin">Botón para iniciar sesión en la aplicación</string>
     <string name="text_hint_password">Contraseña</string>
+    <string name="text_recuperar">Recuperar</string>
     <!--Fin string login-->
 
     <!--string register-->
