@@ -147,4 +147,29 @@ la reparación del auto depende del daño.</string>
 
     //detalle-usuario
 
+
+
+
+
+
+
+
+
+
+
+
+
+    //Servicios
+    <string name="title_activity_servicios">Servicios</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="back_btn">back_btn</string>
+    <string name="car">TODO</string>
+    <string name="lavadero">LAVADERO</string>
+    <string name="Lavadero">Lavadero</string>
+    <string name="Chapa_y_pintura">Chapa y Pintura</string>
+    <string name="Neumaticos">Neumáticos</string>
+    <string name="Cambio_de_Aceite">Cambio de Aceite</string>
+    <string name="Solicitar_turno">Solicitar Turno</string>
 </resources>
