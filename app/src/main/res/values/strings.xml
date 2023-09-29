@@ -151,6 +151,7 @@ la reparación del auto depende del daño.</string>
     <string name="turno">Turno : 25/09/23</string>
     <string name="tipoServicio">Servicio : Tapizado</string>
     <string name="sucursal">Sucursal : Centro</string>
+    <string name="cancelarTurno"><u>Cancelar</u></string>
     <!--mis turnos-->
 
 </resources>
