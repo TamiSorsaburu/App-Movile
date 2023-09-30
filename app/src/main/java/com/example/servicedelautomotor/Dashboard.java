@@ -55,15 +55,12 @@ public class Dashboard extends AppCompatActivity {
         startActivity(perfil);
     }
 
+    public void botonPresupuesto(View V){
+        Intent presupuesto=new Intent(this, Presupuesto.class);
+        startActivity(presupuesto);
+    }
 
 }
 
-
-
-     /*
-    public void botonPresupuesto(View V){
-        Intent presupuesto=new Intent(this, SiniestrosActivity.class);
-        startActivity(presupuesto);
-    }*/
 
 
