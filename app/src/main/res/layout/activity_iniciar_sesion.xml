@@ -35,115 +35,110 @@
         app:layout_constraintTop_toBottomOf="@+id/imageLogoLogin"
         tools:ignore="ExtraText">>
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="24dp"
-            tools:layout_editor_absoluteY="28dp"
-            tools:ignore="MissingConstraints">
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/text_login"
+            android:textAlignment="textStart"
+            android:textColor="@color/negro"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/textUserLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="16dp"
+            android:autofillHints="username"
+            android:background="@drawable/custom_edittext"
+            android:drawablePadding="8dp"
+            android:hint="@string/text_hint_user"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textColor="@color/negro"
+            android:textColorHighlight="@color/cardview_dark_background"
+            app:layout_constraintEnd_toEndOf="@+id/textRegister"
+            app:layout_constraintStart_toStartOf="@+id/textRegister"
+            app:layout_constraintTop_toBottomOf="@+id/textRegister" />
 
-                android:text="@string/text_login"
-                android:textAlignment="textStart"
-                android:textColor="@color/negro"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/userUser"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/custom_edittext"
-                android:drawablePadding="8dp"
-
-                android:hint="@string/text_hint_user"
-                android:padding="8dp"
-                android:textColor="@color/negro"
-                android:inputType="text"
-                android:autofillHints="username"
-                android:textColorHighlight="@color/cardview_dark_background" />
-
-
-            <EditText
-                android:id="@+id/userPassword"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/custom_edittext"
-                android:drawablePadding="8dp"
-
-                android:hint="@string/text_hint_password"
-                android:inputType="textPassword"
-                android:autofillHints="password"
-                android:padding="8dp"
-                android:textColor="@color/negro"
-                android:textColorHighlight="@color/cardview_dark_background" />
-
-            <Button
-                android:id="@+id/loginButton"
-                android:layout_width="210dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/btn_color"
-
-                android:onClick="buttonLogin"
-                android:text="@string/btn_login"
-                android:textColor="@color/blanco"
-                android:textSize="21sp"
-                android:contentDescription="@string/text_description_btnLogin"/>
+        <EditText
+            android:id="@+id/userContraseñaLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/custom_edittext"
+            android:drawablePadding="8dp"
+            android:hint="@string/text_hint_password"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:textColor="@color/negro"
+            android:textColorHighlight="@color/cardview_dark_background"
+            app:layout_constraintEnd_toEndOf="@+id/textUserLogin"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/textUserLogin"
+            app:layout_constraintTop_toBottomOf="@+id/textUserLogin" />
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="92dp"
+            android:background="@drawable/btn_color"
+            android:contentDescription="@string/text_description_btnLogin"
+            android:onClick="buttonLogin"
+            android:text="@string/text_login"
+            android:textColor="@color/blanco"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/userContraseñaLogin"
+            app:layout_constraintStart_toStartOf="@+id/userContraseñaLogin"
+            app:layout_constraintTop_toBottomOf="@+id/userContraseñaLogin" />
 
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/text_forget"
+            android:textColor="@color/negro"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/buttonRegister"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
+            app:layout_constraintVertical_bias="0.508" />
 
-                    android:text="@string/text_forget"
-                    android:textColor="@color/negro"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TextSizeCheck" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="16dp"
-
-                    android:text="@string/text_recover"
-                    android:textColor="@color/secundario"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/textView13"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:ignore="TextSizeCheck" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            android:onClick="textLogin"
+            android:text="@string/text_recuperar"
+            android:textColor="@color/secundario"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/buttonRegister"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
