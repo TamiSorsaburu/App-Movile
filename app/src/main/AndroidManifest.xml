@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceDelAutomotor"
         tools:targetApi="31">
+
+        <activity
+            android:name=".MisTurnos"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".Contacto"
             android:exported="false" />
@@ -29,7 +38,8 @@
             android:exported="false" />
         <activity
             android:name=".DetalleUsuario"
-            android:exported="false" />
+            android:exported="false">
+        </activity>
         <activity
             android:name=".Register"
             android:exported="false" />
@@ -62,6 +72,31 @@
         </activity>
         <activity
             android:name=".Dashboard"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"
+                android:exported="true"/>
+        </activity>
+        <activity
+            android:name=".Mecanico"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".FormMecanico"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Servicios"
+            android:exported="true"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

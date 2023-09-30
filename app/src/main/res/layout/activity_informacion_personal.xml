@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:contentDescription="imagen"
+            android:contentDescription="ImgPerfil"
             app:layout_constraintEnd_toEndOf="@+id/infoPersonal"
             app:layout_constraintStart_toStartOf="@+id/infoPersonal"
             app:layout_constraintTop_toBottomOf="@+id/infoPersonal"
@@ -69,7 +69,8 @@
                 android:layout_weight="1"
                 android:autofillHints="name"
                 android:hint="@string/inpip1"
-                android:inputType="textPersonName"></EditText>
+                android:inputType="textPersonName">
+            </EditText>
 
             <EditText
                 android:id="@+id/textApellido"
@@ -133,7 +134,9 @@
                 android:hint="@string/inpip4"
                 android:inputType="text"
                 android:minWidth="48dp"
-                android:minHeight="48dp"></EditText>
+                android:minHeight="48dp">
+
+            </EditText>
 
             <EditText
                 android:id="@+id/textCalle"
@@ -142,7 +145,9 @@
                 android:layout_weight="1"
                 android:autofillHints="postalAddress"
                 android:hint="@string/inpip5"
-                android:inputType="text"></EditText>
+                android:inputType="text">
+
+            </EditText>
 
             <EditText
                 android:id="@+id/textAltura"
@@ -151,7 +156,9 @@
                 android:layout_weight="1"
                 android:autofillHints="postalAddress"
                 android:hint="@string/inpip6"
-                android:inputType="number"></EditText>
+                android:inputType="number">
+
+            </EditText>
 
         </LinearLayout>
 
@@ -175,7 +182,7 @@
                 android:hint="@string/inpip7"
                 android:inputType="text"
                 android:minWidth="48dp"
-                android:minHeight="48dp"></EditText>
+                android:minHeight="48dp"/>
         </LinearLayout>
 
         <TextView
@@ -210,7 +217,8 @@
                 android:hint="@string/inpip8"
                 android:inputType="text"
                 android:minWidth="48dp"
-                android:minHeight="48dp"></EditText>
+                android:minHeight="48dp"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -234,7 +242,8 @@
                 android:hint="@string/inpip9"
                 android:inputType="text"
                 android:minWidth="48dp"
-                android:minHeight="48dp"></EditText>
+                android:minHeight="48dp"/>
+
             <EditText
                 android:id="@+id/textPatente"
                 android:layout_width="0dp"
@@ -242,7 +251,7 @@
                 android:layout_weight="1"
                 android:autofillHints="phone"
                 android:hint="@string/inpip10"
-                android:inputType="text"></EditText>
+                android:inputType="text"/>
         </LinearLayout>
 
         <Button
