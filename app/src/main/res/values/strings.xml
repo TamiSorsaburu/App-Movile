@@ -29,7 +29,7 @@
     <string name="btnTurnos">Mis Turnos</string>
     <string name="btnSiniestros">Siniestros</string>
     <string name="btnPerfil">Mi perfil</string>
-    <string name="btnConfiguracion">Setting</string>
+    <string name="btnPresupuesto">Presupuesto</string>
     <string name="btnMiAuto">Mi Auto</string>
     <string name="btnContacto">Contácto</string>
     <!--Fin String home-->
@@ -41,7 +41,7 @@
     <string name="text_cuenta">No tienes una cuenta?</string>
     <string name="text_register">Regístrate</string>
     <string name="btn_login">INICIAR SESIÓN</string>
-    <string name="text_recover">Recuperar</string>
+    <string name="text_recuperar">Recuperar</string>
     <!--Fin string presentacion-->
 
     <!--string login-->

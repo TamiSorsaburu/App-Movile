@@ -69,7 +69,8 @@
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".MainActivity"
+                android:exported="true"/>
         </activity>
         <activity
             android:name=".Mecanico"
@@ -81,6 +82,14 @@
         </activity>
         <activity
             android:name=".FormMecanico"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Servicios"
             android:exported="true"
             android:parentActivityName=".MainActivity">
             <meta-data
