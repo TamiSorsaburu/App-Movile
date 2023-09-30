@@ -135,8 +135,6 @@ la reparación del auto depende del daño.</string>
     <string name="btn_iacancelar">Cancelar</string>
 
     <!--fin string información auto-->
-
-
     //listado-usuarios
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
@@ -146,5 +144,40 @@ la reparación del auto depende del daño.</string>
     <string name="detalleUsuarioTitulo">Información Personal</string>
 
     //detalle-usuario
+
+    <!--solicitar turno-->
+    <string name="servicio_turno">Servicio</string>
+    <string name="direccion_turno">Dirección:</string>
+    <string name="vehiculo_turno">Tipo de vehículo:</string>
+    <string name="fecha_turno">Fecha:</string>
+    <string name="precio_turno">Precio:</string>
+    <string name="hora_turno">Hora:</string>
+    <string name="btn_confirmar_turno">Confirmar</string>
+    <string name="btn_cancelar_turno">Cancelar</string>
+
+    <!--confirmacion turno-->
+    <string name="confirmar_turno1">Tu turno ha sido generado exitosamente!</string>
+    <string name="confirmar_turno2">Si desea descargar o enviar a tu correo
+    el comprobante de pago haz click</string>
+    <string name="confirmar_turno3">Las cancelaciones se realizarán 24 horas
+    antes de la fecha del turno</string>
+    <string name="confirmar_turno4">AQUÍ</string>
+    <string name="confirmar_turno5">CANCELAR</string>
+    <string name="btn_atras_turno">Volver</string>
+
+    <!--presupuesto-->
+    <string name="presupuesto_texto00">Presupuesto</string>
+    <string name="presupuesto_texto1">Seleccione los servicios que desea realizar a su vehículo. Al finalizar se visualizará el presupuesto.</string>
+    <string name="presupuesto_texto2">Especifique su tipo de vehículo:</string>
+    <string name="presupuesto_texto3">Auto</string>
+    <string name="presupuesto_texto4">Lavadero</string>
+    <string name="presupuesto_texto5">Cambio de aceite</string>
+    <string name="presupuesto_texto6">Tapizado</string>
+    <string name="presupuesto_texto7">Neumáticos</string>
+    <string name="presupuesto_texto8">Costo total de los servicios seleccionados</string>
+    <string name="presupuesto_texto9">$20.000</string>
+    <string name="btn_presupuesto_b1">Confirmar</string>
+    <string name="btn_presupuesto_b2">Cancelar</string>
+
 
 </resources>

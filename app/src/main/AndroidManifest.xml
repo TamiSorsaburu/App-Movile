@@ -22,6 +22,12 @@
             android:name=".InformacionPersonal"
             android:exported="false" />
         <activity
+            android:name=".ConfirmarTurno"
+            android:exported="false" />
+        <activity
+            android:name=".SolicitarTurno"
+            android:exported="false" />
+        <activity
             android:name=".DetalleUsuario"
             android:exported="false" />
         <activity

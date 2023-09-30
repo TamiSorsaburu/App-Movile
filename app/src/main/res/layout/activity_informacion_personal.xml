@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:contentDescription="@string/fotoPerfil"
+            android:contentDescription="imagen"
             app:layout_constraintEnd_toEndOf="@+id/infoPersonal"
             app:layout_constraintStart_toStartOf="@+id/infoPersonal"
             app:layout_constraintTop_toBottomOf="@+id/infoPersonal"
@@ -175,7 +175,7 @@
                 android:hint="@string/inpip7"
                 android:inputType="text"
                 android:minWidth="48dp"
-                android:minHeight="48dp">
+                android:minHeight="48dp"></EditText>
         </LinearLayout>
 
         <TextView
@@ -210,8 +210,7 @@
                 android:hint="@string/inpip8"
                 android:inputType="text"
                 android:minWidth="48dp"
-                android:minHeight="48dp">
-
+                android:minHeight="48dp"></EditText>
         </LinearLayout>
 
         <LinearLayout
@@ -235,8 +234,7 @@
                 android:hint="@string/inpip9"
                 android:inputType="text"
                 android:minWidth="48dp"
-                android:minHeight="48dp">
-
+                android:minHeight="48dp"></EditText>
             <EditText
                 android:id="@+id/textPatente"
                 android:layout_width="0dp"
@@ -244,7 +242,7 @@
                 android:layout_weight="1"
                 android:autofillHints="phone"
                 android:hint="@string/inpip10"
-                android:inputType="text">
+                android:inputType="text"></EditText>
         </LinearLayout>
 
         <Button

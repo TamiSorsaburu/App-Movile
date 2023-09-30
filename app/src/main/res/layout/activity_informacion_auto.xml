@@ -9,9 +9,9 @@
     <TextView
         android:id="@+id/textView21"
         android:layout_width="327dp"
-        android:layout_height="37dp"
+        android:layout_height="80dp"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="42dp"
         android:text="@string/tituloia1"
         android:textColor="@color/negro"
@@ -91,7 +91,7 @@
         app:layout_constraintGuide_begin="23dp" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btn_atras_turno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -107,13 +107,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/btn_iaguardar"
-        app:layout_constraintEnd_toStartOf="@+id/button10"
+        app:layout_constraintEnd_toStartOf="@+id/btn_presupuesto_b1"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintStart_toEndOf="@+id/btn_atras_turno"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/btn_presupuesto_b1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"

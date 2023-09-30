@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Presupuesto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Presupuesto"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+        <LinearLayout
+            android:layout_width="411dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="173dp"
+            android:layout_marginBottom="488dp"
+            android:background="@drawable/estilo_bordes"
+            android:backgroundTint="#F6BB46"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="411dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="436dp"
+            android:layout_marginBottom="225dp"
+            android:background="@drawable/estilo_bordes"
+            android:backgroundTint="#F6BB46"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Switch
+                android:id="@+id/presupuesto_texto7"
+                android:layout_width="380dp"
+                android:layout_height="48dp"
+                android:text="@string/presupuesto_texto7"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="411dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="349dp"
+            android:layout_marginBottom="312dp"
+            android:background="@drawable/estilo_bordes"
+            android:backgroundTint="#F6BB46"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Switch
+                android:id="@+id/presupuesto_texto6"
+                android:layout_width="390dp"
+                android:layout_height="49dp"
+                android:text="@string/presupuesto_texto6"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="411dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="263dp"
+            android:layout_marginBottom="398dp"
+            android:background="@drawable/estilo_bordes"
+            android:backgroundTint="#F6BB46"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Switch
+                android:id="@+id/presupuesto_texto5"
+                android:layout_width="388dp"
+                android:layout_height="48dp"
+                android:text="@string/presupuesto_texto5"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/presupuesto_texto0"
+            android:layout_width="359dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="601dp"
+            android:text="@string/presupuesto_texto1"
+            android:textColor="@color/negro"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="DuplicateIds" />
+
+        <Switch
+            android:id="@+id/presupuesto_texto4"
+            android:layout_width="380dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="198dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="506dp"
+            android:text="@string/presupuesto_texto4"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/presupuesto_texto9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="274dp"
+            android:layout_marginTop="545dp"
+            android:layout_marginEnd="73dp"
+            android:layout_marginBottom="162dp"
+            android:text="@string/presupuesto_texto9"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_presupuesto_b1"
+            android:layout_width="157dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="636dp"
+            android:layout_marginEnd="246dp"
+            android:layout_marginBottom="47dp"
+            android:background="@drawable/background_dorado"
+            android:text="@string/btn_presupuesto_b1"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/presupuesto_texto8"
+            android:layout_width="155dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="531dp"
+            android:layout_marginEnd="213dp"
+            android:layout_marginBottom="114dp"
+            android:text="@string/presupuesto_texto8"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/presupuesto_texto2"
+            android:layout_width="267dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="141dp"
+            android:layout_marginEnd="199dp"
+            android:layout_marginBottom="571dp"
+            android:text="@string/presupuesto_texto2"
+            android:textColor="@color/negro"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.235" />
+
+        <TextView
+            android:id="@+id/presupuesto_texto3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="290dp"
+            android:layout_marginTop="141dp"
+            android:layout_marginEnd="92dp"
+            android:layout_marginBottom="571dp"
+            android:text="@string/presupuesto_texto3"
+            android:textColor="@color/negro"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_presupuesto_b2"
+            android:layout_width="163dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="258dp"
+            android:layout_marginTop="643dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="56dp"
+            android:background="@drawable/background_dorado"
+            android:text="@string/btn_presupuesto_b2"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.272" />
+
+        <TextView
+            android:id="@+id/presupuesto_textoo"
+            android:layout_width="197dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="136dp"
+            android:layout_marginBottom="671dp"
+            android:text="@string/presupuesto_texto00"
+            android:textColor="@color/negro"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
