@@ -40,21 +40,35 @@
         android:id="@+id/confirmar_turno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="667dp"
+        android:layout_marginEnd="255dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/background_dorado"
+        android:onClick="botonConfirmar"
         android:text="@string/btn_confirmar_turno"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="667dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/cancelar_turno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="667dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/background_dorado"
+        android:onClick="botonCancelar"
         android:text="@string/btn_cancelar_turno"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="264dp"
-        tools:layout_editor_absoluteY="667dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/servicioTurno"
