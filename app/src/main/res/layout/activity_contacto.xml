@@ -87,6 +87,7 @@
             android:layout_height="42dp"
             android:layout_marginStart="32dp"
             android:background="@drawable/btn_color"
+            android:onClick="botonVolver"
             android:text="@string/botón_volver"
             android:textColor="@color/blanco"
             android:textSize="17sp"
