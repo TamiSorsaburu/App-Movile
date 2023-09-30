@@ -98,7 +98,7 @@
             android:layout_marginTop="92dp"
             android:background="@drawable/btn_color"
             android:contentDescription="@string/text_description_btnLogin"
-            android:onClick="buttonRegister"
+            android:onClick="buttonLogin"
             android:text="@string/text_login"
             android:textColor="@color/blanco"
             android:textSize="21sp"
