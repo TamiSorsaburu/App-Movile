@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".SelectSiniestro">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="407dp"
+        android:layout_height="54dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
@@ -46,6 +57,7 @@
                 <ImageView
                     android:layout_width="85dp"
                     android:layout_height="80dp"
+                    android:contentDescription="policía"
                     app:srcCompat="@mipmap/poli" />
 
                 <TextView
@@ -274,7 +286,9 @@
         android:layout_marginStart="135dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="135dp"
+        android:background="@drawable/background_dorado"
         android:backgroundTint="#F6BB46"
+        android:onClick="btnHome"
         android:text="@string/botón_volver"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -285,5 +299,7 @@
         tools:ignore="MissingConstraints">
 
     </Button>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
