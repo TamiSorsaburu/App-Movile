@@ -26,17 +26,15 @@
         android:id="@+id/confirmar_turno5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="490dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="217dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="24dp"
         android:text="@string/confirmar_turno5"
         android:textColor="@color/secundario"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/confirmar_turno3"
+        app:layout_constraintEnd_toEndOf="@+id/confirmar_turno3"
+        app:layout_constraintStart_toStartOf="@+id/confirmar_turno3"
+        app:layout_constraintTop_toTopOf="@+id/confirmar_turno3" />
 
     <TextView
         android:id="@+id/confirmar_turno1"
@@ -59,13 +57,12 @@
         android:id="@+id/confirmar_turno2"
         android:layout_width="353dp"
         android:layout_height="48dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="267dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/confirmar_turno2"
         android:textColor="@color/negro"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
@@ -73,28 +70,24 @@
     <TextView
         android:id="@+id/confirmar_turno3"
         android:layout_width="362dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="206dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/confirmar_turno3"
         android:textColor="@color/negro"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmar_turno2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmar_turno2" />
 
     <Button
         android:id="@+id/btn_atras_turno"
-        android:layout_width="104dp"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="636dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="47dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/background_dorado"
         android:onClick="botonCancelar"
         android:text="@string/btn_atras_turno"
@@ -102,26 +95,22 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmar_turno3" />
 
     <TextView
         android:id="@+id/onfirmar_turno4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="291dp"
-        android:layout_marginTop="440dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="267dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="20dp"
         android:text="@string/confirmar_turno4"
         android:textColor="@color/secundario"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/confirmar_turno2"
+        app:layout_constraintEnd_toEndOf="@+id/confirmar_turno2"
+        app:layout_constraintStart_toStartOf="@+id/confirmar_turno2"
+        app:layout_constraintTop_toTopOf="@+id/confirmar_turno2" />
 
     <ImageView
         android:id="@+id/imageView2"
