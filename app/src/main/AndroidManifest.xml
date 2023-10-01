@@ -57,26 +57,26 @@
         <activity
             android:name=".SelectSiniestro"
             android:exported="false"
-            android:parentActivityName=".MainActivity">
+            >
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.servicedelautomotor.MainActivity" />
+
+
         </activity>
         <activity
             android:name=".activity_confirma_ayuda"
-            android:exported="false"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+            android:exported="false">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.servicedelautomotor.MainActivity" />
         </activity>
         <activity
             android:name=".SiniestrosActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+            android:exported="false">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.servicedelautomotor.MainActivity" />
         </activity>
         <activity
             android:name=".Dashboard"
