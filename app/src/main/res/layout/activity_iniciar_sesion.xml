@@ -81,7 +81,7 @@
             android:background="@drawable/custom_edittext"
             android:drawablePadding="8dp"
             android:hint="@string/text_hint_password"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             android:padding="8dp"
             android:textColor="@color/negro"
             android:textColorHighlight="@color/cardview_dark_background"
