@@ -30,10 +30,7 @@
         <activity
             android:name=".InformacionPersonal"
             android:exported="false" />
-        <activity
-            android:name=".DetalleUsuario"
-            android:exported="false">
-        </activity>
+
         <activity
             android:name=".Register"
             android:exported="false" />
@@ -42,13 +39,10 @@
             android:exported="false" />
         <activity
             android:name=".SelectSiniestro"
-            android:exported="false"
-            >
+            android:exported="false">
             <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="com.example.servicedelautomotor.MainActivity" />
-
-
         </activity>
         <activity
             android:name=".activity_confirma_ayuda"
