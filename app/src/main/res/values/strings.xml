@@ -63,10 +63,7 @@
     <!--Fin string register-->
 
     <!--string contacto-->
-    <string name="text_contacto">Visítenos, llámenos o envíenos email</string>
-    <string name="text_ubicacion_contacto">Sucursal central Av de Mayo 300</string>
-    <string name="text_telefono_contacto">(11)11111111</string>
-    <string name="text_mail_contacto">servicedelautomotor@gmail.com</string>
+    <string name="text_contacto">Contáctanos</string>
     <string name="text_redes_contacto">Siguenos en nuestras redes sociales</string>
     <string name="text_logo_facebook">Logo de Facebook</string>
     <string name="text_logo_instagram">Logo de Instagram</string>

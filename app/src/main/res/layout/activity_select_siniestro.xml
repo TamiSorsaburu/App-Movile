@@ -293,7 +293,7 @@
         android:onClick="btnHome"
         android:text="@string/botón_volver"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="@color/blanco"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

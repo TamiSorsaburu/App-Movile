@@ -371,6 +371,7 @@
             android:background="@drawable/background_dorado"
             android:onClick="botonCancelar"
             android:text="@string/cancelar"
+            android:textColor="@color/blanco"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -23,14 +23,14 @@
         tools:ignore="ExtraText">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textContactenos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="@string/text_contacto"
             android:textAlignment="center"
             android:textColor="@color/negro"
-            android:textSize="15sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,16 +41,16 @@
             android:id="@+id/redes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="160dp"
+            android:layout_marginBottom="196dp"
             android:text="@string/text_redes_contacto"
             android:textAlignment="center"
             android:textColor="@color/negro"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.389"
+            app:layout_constraintStart_toStartOf="parent"
             tools:ignore="TextSizeCheck">
 
         </TextView>
@@ -105,9 +105,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="220dp"
+        android:layout_marginBottom="280dp"
         android:background="@drawable/background_main_contacto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,91 +115,80 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayout"
+            android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/background_btn_principal"
-            android:orientation="vertical"
-            android:padding="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            android:layout_marginBottom="8dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/ubicacion"
+            <EditText
+                android:id="@+id/textNombre"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:drawablePadding="10dp"
-                android:padding="10dp"
-                android:text="@string/text_ubicacion_contacto"
-                android:textAlignment="textEnd"
-                android:textColor="@color/blanco"
-                app:drawableLeftCompat="@mipmap/google_maps" />
-
+                android:layout_height="match_parent"
+                android:autofillHints="postalAddress"
+                android:background="@drawable/background_btn"
+                android:hint="@string/inpip1"
+                android:inputType="text"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:paddingLeft="10dp"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout2"
+            android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/background_btn_principal"
-            android:orientation="vertical"
-            android:padding="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-            <TextView
-                android:id="@+id/numberPhone"
+            <EditText
+                android:id="@+id/textCorreoContacto"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:drawablePadding="10dp"
-                android:padding="10dp"
-                android:text="@string/text_telefono_contacto"
-                android:textAlignment="textEnd"
-                android:textColor="@color/blanco"
-                app:drawableLeftCompat="@mipmap/mobile_taxi_service" />
-
+                android:layout_height="match_parent"
+                android:autofillHints="postalAddress"
+                android:background="@drawable/background_btn"
+                android:hint="@string/text_hint_correo"
+                android:inputType="textEmailAddress"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:paddingLeft="10dp"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout3"
+            android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/background_btn_principal"
-            android:orientation="vertical"
-            android:padding="20dp"
+            android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout1"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
-            <TextView
-                android:id="@+id/email"
+            <EditText
+                android:id="@+id/textMensaje"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:drawablePadding="10dp"
-                android:padding="10dp"
-                android:text="@string/text_mail_contacto"
-                android:textAlignment="textEnd"
-                android:textColor="@color/blanco"
-                app:drawableLeftCompat="@mipmap/mail" />
-
+                android:layout_height="match_parent"
+                android:autofillHints="postalAddress"
+                android:background="@drawable/background_btn"
+                android:hint="Mensaje"
+                android:inputType="textLongMessage"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:paddingLeft="10dp"/>
         </LinearLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

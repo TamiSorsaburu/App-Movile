@@ -263,6 +263,7 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/btn_color"
             android:text="@string/btn_ipeditar"
+            android:textColor="@color/blanco"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonGuardar"
             app:layout_constraintHorizontal_bias="0.5"
@@ -279,6 +280,7 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/btn_color"
             android:text="@string/btn_ipguardar"
+            android:textColor="@color/blanco"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonCancelar"
             app:layout_constraintHorizontal_bias="0.5"
@@ -286,6 +288,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
 
         <Button
+            android:id="@+id/buttonCancelar"
             android:layout_width="105dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -294,6 +297,7 @@
             android:background="@drawable/btn_color"
             android:onClick="botonCancelar"
             android:text="@string/btn_ipCancelar"
+            android:textColor="@color/blanco"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
