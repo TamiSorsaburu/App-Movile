@@ -41,6 +41,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="@drawable/blurredblack"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center_horizontal"
                     android:text="BIENVENIDO"
@@ -56,6 +57,7 @@
                 android:layout_marginStart="113dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="113dp"
+                android:background="@drawable/blurredblack"
                 android:contentDescription="@string/app_name"
                 android:onClick="boton"
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
@@ -142,7 +144,7 @@
                 <TextView
                     android:id="@+id/textServicio"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48sp"
                     android:text="@string/btnServicio"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -197,7 +199,7 @@
                 <TextView
                     android:id="@+id/textMecanico"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48sp"
                     android:text="@string/btnMecanico"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -251,7 +253,7 @@
                 <TextView
                     android:id="@+id/textGrua"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:text="@string/btnGrua"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -303,6 +305,8 @@
                         android:layout_marginTop="14dp"
                         android:layout_marginEnd="4dp"
                         android:layout_marginBottom="15dp"
+                        android:onClick="botonPresupuesto"
+                        android:contentDescription="img"
                         android:src="@mipmap/presupuesto"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -314,10 +318,11 @@
                 <TextView
                     android:id="@+id/textPresupuesto"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48sp"
+                    android:onClick="botonPresupuesto"
                     android:text="@string/btnPresupuesto"
                     android:textAlignment="center"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
             </LinearLayout><!--presupuesto-->
@@ -369,7 +374,7 @@
                 <TextView
                     android:id="@+id/textMiTurno"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48sp"
                     android:text="@string/btnTurnos"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -424,7 +429,7 @@
                 <TextView
                     android:id="@+id/textMiPerfil"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48sp"
                     android:text="@string/btnPerfil"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -486,7 +491,7 @@
                 <TextView
                     android:id="@+id/textMiAuto"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48sp"
                     android:text="@string/btnMiAuto"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -542,7 +547,7 @@
                 <TextView
                     android:id="@+id/textSiniestro"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48sp"
                     android:text="@string/btnSiniestros"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -597,7 +602,7 @@
                 <TextView
                     android:id="@+id/textContacto"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48sp"
                     android:text="@string/btnContacto"
                     android:textAlignment="center"
                     android:textSize="16sp"

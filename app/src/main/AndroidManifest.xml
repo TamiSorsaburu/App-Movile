@@ -31,12 +31,29 @@
             android:name=".InformacionPersonal"
             android:exported="false" />
 
+
+
+        <activity
+            android:name=".ConfirmarTurno"
+            android:exported="true" />
+        <activity
+            android:name=".SolicitarTurno"
+            android:exported="true" />
+       
         <activity
             android:name=".Register"
             android:exported="false" />
         <activity
             android:name=".Iniciar_sesion"
             android:exported="false" />
+        <activity
+            android:name=".Presupuesto"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".SelectSiniestro"
             android:exported="false">

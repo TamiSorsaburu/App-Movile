@@ -12,9 +12,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/background_main_login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +41,7 @@
             android:id="@+id/redes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="160dp"
             android:text="@string/text_redes_contacto"
             android:textAlignment="center"
             android:textColor="@color/negro"
@@ -60,28 +60,44 @@
             android:layout_width="53dp"
             android:layout_height="45dp"
             android:layout_marginStart="72dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="32dp"
             android:contentDescription="@string/text_logo_facebook"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/redes"
             app:layout_constraintTop_toBottomOf="@+id/redes"
-            app:layout_constraintVertical_bias="0.521"
+            app:layout_constraintVertical_bias="0.301"
             app:srcCompat="@mipmap/facebook" />
 
         <ImageView
             android:id="@+id/imageInstagram"
             android:layout_width="53dp"
             android:layout_height="45dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="68dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="32dp"
             android:contentDescription="@string/text_logo_instagram"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/redes"
             app:layout_constraintTop_toBottomOf="@+id/redes"
-            app:layout_constraintVertical_bias="0.521"
+            app:layout_constraintVertical_bias="0.301"
             app:srcCompat="@mipmap/instagram" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/btn_color"
+            android:onClick="botonVolver"
+            android:text="@string/botón_volver"
+            android:textColor="@color/blanco"
+            android:textSize="17sp"
+            android:padding="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.935"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageInstagram"
+            app:layout_constraintVertical_bias="0.666" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -89,7 +105,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="90dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="220dp"
         android:background="@drawable/background_main_contacto"
@@ -118,12 +134,12 @@
                 android:id="@+id/ubicacion"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                app:drawableLeftCompat="@mipmap/google_maps"
                 android:drawablePadding="10dp"
                 android:padding="10dp"
                 android:text="@string/text_ubicacion_contacto"
                 android:textAlignment="textEnd"
-                android:textColor="@color/blanco" />
+                android:textColor="@color/blanco"
+                app:drawableLeftCompat="@mipmap/google_maps" />
 
         </LinearLayout>
 
@@ -147,12 +163,12 @@
                 android:id="@+id/numberPhone"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                app:drawableLeftCompat="@mipmap/mobile_taxi_service"
                 android:drawablePadding="10dp"
                 android:padding="10dp"
                 android:text="@string/text_telefono_contacto"
                 android:textAlignment="textEnd"
-                android:textColor="@color/blanco" />
+                android:textColor="@color/blanco"
+                app:drawableLeftCompat="@mipmap/mobile_taxi_service" />
 
         </LinearLayout>
 
@@ -176,12 +192,12 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                app:drawableLeftCompat="@mipmap/mail"
                 android:drawablePadding="10dp"
                 android:padding="10dp"
                 android:text="@string/text_mail_contacto"
                 android:textAlignment="textEnd"
-                android:textColor="@color/blanco" />
+                android:textColor="@color/blanco"
+                app:drawableLeftCompat="@mipmap/mail" />
 
         </LinearLayout>
 
