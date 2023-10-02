@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".activity_confirma_ayuda">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/textView7"
         android:layout_width="299dp"
@@ -40,7 +51,9 @@
         android:layout_height="66dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
+        android:background="@drawable/background_dorado"
         android:backgroundTint="#F6BB46"
+        android:onClick="btnHome"
         android:text="@string/botón_volver"
         android:textColor="#000000"
         android:textSize="20sp"

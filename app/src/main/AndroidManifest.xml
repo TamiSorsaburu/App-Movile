@@ -12,11 +12,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceDelAutomotor"
         tools:targetApi="31">
-        <activity
-            android:name=".DetalleUsuario"
-            android:exported="false">
 
+        <activity
+            android:name=".MisTurnos"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
+        <activity
+            android:name=".Contacto"
+            android:exported="false" />
+        <activity
+            android:name=".InformacionAuto"
+            android:exported="false" />
+        <activity
+            android:name=".InformacionPersonal"
+            android:exported="false" />
+
+
+
+        <activity
+            android:name=".ConfirmarTurno"
+            android:exported="true" />
+        <activity
+            android:name=".SolicitarTurno"
+            android:exported="true" />
+
         <activity
             android:name=".Register"
             android:exported="false" />
@@ -24,31 +47,61 @@
             android:name=".Iniciar_sesion"
             android:exported="false" />
         <activity
-            android:name=".SelectSiniestro"
-            android:exported="false"
+            android:name=".Presupuesto"
+            android:exported="true"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".SelectSiniestro"
+            android:exported="false">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.servicedelautomotor.MainActivity" />
         </activity>
         <activity
             android:name=".activity_confirma_ayuda"
-            android:exported="false"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+            android:exported="false">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.servicedelautomotor.MainActivity" />
         </activity>
         <activity
             android:name=".SiniestrosActivity"
-            android:exported="false"
+            android:exported="false">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.servicedelautomotor.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Dashboard"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"
+                android:exported="true"/>
+        </activity>
+        <activity
+            android:name=".Mecanico"
+            android:exported="true"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".Dashboard"
+            android:name=".FormMecanico"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Servicios"
+            android:exported="true"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
