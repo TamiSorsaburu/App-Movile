@@ -4,24 +4,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Mecanico extends AppCompatActivity {
-
+public class Servicios extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mecanico);
-    }
-
-    public void botonConfirmar(View V){
-        Intent confirmar=new Intent(this, FormMecanico.class);
-        startActivity(confirmar);
+        setContentView(R.layout.activity_servicios);
     }
 
     public void botonCancelar(View V){
         Intent cancelar=new Intent(this, Dashboard.class);
         startActivity(cancelar);
     }
+
+    public void botonSolicitarTurno(View V){
+        Intent solicitarT=new Intent(this, SolicitarTurno.class);
+        startActivity(solicitarT);
+    }
+
+
+
 }
