@@ -23,7 +23,7 @@ public class Mecanico {
 
     public Boolean guardia;
 
-    public String turnoTrabajo;
+    public long sucursalMecanicoId;
 
 
 
