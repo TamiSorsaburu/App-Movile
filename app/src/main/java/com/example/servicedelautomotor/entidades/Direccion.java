@@ -6,7 +6,8 @@ import androidx.room.PrimaryKey;
 @Entity
 public class Direccion {
     @PrimaryKey
-    public long IdDirecion;
+    public long idDireccion;
+    public long direccionClienteId;
     public String calle;
     public String altura;
     public String localidad;

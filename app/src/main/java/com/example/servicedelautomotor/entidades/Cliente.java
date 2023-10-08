@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey;
 public class Cliente {
     @PrimaryKey
     public long idCliente;
+    public long usuarioClienteId;
     public String nombre;
     public String apellido;
     public int telefono;

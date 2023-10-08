@@ -5,7 +5,9 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Administrador {
-    @PrimaryKey public long idAdmin;
+    @PrimaryKey
+    public long idAdmin;
+    public long UsuarioAdminId;
     public String nombre;
     public String apellido;
     public String telefono;
