@@ -21,8 +21,8 @@ public interface DaoSucursal {
     @Insert
     void insertarSucursal(Sucursal...sucursales);
 
-    @Query("UPDATE sucursal SET direccion=:direccion, telefono=:telefono, correo=:correo WHERE idSucursal=:idSucursal")
-    void actualizarSucursal(long idSucursal, String direccion, int telefono, String correo );
+    @Query("UPDATE sucursal SET  telefono=:telefono, correo=:correo WHERE idSucursal=:idSucursal")
+    void actualizarSucursal(long idSucursal,  int telefono, String correo );
 
     @Query("DELETE FROM sucursal WHERE idSucursal=:idSucursal")
     void eliminarSucursal(long idSucursal);

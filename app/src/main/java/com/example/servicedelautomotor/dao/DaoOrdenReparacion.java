@@ -22,7 +22,7 @@ public interface DaoOrdenReparacion {
     void insertarOrden(OrdenReparacion...ordenes);
 
     @Query("UPDATE ordenreparacion SET fechaIngreso=:fechaIngreso,horaIngreso=:horaIngreso, motivoIngreso=:motivoIngreso, fechaSalida=:fechaSalida, horaSalida=:horaSalida WHERE idOrden=:idOrden")
-    void actualizarOrden(long idOrden, String fechaIngreso, Date horaIngreso, String motivoIngreso, String fechaSalida, Date horaSalida );
+    void actualizarOrden(long idOrden, String fechaIngreso, String horaIngreso, String motivoIngreso, String fechaSalida, String horaSalida );
 
     @Query("DELETE FROM ordenreparacion WHERE idOrden=:idOrden")
     void eliminarOrden(long idOrden);

@@ -12,5 +12,5 @@ public class Turno {
     public long clienteTurnoId;
     public long sucursalTurnoId;
     public String dia;
-    public Date hora;
+    public String hora;
 }

@@ -15,7 +15,7 @@ public class Dashboard extends AppCompatActivity {
 
     //metodo para botones
     public void botonMecanico(View V) {
-        Intent mecanico = new Intent(this, Mecanico.class);
+        Intent mecanico = new Intent(this, MecanicoActivity.class);
         startActivity(mecanico);
     }
 
@@ -56,7 +56,7 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public void botonPresupuesto(View V){
-        Intent presupuesto=new Intent(this, Presupuesto.class);
+        Intent presupuesto=new Intent(this, PresupuestoActivity.class);
         startActivity(presupuesto);
     }
 

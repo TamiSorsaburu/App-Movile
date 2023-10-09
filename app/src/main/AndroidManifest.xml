@@ -47,7 +47,7 @@
             android:name=".Iniciar_sesion"
             android:exported="false" />
         <activity
-            android:name=".Presupuesto"
+            android:name=".PresupuestoActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -84,7 +84,7 @@
                 android:exported="true"/>
         </activity>
         <activity
-            android:name=".Mecanico"
+            android:name=".MecanicoActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity">
             <meta-data

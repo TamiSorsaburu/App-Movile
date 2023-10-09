@@ -18,7 +18,7 @@ public class SolicitarTurno extends AppCompatActivity {
         startActivity(confirmar);
     }
     public void botonCancelar(View V) {
-        Intent cancelar = new Intent(this, Presupuesto.class);
+        Intent cancelar = new Intent(this, PresupuestoActivity.class);
         startActivity(cancelar);
     }
 }

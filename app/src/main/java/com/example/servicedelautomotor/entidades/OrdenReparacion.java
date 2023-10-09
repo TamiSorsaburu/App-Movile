@@ -10,10 +10,10 @@ public class OrdenReparacion {
     @PrimaryKey
     public long idOrden;
     public String fechaIngreso;
-    public Date horaIngreso;
+    public String horaIngreso;
     public String motivoIngreso;
     public String fechaSalida;
-    public Date horaSalida;
+    public String horaSalida;
     public long vehiculoOrdenId;
     public long sucursalOrdenId;
 }

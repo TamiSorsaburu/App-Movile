@@ -22,7 +22,7 @@ public interface DaoTurno {
     void insertarTurno(Turno...turnos);
 
     @Query("UPDATE turno SET dia=:dia, hora=:hora WHERE idTurno=:idTurno")
-    void actualizarTurno(long idTurno, String dia, Date hora);
+    void actualizarTurno(long idTurno, String dia, String hora);
 
     @Query("DELETE FROM turno WHERE idTurno=:idTurno")
     void eliminarTurno(long idTurno);

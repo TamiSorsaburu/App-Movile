@@ -4,7 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.example.servicedelautomotor.Presupuesto;
+
 import com.example.servicedelautomotor.entidades.Servicio;
 
 import java.util.List;

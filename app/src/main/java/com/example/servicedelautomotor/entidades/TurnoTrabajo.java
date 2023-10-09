@@ -9,5 +9,5 @@ import java.util.Date;
 public class TurnoTrabajo {
     @PrimaryKey public long idTurnoTrabajo;
     public String dia;
-    public Date hora;
+    public String hora;
 }

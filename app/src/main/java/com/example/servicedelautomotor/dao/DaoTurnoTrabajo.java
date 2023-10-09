@@ -21,7 +21,7 @@ public interface DaoTurnoTrabajo {
     void insertarTurnoTrabajo(TurnoTrabajo...turnosTrabajo);
 
     @Query("UPDATE turnotrabajo SET dia=:dia, hora=:hora WHERE idTurnoTrabajo=:idTurnoTrabajo")
-    void actualizarTurnoTrabajo(long idTurnoTrabajo, String dia, Date hora);
+    void actualizarTurnoTrabajo(long idTurnoTrabajo, String dia, String hora);
 
     @Query("DELETE FROM turnotrabajo WHERE idTurnoTrabajo=:idTurnoTrabajo")
     void eliminarTurnoTrabajo(long idTurnoTrabajo);

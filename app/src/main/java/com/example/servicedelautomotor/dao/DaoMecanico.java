@@ -5,7 +5,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.servicedelautomotor.Mecanico;
+import com.example.servicedelautomotor.entidades.Mecanico;
 
 import java.util.List;
 
@@ -15,15 +15,15 @@ public interface DaoMecanico {
     @Query("SELECT * FROM mecanico")
     List<Mecanico> obtenerMecanicos();
 
-    @Query("SELECT * FROM mecanico WHERE idMecanico=:mecanic")
-    Mecanico obtenerMecanico(String mecanic);
+    @Query("SELECT * FROM mecanico WHERE idMecanico=:idMecanico")
+    Mecanico obtenerMecanico(long idMecanico);
 
     @Insert
     void insertarMecanico(Mecanico...mecanicos);
 
-    @Query("UPDATE mecanico SET nombre=:nombre,apellido=:apellido,telefono=:telefono,guardia=:guardia,turnoTrabajo=:turnoTrabajo WHERE idMecanico=:mecanic")
-    void actualizarMecanico(String mecanic,String nombre, String apellido,int telefono, Boolean guardia, String turnoTrabajo);
+    @Query("UPDATE mecanico SET nombre=:nombre,apellido=:apellido,telefono=:telefono,guardia=:guardia WHERE idMecanico=:idMecanico")
+    void actualizarMecanico(long idMecanico,String nombre, String apellido,int telefono, Boolean guardia);
 
-    @Query("DELETE FROM mecanico WHERE idMecanico=:mecanic")
-    void eliminarMecanico(String mecanic);
+    @Query("DELETE FROM mecanico WHERE idMecanico=:idMecanico")
+    void eliminarMecanico(long idMecanico);
 }
