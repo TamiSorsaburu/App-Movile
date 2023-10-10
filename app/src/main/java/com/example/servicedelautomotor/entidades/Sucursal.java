@@ -8,8 +8,7 @@ import androidx.room.PrimaryKey;
 public class Sucursal {
     @PrimaryKey
     public long idSucursal;
-    @Embedded
-    public Direccion direccion;
+
     public int telefono;
     public String correo;
 }

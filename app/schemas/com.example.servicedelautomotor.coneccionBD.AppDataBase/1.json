@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "b0f6e573bdd261f4744f16fbd9fa0fc5",
+    "identityHash": "58e0332d7450d286a496ca650f111490",
     "entities": [
       {
         "tableName": "Administrador",
@@ -332,7 +332,7 @@
       },
       {
         "tableName": "Sucursal",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idSucursal` INTEGER NOT NULL, `telefono` INTEGER NOT NULL, `correo` TEXT, `idDireccion` INTEGER, `direccionClienteId` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` TEXT, PRIMARY KEY(`idSucursal`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idSucursal` INTEGER NOT NULL, `telefono` INTEGER NOT NULL, `correo` TEXT, PRIMARY KEY(`idSucursal`))",
         "fields": [
           {
             "fieldPath": "idSucursal",
@@ -349,48 +349,6 @@
           {
             "fieldPath": "correo",
             "columnName": "correo",
-            "affinity": "TEXT",
-            "notNull": false
-          },
-          {
-            "fieldPath": "direccion.idDireccion",
-            "columnName": "idDireccion",
-            "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "direccion.direccionClienteId",
-            "columnName": "direccionClienteId",
-            "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "direccion.calle",
-            "columnName": "calle",
-            "affinity": "TEXT",
-            "notNull": false
-          },
-          {
-            "fieldPath": "direccion.altura",
-            "columnName": "altura",
-            "affinity": "TEXT",
-            "notNull": false
-          },
-          {
-            "fieldPath": "direccion.localidad",
-            "columnName": "localidad",
-            "affinity": "TEXT",
-            "notNull": false
-          },
-          {
-            "fieldPath": "direccion.provincia",
-            "columnName": "provincia",
-            "affinity": "TEXT",
-            "notNull": false
-          },
-          {
-            "fieldPath": "direccion.codigoPostal",
-            "columnName": "codigoPostal",
             "affinity": "TEXT",
             "notNull": false
           }
@@ -560,7 +518,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b0f6e573bdd261f4744f16fbd9fa0fc5')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '58e0332d7450d286a496ca650f111490')"
     ]
   }
 }
