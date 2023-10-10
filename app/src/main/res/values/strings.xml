@@ -62,6 +62,15 @@
     <string name="text_cuenta2">Ya tienes cuenta?</string>
     <!--Fin string register-->
 
+    <!--String recuperar contraseña-->
+    <string name="text_recuperar_contraseña">Recuperá tu contraseña</string>
+    <string name="text_olvidaste_contraseña">¿Olvidaste tu contraseña?</string>
+    <string name="text_ingresar_correo"> ¡No te preocupes! Escribí el mail de tu cuenta y recibí instrucciones para recuperarla.</string>
+    <string name="text_hintEmail">Email</string>
+    <string name="btn_recuperarContraseña">Recuperar Contraseña</string>
+    <string name="text_description_btnRecuperarContraseña">Botón para recuperar contraseña</string>
+    <!--Fin string recuperar contraseña-->
+
     <!--string contacto-->
     <string name="text_contacto">Contáctanos</string>
     <string name="text_redes_contacto">Siguenos en nuestras redes sociales</string>
@@ -187,18 +196,6 @@ la reparación del auto depende del daño.</string>
     <string name="sucursal">Sucursal : Centro</string>
     <string name="cancelarTurno"><u>Cancelar</u></string>
     <!--mis turnos-->
-
-
-
-
-
-
-
-
-
-
-
-
 
     //Servicios
     <string name="title_activity_servicios">Servicios</string>
