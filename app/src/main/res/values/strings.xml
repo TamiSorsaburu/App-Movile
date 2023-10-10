@@ -210,4 +210,11 @@ la reparación del auto depende del daño.</string>
     <string name="Neumaticos">Neumáticos</string>
     <string name="Cambio_de_Aceite">Cambio de Aceite</string>
     <string name="Solicitar_turno">Solicitar Turno</string>
+    //servicios
+
+    //menu_home
+    <string name="m_home">Home</string>
+    <string name="m_notificacion">Notificación</string>
+    <string name="m_setting">Configuración</string>
+    <string name="m_salir">Salir</string>
 </resources>

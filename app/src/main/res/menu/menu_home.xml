@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_home"
+        android:title="@string/m_home"
+        android:icon="@mipmap/user"/>
+
+    <item android:id="@+id/menu_notificacion"
+        android:title="@string/m_notificacion"
+        android:icon="@mipmap/ic_notificacion"
+        />
+
+    <item android:id="@+id/menu_setting"
+        android:icon="@mipmap/ic_setting"
+        android:title="@string/m_setting"
+        />
+
+    <item android:id="@+id/menu_exit"
+        android:icon="@mipmap/ic_salir"
+        android:title="@string/m_salir"/>
+</menu>
