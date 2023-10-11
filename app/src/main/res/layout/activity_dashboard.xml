@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,7 +36,7 @@
                 app:layout_constraintVertical_bias="0.665">
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/textBienvenido"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -51,7 +50,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnLogo"
                 android:layout_width="185dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="113dp"
@@ -73,14 +72,18 @@
 
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="405dp"
-        android:layout_height="611dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    <ScrollView
+    android:id="@+id/scroll"
+    android:layout_width="425dp"
+    android:layout_height="600dp"
+    android:layout_marginTop="215dp"
+    android:layout_marginBottom="99dp"
+    android:background="@color/blanco"
+    android:contentDescription="home"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -132,8 +135,8 @@
                         android:layout_marginEnd="6dp"
                         android:layout_marginBottom="18dp"
                         android:contentDescription="imagen"
-                        android:src="@mipmap/servicios"
                         android:onClick="botonServicio"
+                        android:src="@mipmap/servicios"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -305,8 +308,8 @@
                         android:layout_marginTop="14dp"
                         android:layout_marginEnd="4dp"
                         android:layout_marginBottom="15dp"
-                        android:onClick="botonPresupuesto"
                         android:contentDescription="img"
+                        android:onClick="botonPresupuesto"
                         android:src="@mipmap/presupuesto"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -361,8 +364,8 @@
                         android:layout_marginTop="14dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginBottom="14dp"
-                        android:onClick="botonMisTurnos"
                         android:contentDescription="imagen"
+                        android:onClick="botonMisTurnos"
                         android:src="@mipmap/calendar"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -416,8 +419,8 @@
                         android:layout_marginTop="13dp"
                         android:layout_marginEnd="4dp"
                         android:layout_marginBottom="14dp"
-                        android:onClick="botonPerfil"
                         android:contentDescription="imagen"
+                        android:onClick="botonPerfil"
                         android:src="@mipmap/user"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -478,9 +481,9 @@
                         android:layout_marginTop="13dp"
                         android:layout_marginEnd="6dp"
                         android:layout_marginBottom="14dp"
-                        android:src="@mipmap/auto"
                         android:contentDescription="imagen"
                         android:onClick="botonMiAuto"
+                        android:src="@mipmap/auto"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -534,8 +537,8 @@
                         android:layout_marginTop="13dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginBottom="14dp"
-                        android:onClick="botonSiniestro"
                         android:contentDescription="imagen"
+                        android:onClick="botonSiniestro"
                         android:src="@mipmap/crash"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -589,9 +592,9 @@
                         android:layout_marginTop="13dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginBottom="15dp"
-                        android:src="@mipmap/contact"
-                        android:onClick="botonContacto"
                         android:contentDescription="imagen"
+                        android:onClick="botonContacto"
+                        android:src="@mipmap/contact"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -608,11 +611,30 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-            </LinearLayout><!--contacto-->
+            </LinearLayout>
+
+            <!--contacto-->
 
         </TableRow>
 
     </TableLayout>
 
+
+</ScrollView>
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+android:layout_width="412dp"
+android:layout_height="63dp"
+android:layout_marginTop="782dp"
+android:layout_marginBottom="1dp"
+android:background="@color/principal"
+app:itemIconTint="@color/blanco"
+app:itemTextColor="@color/blanco"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:menu="@menu/menu_home"
+android:id="@+id/barraMenu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

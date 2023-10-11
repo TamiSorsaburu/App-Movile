@@ -20,22 +20,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="ExtraText">
+
 
         <TextView
             android:id="@+id/textContactenos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="52dp"
             android:text="@string/text_contacto"
             android:textAlignment="center"
             android:textColor="@color/negro"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.514"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <TextView
             android:id="@+id/redes"
@@ -88,10 +90,10 @@
             android:layout_marginStart="32dp"
             android:background="@drawable/btn_color"
             android:onClick="botonVolver"
+            android:padding="3dp"
             android:text="@string/botón_volver"
             android:textColor="@color/blanco"
             android:textSize="17sp"
-            android:padding="3dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.935"
@@ -114,81 +116,101 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/linearLayout4"
+
+        <TextView
+            android:id="@+id/textNombreContacto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
-            android:padding="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout1"
+            android:text="@string/nombre"
+            android:textColor="@color/negro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editNombre"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edittext_background"
+            android:ems="10"
+            android:hint="Ingrese su correo"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textCorreoContacto"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/textNombreContacto" />
 
-            <EditText
-                android:id="@+id/textNombre"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autofillHints="postalAddress"
-                android:background="@drawable/background_btn"
-                android:hint="@string/inpip1"
-                android:inputType="text"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                android:paddingLeft="10dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout1"
+        <TextView
+            android:id="@+id/textCorreoContacto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:padding="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout4"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+            android:text="@string/text_hint_correo"
+            android:textColor="@color/negro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editCorreo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editNombre" />
 
-            <EditText
-                android:id="@+id/textCorreoContacto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autofillHints="postalAddress"
-                android:background="@drawable/background_btn"
-                android:hint="@string/text_hint_correo"
-                android:inputType="textEmailAddress"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                android:paddingLeft="10dp"/>
-        </LinearLayout>
+        <EditText
+            android:id="@+id/editCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edittext_background"
+            android:ems="10"
+            android:hint="Ingrese su correo"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textMensajeContacto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCorreoContacto" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout5"
+        <TextView
+            android:id="@+id/textMensajeContacto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
-            android:padding="10dp"
+            android:text="@string/text_mensaje"
+            android:textColor="@color/negro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editMensaje"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editCorreo" />
+
+        <EditText
+            android:id="@+id/editMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edittext_background"
+            android:ems="10"
+            android:hint="Ingrese su mensaje"
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout1"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
-
-            <EditText
-                android:id="@+id/textMensaje"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autofillHints="postalAddress"
-                android:background="@drawable/background_btn"
-                android:hint="Mensaje"
-                android:inputType="textLongMessage"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                android:paddingLeft="10dp"/>
-        </LinearLayout>
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textMensajeContacto" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
