@@ -25,6 +25,11 @@ public class Mecanico {
 
     public long sucursalMecanicoId;
 
-
-
+    public Mecanico(long idMecanico, String nombre, String apellido, Integer telefono, Boolean guardia) {
+        this.idMecanico = idMecanico;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.guardia = guardia;
+    }
 }
