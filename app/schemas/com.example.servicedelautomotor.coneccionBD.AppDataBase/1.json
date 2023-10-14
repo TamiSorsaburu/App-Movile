@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "58e0332d7450d286a496ca650f111490",
+    "identityHash": "d6b50560e28fbd458a206c70cbce5c80",
     "entities": [
       {
         "tableName": "Administrador",
@@ -100,7 +100,7 @@
       },
       {
         "tableName": "Direccion",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idDireccion` INTEGER NOT NULL, `direccionClienteId` INTEGER NOT NULL, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` TEXT, PRIMARY KEY(`idDireccion`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idDireccion` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `direccionClienteId` INTEGER NOT NULL, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "idDireccion",
@@ -141,12 +141,12 @@
           {
             "fieldPath": "codigoPostal",
             "columnName": "codigoPostal",
-            "affinity": "TEXT",
-            "notNull": false
+            "affinity": "INTEGER",
+            "notNull": true
           }
         ],
         "primaryKey": {
-          "autoGenerate": false,
+          "autoGenerate": true,
           "columnNames": [
             "idDireccion"
           ]
@@ -332,13 +332,19 @@
       },
       {
         "tableName": "Sucursal",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idSucursal` INTEGER NOT NULL, `telefono` INTEGER NOT NULL, `correo` TEXT, PRIMARY KEY(`idSucursal`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idSucursal` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `telefono` INTEGER NOT NULL, `correo` TEXT, `idDireccion` INTEGER, `direccionClienteId` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER)",
         "fields": [
           {
             "fieldPath": "idSucursal",
             "columnName": "idSucursal",
             "affinity": "INTEGER",
             "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
           },
           {
             "fieldPath": "telefono",
@@ -351,10 +357,52 @@
             "columnName": "correo",
             "affinity": "TEXT",
             "notNull": false
+          },
+          {
+            "fieldPath": "direccion.idDireccion",
+            "columnName": "idDireccion",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.direccionClienteId",
+            "columnName": "direccionClienteId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.calle",
+            "columnName": "calle",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.altura",
+            "columnName": "altura",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.localidad",
+            "columnName": "localidad",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.provincia",
+            "columnName": "provincia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.codigoPostal",
+            "columnName": "codigoPostal",
+            "affinity": "INTEGER",
+            "notNull": false
           }
         ],
         "primaryKey": {
-          "autoGenerate": false,
+          "autoGenerate": true,
           "columnNames": [
             "idSucursal"
           ]
@@ -518,7 +566,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '58e0332d7450d286a496ca650f111490')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd6b50560e28fbd458a206c70cbce5c80')"
     ]
   }
 }

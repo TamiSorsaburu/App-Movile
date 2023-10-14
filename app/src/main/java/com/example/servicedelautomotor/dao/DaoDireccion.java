@@ -15,13 +15,13 @@ public interface DaoDireccion {
     List<Direccion> obtenerDirecciones();
 
     @Query("SELECT * FROM direccion WHERE idDireccion=:direcc")
-    Direccion obtenerDireccion(String direcc);
+    Direccion obtenerDireccion(long direcc);
 
     @Insert
     void insertarDireccion(Direccion...direccion);
 
     @Query("UPDATE direccion SET calle=:calle,altura=:altura,localidad=:localidad,provincia=:provincia,codigoPostal=:codigoPostal WHERE idDireccion=:idDireccion")
-    void actualizarDireccion(long idDireccion,String calle,int altura, String localidad,String provincia,int codigoPostal);
+    void actualizarDireccion(long idDireccion, String calle,int altura, String localidad,String provincia,int codigoPostal);
 
     @Query("DELETE FROM direccion WHERE idDireccion=:direcc")
     void eliminarDireccion(String direcc);

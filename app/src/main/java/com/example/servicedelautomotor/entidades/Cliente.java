@@ -1,5 +1,6 @@
 package com.example.servicedelautomotor.entidades;
 
+import androidx.room.Embedded;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -12,6 +13,9 @@ public class Cliente {
     public String apellido;
     public int telefono;
     public String imagen;
+
+    @Embedded
+    public Direccion direccion;
 
 
 }
