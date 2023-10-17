@@ -1,0 +1,572 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "d6b50560e28fbd458a206c70cbce5c80",
+    "entities": [
+      {
+        "tableName": "Administrador",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idAdmin` INTEGER NOT NULL, `UsuarioAdminId` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` TEXT, PRIMARY KEY(`idAdmin`))",
+        "fields": [
+          {
+            "fieldPath": "idAdmin",
+            "columnName": "idAdmin",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "UsuarioAdminId",
+            "columnName": "UsuarioAdminId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "apellido",
+            "columnName": "apellido",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "telefono",
+            "columnName": "telefono",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "idAdmin"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Cliente",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER NOT NULL, `usuarioClienteId` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, PRIMARY KEY(`idCliente`))",
+        "fields": [
+          {
+            "fieldPath": "idCliente",
+            "columnName": "idCliente",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "usuarioClienteId",
+            "columnName": "usuarioClienteId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "apellido",
+            "columnName": "apellido",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "telefono",
+            "columnName": "telefono",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imagen",
+            "columnName": "imagen",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "idCliente"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Direccion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idDireccion` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `direccionClienteId` INTEGER NOT NULL, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "idDireccion",
+            "columnName": "idDireccion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "direccionClienteId",
+            "columnName": "direccionClienteId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "calle",
+            "columnName": "calle",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "altura",
+            "columnName": "altura",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "localidad",
+            "columnName": "localidad",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "provincia",
+            "columnName": "provincia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codigoPostal",
+            "columnName": "codigoPostal",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "idDireccion"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Mecanico",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idMecanico` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER, `guardia` INTEGER, `sucursalMecanicoId` INTEGER NOT NULL, PRIMARY KEY(`idMecanico`))",
+        "fields": [
+          {
+            "fieldPath": "idMecanico",
+            "columnName": "idMecanico",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "apellido",
+            "columnName": "apellido",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "telefono",
+            "columnName": "telefono",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "guardia",
+            "columnName": "guardia",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sucursalMecanicoId",
+            "columnName": "sucursalMecanicoId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "idMecanico"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "OrdenReparacion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idOrden` INTEGER NOT NULL, `fechaIngreso` TEXT, `horaIngreso` TEXT, `motivoIngreso` TEXT, `fechaSalida` TEXT, `horaSalida` TEXT, `vehiculoOrdenId` INTEGER NOT NULL, `sucursalOrdenId` INTEGER NOT NULL, PRIMARY KEY(`idOrden`))",
+        "fields": [
+          {
+            "fieldPath": "idOrden",
+            "columnName": "idOrden",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechaIngreso",
+            "columnName": "fechaIngreso",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "horaIngreso",
+            "columnName": "horaIngreso",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "motivoIngreso",
+            "columnName": "motivoIngreso",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fechaSalida",
+            "columnName": "fechaSalida",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "horaSalida",
+            "columnName": "horaSalida",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehiculoOrdenId",
+            "columnName": "vehiculoOrdenId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sucursalOrdenId",
+            "columnName": "sucursalOrdenId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "idOrden"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Presupuesto",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idPresupuesto` INTEGER NOT NULL, `total` REAL NOT NULL, PRIMARY KEY(`idPresupuesto`))",
+        "fields": [
+          {
+            "fieldPath": "idPresupuesto",
+            "columnName": "idPresupuesto",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "total",
+            "columnName": "total",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "idPresupuesto"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Servicio",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idServicio` INTEGER NOT NULL, `nombre` TEXT, `descripcion` TEXT, `precio` REAL NOT NULL, PRIMARY KEY(`idServicio`))",
+        "fields": [
+          {
+            "fieldPath": "idServicio",
+            "columnName": "idServicio",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "descripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "precio",
+            "columnName": "precio",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "idServicio"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Sucursal",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idSucursal` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `telefono` INTEGER NOT NULL, `correo` TEXT, `idDireccion` INTEGER, `direccionClienteId` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "idSucursal",
+            "columnName": "idSucursal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "telefono",
+            "columnName": "telefono",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correo",
+            "columnName": "correo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.idDireccion",
+            "columnName": "idDireccion",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.direccionClienteId",
+            "columnName": "direccionClienteId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.calle",
+            "columnName": "calle",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.altura",
+            "columnName": "altura",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.localidad",
+            "columnName": "localidad",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.provincia",
+            "columnName": "provincia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.codigoPostal",
+            "columnName": "codigoPostal",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "idSucursal"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Turno",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idTurno` INTEGER NOT NULL, `clienteTurnoId` INTEGER NOT NULL, `sucursalTurnoId` INTEGER NOT NULL, `dia` TEXT, `hora` TEXT, PRIMARY KEY(`idTurno`))",
+        "fields": [
+          {
+            "fieldPath": "idTurno",
+            "columnName": "idTurno",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "clienteTurnoId",
+            "columnName": "clienteTurnoId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sucursalTurnoId",
+            "columnName": "sucursalTurnoId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dia",
+            "columnName": "dia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hora",
+            "columnName": "hora",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "idTurno"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "TurnoTrabajo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idTurnoTrabajo` INTEGER NOT NULL, `dia` TEXT, `hora` TEXT, PRIMARY KEY(`idTurnoTrabajo`))",
+        "fields": [
+          {
+            "fieldPath": "idTurnoTrabajo",
+            "columnName": "idTurnoTrabajo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dia",
+            "columnName": "dia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hora",
+            "columnName": "hora",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "idTurnoTrabajo"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Usuario",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idUsuario` INTEGER NOT NULL, `correo` TEXT, `contraseña` TEXT, PRIMARY KEY(`idUsuario`))",
+        "fields": [
+          {
+            "fieldPath": "idUsuario",
+            "columnName": "idUsuario",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correo",
+            "columnName": "correo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "contraseña",
+            "columnName": "contraseña",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "idUsuario"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Vehiculo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idVehiculo` INTEGER NOT NULL, `tipoVehiculo` TEXT, `patente` INTEGER NOT NULL, `modelo` TEXT, `marca` TEXT, PRIMARY KEY(`idVehiculo`))",
+        "fields": [
+          {
+            "fieldPath": "idVehiculo",
+            "columnName": "idVehiculo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipoVehiculo",
+            "columnName": "tipoVehiculo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "patente",
+            "columnName": "patente",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "modelo",
+            "columnName": "modelo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "marca",
+            "columnName": "marca",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "idVehiculo"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd6b50560e28fbd458a206c70cbce5c80')"
+    ]
+  }
+}

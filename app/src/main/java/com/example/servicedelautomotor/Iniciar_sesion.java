@@ -18,4 +18,9 @@ public class Iniciar_sesion extends AppCompatActivity {
         Intent intent = new Intent(this, Dashboard.class);
         startActivity(intent);
     }
+
+    public void textRecuperarContraseña(View view) {
+        Intent intent = new Intent(this, RecuperarContrasena.class);
+        startActivity(intent);
+    }
 }

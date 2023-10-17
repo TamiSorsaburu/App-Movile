@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dashboard">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,48 +36,54 @@
                 app:layout_constraintVertical_bias="0.665">
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/textBienvenido"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="@drawable/blurredblack"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center_horizontal"
-                    android:text="QUE TAL"
-                    android:background="@drawable/blurredblack"
+                    android:text="BIENVENIDO"
                     android:textColor="#F6BB46"
                     android:textSize="30sp" />
 
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/btnLogo"
                 android:layout_width="185dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="113dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="113dp"
+                android:background="@drawable/blurredblack"
+                android:contentDescription="@string/app_name"
+                android:onClick="boton"
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@mipmap/logo"
-                android:background="@drawable/blurredblack"/>
+                app:srcCompat="@mipmap/logo" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="405dp"
-        android:layout_height="611dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    <ScrollView
+    android:id="@+id/scroll"
+    android:layout_width="425dp"
+    android:layout_height="600dp"
+    android:layout_marginTop="215dp"
+    android:layout_marginBottom="99dp"
+    android:background="@color/blanco"
+    android:contentDescription="home"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -91,6 +96,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:gravity="center">
 
             <LinearLayout
@@ -122,14 +128,15 @@
 
                     <ImageView
                         android:id="@+id/imgServicio"
-                        android:layout_width="67dp"
-                        android:layout_height="55dp"
-                        android:layout_marginStart="14dp"
-                        android:layout_marginTop="18dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="24dp"
-                        android:contentDescription="@string/btnServicio"
-                        android:src="@mipmap/lavado"
+                        android:layout_width="81dp"
+                        android:layout_height="66dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="18dp"
+                        android:contentDescription="imagen"
+                        android:onClick="botonServicio"
+                        android:src="@mipmap/servicios"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -140,9 +147,7 @@
                 <TextView
                     android:id="@+id/textServicio"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-5dp"
-                    android:padding="3dp"
+                    android:layout_height="48sp"
                     android:text="@string/btnServicio"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -170,7 +175,6 @@
                         android:layout_height="77dp"
                         android:layout_margin="10dp"
                         android:contentDescription="imagen"
-                        android:onClick="botonServicios"
                         android:src="@mipmap/btn"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -179,13 +183,13 @@
 
                     <ImageView
                         android:id="@+id/imgMecanico"
-                        android:layout_width="84dp"
-                        android:layout_height="84dp"
-                        android:layout_marginStart="3dp"
-                        android:layout_marginTop="6dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginBottom="7dp"
-                        android:contentDescription="@string/btnMecanico"
+                        android:layout_width="81dp"
+                        android:layout_height="65dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="18dp"
+                        android:contentDescription="imagen"
                         android:onClick="botonMecanico"
                         android:src="@mipmap/mecanic"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -198,9 +202,7 @@
                 <TextView
                     android:id="@+id/textMecanico"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-5dp"
-                    android:padding="3dp"
+                    android:layout_height="48sp"
                     android:text="@string/btnMecanico"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -227,7 +229,6 @@
                         android:layout_height="77dp"
                         android:layout_margin="10dp"
                         android:contentDescription="imagen"
-                        android:onClick="botonServicios"
                         android:src="@mipmap/btn"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -236,13 +237,14 @@
 
                     <ImageView
                         android:id="@+id/imgGrua"
-                        android:layout_width="81dp"
-                        android:layout_height="66dp"
-                        android:layout_marginStart="6dp"
-                        android:layout_marginTop="17dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginBottom="14dp"
-                        android:contentDescription="@string/btnGrua"
+                        android:layout_width="80dp"
+                        android:layout_height="68dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="15dp"
+                        android:contentDescription="imagen"
+                        android:onClick="botonGrua"
                         android:src="@mipmap/s"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -254,9 +256,7 @@
                 <TextView
                     android:id="@+id/textGrua"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-5dp"
-                    android:padding="3dp"
+                    android:layout_height="45dp"
                     android:text="@string/btnGrua"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -270,6 +270,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:gravity="center">
 
 
@@ -280,7 +281,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="12dp"
                 android:orientation="vertical"
-                tools:layout_margin="16dp"><!--SIENIESTRO-->
+                tools:layout_margin="16dp"><!--Presupuesto-->
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="91dp"
@@ -288,12 +289,11 @@
                     android:background="@drawable/background_btn">
 
                     <ImageView
-                        android:id="@+id/FondoSiniestro"
+                        android:id="@+id/FondoPresupuesto"
                         android:layout_width="87dp"
                         android:layout_height="77dp"
                         android:layout_margin="10dp"
                         android:contentDescription="imagen"
-                        android:onClick="botonServicios"
                         android:src="@mipmap/btn"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -301,15 +301,16 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/imgSiniestro"
-                        android:layout_width="79dp"
-                        android:layout_height="72dp"
+                        android:id="@+id/imgPresupuesto"
+                        android:layout_width="81dp"
+                        android:layout_height="68dp"
                         android:layout_marginStart="6dp"
-                        android:layout_marginTop="11dp"
-                        android:layout_marginEnd="6dp"
-                        android:layout_marginBottom="14dp"
-                        android:contentDescription="@string/btnSiniestros"
-                        android:src="@mipmap/crash"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="15dp"
+                        android:contentDescription="img"
+                        android:onClick="botonPresupuesto"
+                        android:src="@mipmap/presupuesto"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -318,17 +319,16 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
-                    android:id="@+id/textSiniestro"
+                    android:id="@+id/textPresupuesto"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-5dp"
-                    android:padding="3dp"
-                    android:text="@string/btnSiniestros"
+                    android:layout_height="48sp"
+                    android:onClick="botonPresupuesto"
+                    android:text="@string/btnPresupuesto"
                     android:textAlignment="center"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-            </LinearLayout><!--siniestro-->
+            </LinearLayout><!--presupuesto-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -358,13 +358,14 @@
 
                     <ImageView
                         android:id="@+id/imgMiTurno"
-                        android:layout_width="71dp"
-                        android:layout_height="62dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="19dp"
-                        android:contentDescription="@string/btnTurnos"
+                        android:layout_width="80dp"
+                        android:layout_height="69dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="14dp"
+                        android:contentDescription="imagen"
+                        android:onClick="botonMisTurnos"
                         android:src="@mipmap/calendar"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -376,9 +377,7 @@
                 <TextView
                     android:id="@+id/textMiTurno"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-5dp"
-                    android:padding="3dp"
+                    android:layout_height="48sp"
                     android:text="@string/btnTurnos"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -414,13 +413,14 @@
 
                     <ImageView
                         android:id="@+id/imgMiPerfil"
-                        android:layout_width="74dp"
-                        android:layout_height="67dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="7dp"
-                        android:layout_marginBottom="15dp"
-                        android:contentDescription="@string/btnPerfil"
+                        android:layout_width="82dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="14dp"
+                        android:contentDescription="imagen"
+                        android:onClick="botonPerfil"
                         android:src="@mipmap/user"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -432,9 +432,7 @@
                 <TextView
                     android:id="@+id/textMiPerfil"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-5dp"
-                    android:padding="3dp"
+                    android:layout_height="48sp"
                     android:text="@string/btnPerfil"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -446,6 +444,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:gravity="center">
 
             <LinearLayout
@@ -478,11 +477,12 @@
                         android:id="@+id/imgMiAuto"
                         android:layout_width="81dp"
                         android:layout_height="70dp"
-                        android:layout_marginStart="6dp"
+                        android:layout_marginStart="4dp"
                         android:layout_marginTop="13dp"
-                        android:layout_marginEnd="4dp"
+                        android:layout_marginEnd="6dp"
                         android:layout_marginBottom="14dp"
-                        android:contentDescription="@string/btnMiAuto"
+                        android:contentDescription="imagen"
+                        android:onClick="botonMiAuto"
                         android:src="@mipmap/auto"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -494,9 +494,7 @@
                 <TextView
                     android:id="@+id/textMiAuto"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-5dp"
-                    android:padding="3dp"
+                    android:layout_height="48sp"
                     android:text="@string/btnMiAuto"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -512,7 +510,62 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="12dp"
                 android:orientation="vertical"
-                tools:layout_margin="16dp"><!--contacto-->
+                tools:layout_margin="16dp"><!--siniestro-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="91dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_btn">
+
+                    <ImageView
+                        android:id="@+id/FondoSiniestro"
+                        android:layout_width="87dp"
+                        android:layout_height="77dp"
+                        android:layout_margin="10dp"
+                        android:contentDescription="imagen"
+                        android:src="@mipmap/btn"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imgSiniestro"
+                        android:layout_width="81dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="14dp"
+                        android:contentDescription="imagen"
+                        android:onClick="botonSiniestro"
+                        android:src="@mipmap/crash"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textSiniestro"
+                    android:layout_width="match_parent"
+                    android:layout_height="48sp"
+                    android:text="@string/btnSiniestros"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout><!--contacto-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="vertical"
+                tools:layout_margin="16dp"><!---->
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="91dp"
@@ -533,14 +586,15 @@
 
                     <ImageView
                         android:id="@+id/imgContacto"
-                        android:layout_width="79dp"
-                        android:layout_height="72dp"
-                        android:layout_marginStart="6dp"
+                        android:layout_width="81dp"
+                        android:layout_height="69dp"
+                        android:layout_marginStart="5dp"
                         android:layout_marginTop="13dp"
-                        android:layout_marginEnd="6dp"
-                        android:layout_marginBottom="12dp"
-                        android:contentDescription="@string/btnContacto"
-                        android:src="@mipmap/carservice"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:contentDescription="imagen"
+                        android:onClick="botonContacto"
+                        android:src="@mipmap/contact"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -551,75 +605,36 @@
                 <TextView
                     android:id="@+id/textContacto"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-5dp"
-                    android:padding="3dp"
+                    android:layout_height="48sp"
                     android:text="@string/btnContacto"
                     android:textAlignment="center"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-            </LinearLayout><!--contacto-->
+            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="12dp"
-                android:orientation="vertical"
-                tools:layout_margin="16dp"><!--configuracion-->
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="91dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/background_btn">
-
-                    <ImageView
-                        android:id="@+id/FondoConfiguracion"
-                        android:layout_width="87dp"
-                        android:layout_height="77dp"
-                        android:layout_margin="10dp"
-                        android:contentDescription="imagen"
-                        android:src="@mipmap/btn"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/imgConfiguracion"
-                        android:layout_width="83dp"
-                        android:layout_height="74dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginEnd="3dp"
-                        android:layout_marginBottom="11dp"
-                        android:contentDescription="@string/btnConfiguracion"
-                        android:src="@mipmap/settings"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <TextView
-                    android:id="@+id/textConfiguracion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-5dp"
-                    android:padding="3dp"
-                    android:text="@string/btnConfiguracion"
-                    android:textAlignment="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout><!--contacto-->
+            <!--contacto-->
 
         </TableRow>
 
     </TableLayout>
 
+
+</ScrollView>
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+android:layout_width="412dp"
+android:layout_height="63dp"
+android:layout_marginTop="782dp"
+android:layout_marginBottom="1dp"
+android:background="@color/principal"
+app:itemIconTint="@color/blanco"
+app:itemTextColor="@color/blanco"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:menu="@menu/menu_home"
+android:id="@+id/barraMenu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

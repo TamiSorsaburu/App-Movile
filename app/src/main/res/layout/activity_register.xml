@@ -8,7 +8,6 @@
     tools:context=".Register">
 
     <ImageView
-
         android:id="@+id/imageLogoRegister"
         android:layout_width="263dp"
         android:layout_height="87dp"
