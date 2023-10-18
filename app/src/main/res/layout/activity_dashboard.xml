@@ -53,19 +53,30 @@
                 android:id="@+id/btnLogo"
                 android:layout_width="185dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="113dp"
                 android:layout_marginTop="50dp"
-                android:layout_marginEnd="113dp"
                 android:background="@drawable/blurredblack"
                 android:contentDescription="@string/app_name"
                 android:onClick="boton"
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout2"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@mipmap/logo" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center_horizontal"
+                android:text="Ayelen"
+                android:textColor="@color/secundario"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

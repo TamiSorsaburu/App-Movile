@@ -46,7 +46,7 @@
 
     <!--string login-->
     <string name="text_login">Iniciar Sesión</string>
-    <string name="text_hint_user">Email o Nombre de Usuario</string>
+    <string name="text_hint_user">Email</string>
     <string name="text_forget">Olvidó su contraseña?</string>
     <string name="text_description_btnLogin">Botón para iniciar sesión en la aplicación</string>
     <string name="text_hint_password">Contraseña</string>
