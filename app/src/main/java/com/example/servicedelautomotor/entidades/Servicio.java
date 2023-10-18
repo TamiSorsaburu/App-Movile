@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Servicio {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public long idServicio;
     public String nombre;
     public String descripcion;

@@ -12,10 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceDelAutomotor"
         tools:targetApi="31">
+
+        <activity
+            android:name=".MenuAdmin"
+            android:exported="true">
+        </activity>
         <activity
             android:name=".AgregarSucursal"
             android:exported="false" >
-
         </activity>
         <activity
             android:name=".ListadoMecanicos"
@@ -23,7 +27,6 @@
         <activity
             android:name=".AgregarMecanicos"
             android:exported="false">
-
         </activity>
         <activity
             android:name=".RecuperarContrasena"

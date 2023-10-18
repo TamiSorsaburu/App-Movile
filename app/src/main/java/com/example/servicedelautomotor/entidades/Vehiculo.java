@@ -5,7 +5,8 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Vehiculo {
-    @PrimaryKey public long idVehiculo;
+    @PrimaryKey(autoGenerate = true)
+    public long idVehiculo;
     public String tipoVehiculo;
     public int patente;
     public String modelo;

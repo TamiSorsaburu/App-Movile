@@ -60,6 +60,10 @@ public class Dashboard extends AppCompatActivity {
         startActivity(presupuesto);
     }
 
+    public void botonMenuAdmin(View V) {
+        Intent i = new Intent(this, MenuAdmin.class);
+        startActivity(i);
+    }
 }
 
 

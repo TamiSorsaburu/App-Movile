@@ -7,7 +7,8 @@ import java.util.Date;
 
 @Entity
 public class TurnoTrabajo {
-    @PrimaryKey public long idTurnoTrabajo;
+    @PrimaryKey(autoGenerate = true)
+    public long idTurnoTrabajo;
     public String dia;
     public String hora;
 }

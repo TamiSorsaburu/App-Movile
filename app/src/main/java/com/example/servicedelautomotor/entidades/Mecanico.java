@@ -13,7 +13,7 @@ import java.util.ArrayList;
 @Entity
 public class Mecanico {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public long idMecanico;
     public String nombre;
 
