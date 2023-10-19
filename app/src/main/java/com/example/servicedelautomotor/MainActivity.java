@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
         //llamar BD
         AppDataBase db= AppDataBase.getInstance(this.getApplicationContext());
-        //insertando un usuario
-        db.daoUsuario().insertarUsuario(new Usuario(1,"usuario@gmail.com","assdd444"));
 
         db.daoMecanico().insertMecanicos(new Mecanico(4,"Nombre","Apellido",56,true));
         db.daoMecanico().insertMecanicos(new Mecanico(5,"Nombre5","Apellido5",5,true));
