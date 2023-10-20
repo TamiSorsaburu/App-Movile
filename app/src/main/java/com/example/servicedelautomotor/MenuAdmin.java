@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.servicedelautomotor.crud.AgregarMecanico;
+
 public class MenuAdmin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +17,11 @@ public class MenuAdmin extends AppCompatActivity {
 
     public void botonVolver(View V) {
         Intent i = new Intent(this, Dashboard.class);
+        startActivity(i);
+    }
+
+    public void crudMecanico(View V) {
+        Intent i = new Intent(this, AgregarMecanico.class);
         startActivity(i);
     }
 }

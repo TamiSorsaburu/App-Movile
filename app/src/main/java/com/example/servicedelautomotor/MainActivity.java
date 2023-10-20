@@ -23,20 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //llamar BD
-        AppDataBase db= AppDataBase.getInstance(this.getApplicationContext());
 
-        db.daoMecanico().insertMecanicos(new Mecanico(4,"Nombre","Apellido",56,true));
-        db.daoMecanico().insertMecanicos(new Mecanico(5,"Nombre5","Apellido5",5,true));
-        db.daoMecanico().insertMecanicos(new Mecanico(6,"Nombre6","Apellido6",6,true));
-        db.daoMecanico().insertMecanicos(new Mecanico(7,"Nombre7","Apellido7",56,true));
-        db.daoMecanico().insertMecanicos(new Mecanico(8,"Nombre8","Apellido8",58,true));
-
-        List<Mecanico> mecanicos = db.daoMecanico().obtenerMecanicos();
-        System.out.println("lista de mecanicos");
-        for (int i=0;i<mecanicos.size();i++) {
-
-            System.out.println(mecanicos.get(i).nombre);
-        }
 
     }
 
