@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "a76adddb3ea58afd98a040a5aa35a93a",
+    "identityHash": "8bf95b7c21462d237e357935c75b3319",
     "entities": [
       {
         "tableName": "Administrador",
@@ -596,6 +596,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ff69a70f3699ed314f27a34f16a0c3f0')"
       "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a76adddb3ea58afd98a040a5aa35a93a')"
     ]
   }
