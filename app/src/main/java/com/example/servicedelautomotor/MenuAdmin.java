@@ -24,4 +24,10 @@ public class MenuAdmin extends AppCompatActivity {
         Intent i = new Intent(this, AgregarMecanico.class);
         startActivity(i);
     }
+
+    public void crudSucursal(View V) {
+        Intent i = new Intent(this, AgregarSucursal.class);
+        startActivity(i);
+    }
+
 }
