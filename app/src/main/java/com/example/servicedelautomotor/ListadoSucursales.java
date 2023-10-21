@@ -110,7 +110,7 @@ public class ListadoSucursales extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     abrirVentanaModificacion(sucur);
-                    Toast.makeText(getContext(), "Se modificó la Sucursal de id " + idSucur, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Se modificará la Sucursal de id " + idSucur, Toast.LENGTH_SHORT).show();
 
                 }
             });

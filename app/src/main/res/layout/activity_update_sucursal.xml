@@ -129,11 +129,11 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnRegistro"
+        android:id="@+id/btnEditar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="Registrar Sucursal"
+        android:text="Guardar cambios"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
