@@ -50,11 +50,7 @@
       },
       {
         "tableName": "Cliente",
-<<<<<<< HEAD
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER NOT NULL, `usuarioClienteId` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, `idDireccion` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER, PRIMARY KEY(`idCliente`))",
-=======
         "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `usuarioClienteId` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, `idDireccion` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER)",
->>>>>>> 8eebd1a42aaf6c10840bbb99aceeac0943cf17d0
         "fields": [
           {
             "fieldPath": "idCliente",
@@ -600,12 +596,9 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-<<<<<<< HEAD
+
       "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8bf95b7c21462d237e357935c75b3319')"
-=======
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ff69a70f3699ed314f27a34f16a0c3f0')"
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a76adddb3ea58afd98a040a5aa35a93a')"
->>>>>>> 8eebd1a42aaf6c10840bbb99aceeac0943cf17d0
+
     ]
   }
 }
