@@ -50,6 +50,11 @@ public class AgregarSucursal extends AppCompatActivity {
         appDatabase.daoDireccion().insertarDireccion(direccion);
         appDatabase.daoSucursal().insertarSucursal(new Sucursal(campoNombre.getText().toString(),Integer.parseInt(campoTelefono.getText().toString()),campoCorreo.getText().toString(),direccion));
 
-        Toast.makeText(AgregarSucursal.this, "Sucursal " + campoNombre.toString() + " agregada", Toast.LENGTH_SHORT).show();
+        Toast.makeText(AgregarSucursal.this, "Sucursal " + campoNombre.getText().toString() + " agregada", Toast.LENGTH_SHORT).show();
+    }
+
+    public void btnListar(View view) {
+        Intent intent = new Intent(this, ListadoSucursales.class);
+        startActivity(intent);
     }
 }
