@@ -3,6 +3,7 @@ package com.example.servicedelautomotor;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +12,10 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        String name = getIntent().getStringExtra("nombreUsuario");
+        TextView nameTextView = findViewById(R.id.name);
+        nameTextView.setText(name);
     }
 
     //metodo para botones
@@ -60,6 +65,10 @@ public class Dashboard extends AppCompatActivity {
         startActivity(presupuesto);
     }
 
+    public void botonMenuAdmin(View V) {
+        Intent i = new Intent(this, MenuAdmin.class);
+        startActivity(i);
+    }
 }
 
 

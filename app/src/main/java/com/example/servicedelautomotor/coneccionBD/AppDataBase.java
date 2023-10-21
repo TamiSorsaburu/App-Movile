@@ -45,7 +45,7 @@ import com.example.servicedelautomotor.entidades.Vehiculo;
         TurnoTrabajo.class,
         Usuario.class,
         Vehiculo.class},
-        version =1,exportSchema = true )
+        version =1)
 public abstract class AppDataBase extends RoomDatabase {
 
     public static AppDataBase INSTANCE;
@@ -66,9 +66,9 @@ public abstract class AppDataBase extends RoomDatabase {
 
     public static AppDataBase getInstance(Context context){
         if (INSTANCE==null){
-            INSTANCE= Room.databaseBuilder(context, AppDataBase.class, "dbServiceAutomotor")
+            INSTANCE= Room.databaseBuilder(context.getApplicationContext(),
+                            AppDataBase.class, "dbServiceAutomotor")
                     .allowMainThreadQueries()
-                    .fallbackToDestructiveMigration()
                     .build();
         }
         return INSTANCE;

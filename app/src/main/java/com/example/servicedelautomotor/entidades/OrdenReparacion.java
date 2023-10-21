@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 public class OrdenReparacion {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public long idOrden;
     public String fechaIngreso;
     public String horaIngreso;
