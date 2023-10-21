@@ -13,18 +13,22 @@
         android:theme="@style/Theme.ServiceDelAutomotor"
         tools:targetApi="31">
         <activity
-            android:name=".AgregarSucursal"
-            android:exported="false" >
-
-        </activity>
+            android:name=".UpdateSucursal"
+            android:exported="false" />
         <activity
-            android:name=".ListadoMecanicos"
-            android:exported="false"></activity>
-        <activity
-            android:name=".AgregarMecanicos"
+            android:name=".ListadoSucursales"
             android:exported="false">
 
         </activity>
+        <activity
+            android:name=".AgregarSucursal"
+            android:exported="false"></activity>
+        <activity
+            android:name=".ListadoMecanicos"
+            android:exported="false" />
+        <activity
+            android:name=".AgregarMecanicos"
+            android:exported="false" />
         <activity
             android:name=".RecuperarContrasena"
             android:exported="false" />
@@ -120,7 +124,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

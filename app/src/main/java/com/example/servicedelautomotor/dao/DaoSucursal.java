@@ -13,7 +13,7 @@ import java.util.List;
 @Dao
 public interface DaoSucursal {
     @Query("SELECT * FROM sucursal")
-    List<Sucursal> obtenerSucursal();
+    List<Sucursal> obtenerSucursales();
 
     @Query("SELECT * FROM sucursal WHERE idSucursal=:idSucursal")
     Sucursal obtenerSuscursal(long idSucursal);
@@ -21,8 +21,8 @@ public interface DaoSucursal {
     @Insert
     void insertarSucursal(Sucursal...sucursales);
 
-    @Query("UPDATE sucursal SET  telefono=:telefono, correo=:correo WHERE idSucursal=:idSucursal")
-    void actualizarSucursal(long idSucursal,  int telefono, String correo );
+    @Query("UPDATE sucursal SET  nombre=:nombre, correo=:correo WHERE idSucursal=:idSucursal")
+    void actualizarSucursal(long idSucursal,  String nombre, String correo );
 
     @Query("DELETE FROM sucursal WHERE idSucursal=:idSucursal")
     void eliminarSucursal(long idSucursal);
