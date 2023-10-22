@@ -18,6 +18,7 @@ public interface DaoMecanico {
     @Insert
     void insertarMecanico(Mecanico... mecanico);
 
+
     @Query("SELECT EXISTS(SELECT * FROM mecanico WHERE idMecanico=:idMecanico)")
     Boolean obtenerMecanico(int idMecanico);
 
@@ -28,10 +29,9 @@ public interface DaoMecanico {
 
 
 
-    @Query("UPDATE mecanico SET nombre=:nombre,apellido=:apellido,telefono=:telefono ,guardia=:guardia,sucursalMecanicoId=:sucursal WHERE idMecanico=:idMecanico")
-    void actualizarMecanico(String nombre, String apellido, int telefono, String guardia,int sucursal, int idMecanico);
+    @Query("UPDATE mecanico SET nombre=:nombre,apellido=:apellido,telefono=:telefono,sucursalMecanicoId=:sucursal,guardia=:guardia WHERE idMecanico=:idMecanico")
+    void actualizarMecanico( int idMecanico,String nombre, String apellido,int telefono,int sucursal,String guardia);
 
-
-    @Delete
-    void eliminarMecanico(Mecanico mecanico);
+    @Query("DELETE FROM Mecanico WHERE idMecanico=:id")
+    void eliminarMecanico(int id);
 }
