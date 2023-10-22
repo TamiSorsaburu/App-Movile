@@ -49,6 +49,11 @@ public class Iniciar_sesion extends AppCompatActivity {
                                            }
                                        }
         );
+
+        if(mAuth.getCurrentUser() != null) {
+            startActivity(new Intent(Iniciar_sesion.this, Dashboard.class));
+            finish();
+        }
     }
 
     private void loginUser() {

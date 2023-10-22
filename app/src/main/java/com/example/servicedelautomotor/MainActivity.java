@@ -10,20 +10,25 @@ import android.view.View;
 import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.entidades.Mecanico;
 import com.example.servicedelautomotor.entidades.Usuario;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //llamar BD
+        mAuth = FirebaseAuth.getInstance();
 
+        if(mAuth.getCurrentUser() != null) {
+            startActivity(new Intent(MainActivity.this, Dashboard.class));
+            finish();
+        }
 
     }
 

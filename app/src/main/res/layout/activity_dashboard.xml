@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center_horizontal"
-                android:text="Ayelen"
+                android:text=""
                 android:textColor="@color/secundario"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"

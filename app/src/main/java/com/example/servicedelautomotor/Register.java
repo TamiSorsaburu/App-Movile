@@ -56,6 +56,11 @@ public class Register extends AppCompatActivity {
                 registerUser();
             }
         });
+
+        if(mAuth.getCurrentUser() != null) {
+            startActivity(new Intent(Register.this, Dashboard.class));
+            finish();
+        }
     }
 
     private void registerUser() {
