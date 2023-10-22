@@ -71,7 +71,8 @@
             android:textColor="@color/blanco"
             android:textSize="16sp"
             tools:layout_editor_absoluteX="57dp"
-            tools:layout_editor_absoluteY="137dp" />
+            tools:layout_editor_absoluteY="137dp"
+            android:onClick="crudSucursal"/>
 
     </LinearLayout>
 
