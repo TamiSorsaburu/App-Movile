@@ -25,4 +25,9 @@ public interface DaoUsuario {
 
     @Query("DELETE FROM usuario WHERE idUsuario=:user")
     void eliminarUsuario(String user);
+
+    @Query("SELECT * FROM usuario WHERE correo = :correo")
+    Usuario getUsuarioPorCorreo(String correo);
+
+
 }

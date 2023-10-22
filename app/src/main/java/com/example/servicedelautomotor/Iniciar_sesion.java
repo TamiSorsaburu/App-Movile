@@ -1,5 +1,6 @@
 package com.example.servicedelautomotor;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
@@ -13,6 +14,11 @@ import android.widget.Toast;
 
 import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.entidades.Usuario;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Iniciar_sesion extends AppCompatActivity {
     private EditText usernameEditText;
@@ -21,12 +27,16 @@ public class Iniciar_sesion extends AppCompatActivity {
 
     private AppDataBase database;
 
+    FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion);
 
         database = Room.databaseBuilder(getApplicationContext(), AppDataBase.class, "dbServiceAutomotor").build();
+
+        mAuth = FirebaseAuth.getInstance();
 
         usernameEditText = findViewById(R.id.textUserLogin);
         passwordEditText = findViewById(R.id.userContraseñaLogin);
@@ -45,6 +55,24 @@ public class Iniciar_sesion extends AppCompatActivity {
         String correo = usernameEditText.getText().toString();
         String contraseña = passwordEditText.getText().toString();
 
+        mAuth.signInWithEmailAndPassword(correo, contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    finish();
+                    Intent intent = new Intent(Iniciar_sesion.this, Dashboard.class);
+                    startActivity(intent);
+                    Toast.makeText(Iniciar_sesion.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
+                } else{
+                    Toast.makeText(Iniciar_sesion.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(Iniciar_sesion.this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show();
+            }
+        });
         // Realiza la verificación de inicio de sesión
         new LoginUserTask().execute(correo, contraseña);
     }

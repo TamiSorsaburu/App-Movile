@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "d6b50560e28fbd458a206c70cbce5c80",
+    "identityHash": "03c9154a70516c57f36169feeeb82314",
     "entities": [
       {
         "tableName": "Administrador",
@@ -50,7 +50,7 @@
       },
       {
         "tableName": "Cliente",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER NOT NULL, `usuarioClienteId` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, PRIMARY KEY(`idCliente`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER NOT NULL, `usuarioClienteId` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, `idDireccion` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER, PRIMARY KEY(`idCliente`))",
         "fields": [
           {
             "fieldPath": "idCliente",
@@ -87,6 +87,42 @@
             "columnName": "imagen",
             "affinity": "TEXT",
             "notNull": false
+          },
+          {
+            "fieldPath": "direccion.idDireccion",
+            "columnName": "idDireccion",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.calle",
+            "columnName": "calle",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.altura",
+            "columnName": "altura",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.localidad",
+            "columnName": "localidad",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.provincia",
+            "columnName": "provincia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "direccion.codigoPostal",
+            "columnName": "codigoPostal",
+            "affinity": "INTEGER",
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -100,17 +136,11 @@
       },
       {
         "tableName": "Direccion",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idDireccion` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `direccionClienteId` INTEGER NOT NULL, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idDireccion` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "idDireccion",
             "columnName": "idDireccion",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "direccionClienteId",
-            "columnName": "direccionClienteId",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -332,7 +362,7 @@
       },
       {
         "tableName": "Sucursal",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idSucursal` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `telefono` INTEGER NOT NULL, `correo` TEXT, `idDireccion` INTEGER, `direccionClienteId` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idSucursal` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `telefono` INTEGER NOT NULL, `correo` TEXT, `idDireccion` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER)",
         "fields": [
           {
             "fieldPath": "idSucursal",
@@ -361,12 +391,6 @@
           {
             "fieldPath": "direccion.idDireccion",
             "columnName": "idDireccion",
-            "affinity": "INTEGER",
-            "notNull": false
-          },
-          {
-            "fieldPath": "direccion.direccionClienteId",
-            "columnName": "direccionClienteId",
             "affinity": "INTEGER",
             "notNull": false
           },
@@ -487,14 +511,20 @@
         "foreignKeys": []
       },
       {
-        "tableName": "Usuario",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idUsuario` INTEGER NOT NULL, `correo` TEXT, `contraseña` TEXT, PRIMARY KEY(`idUsuario`))",
+        "tableName": "usuario",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idUsuario` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombreUsuario` TEXT, `correo` TEXT, `contraseña` TEXT)",
         "fields": [
           {
             "fieldPath": "idUsuario",
             "columnName": "idUsuario",
             "affinity": "INTEGER",
             "notNull": true
+          },
+          {
+            "fieldPath": "nombreUsuario",
+            "columnName": "nombreUsuario",
+            "affinity": "TEXT",
+            "notNull": false
           },
           {
             "fieldPath": "correo",
@@ -510,7 +540,7 @@
           }
         ],
         "primaryKey": {
-          "autoGenerate": false,
+          "autoGenerate": true,
           "columnNames": [
             "idUsuario"
           ]
@@ -566,7 +596,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd6b50560e28fbd458a206c70cbce5c80')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '03c9154a70516c57f36169feeeb82314')"
     ]
   }
 }
