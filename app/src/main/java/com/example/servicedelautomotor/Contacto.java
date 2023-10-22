@@ -26,15 +26,9 @@ public class Contacto extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 }
-                // Agrega más bloques else if para otros elementos de menú si es necesario.
                 return false;
             }
         });
     }
 
-
-    public void botonVolver(View V){
-        Intent volver=new Intent(this, Dashboard.class);
-        startActivity(volver);
-    }
 }

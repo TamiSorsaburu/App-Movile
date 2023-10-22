@@ -42,7 +42,7 @@
 
         <TextView
             android:id="@+id/redes"
-            android:layout_width="wrap_content"
+            android:layout_width="249dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="196dp"
             android:text="@string/text_redes_contacto"
@@ -52,7 +52,6 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.389"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="TextSizeCheck">
 
@@ -83,24 +82,6 @@
             app:layout_constraintTop_toBottomOf="@+id/redes"
             app:layout_constraintVertical_bias="0.301"
             app:srcCompat="@mipmap/instagram" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="100dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="32dp"
-            android:background="@drawable/btn_color"
-            android:onClick="botonVolver"
-            android:padding="3dp"
-            android:text="@string/botón_volver"
-            android:textColor="@color/blanco"
-            android:textSize="17sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.935"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageInstagram"
-            app:layout_constraintVertical_bias="0.208" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -128,6 +109,7 @@
             android:textColor="@color/negro"
             android:textSize="18sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editNombre"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -136,7 +118,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/edittext_background"
             android:ems="10"
@@ -154,7 +136,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/text_hint_correo"
             android:textColor="@color/negro"
             android:textSize="18sp"
@@ -168,7 +150,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/edittext_background"
             android:ems="10"
@@ -186,7 +168,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/text_mensaje"
             android:textColor="@color/negro"
             android:textSize="18sp"
@@ -200,7 +182,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/edittext_background"
             android:ems="10"
@@ -208,10 +190,22 @@
             android:inputType="textMultiLine"
             android:padding="8dp"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textMensajeContacto" />
+
+        <Button
+            android:id="@+id/btn_enviar"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_azul"
+            android:text="@string/btn_enviar"
+            android:textColor="@color/blanco"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editMensaje"
+            app:layout_constraintStart_toStartOf="@+id/editMensaje"
+            app:layout_constraintTop_toBottomOf="@+id/editMensaje" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
