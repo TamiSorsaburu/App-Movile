@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -17,6 +18,8 @@ public class Contacto extends AppCompatActivity {
         setContentView(R.layout.activity_contacto);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
+        Menu menu = bottomNavigationView.getMenu();
+        menu.findItem(R.id.menu_exit).setVisible(false); // Oculta el ícono de cierre de sesión
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
