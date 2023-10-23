@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "477479257718",
+    "project_id": "service-del-automotor",
+    "storage_bucket": "service-del-automotor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477479257718:android:517a7fccd36d1cdb02c157",
+        "android_client_info": {
+          "package_name": "com.example.servicedelautomotor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMedEgFFt5oW8nj85TfdednUqLic2z2bg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.entidades.Direccion;
@@ -34,8 +35,8 @@ public class AgregarSucursal extends AppCompatActivity {
 
     public void onClick(View view) {
         registrarSucursal();
-       // Intent intent = new Intent(this, ListadoMecanicos.class);
-       // startActivity(intent);
+        Intent intent = new Intent(this, ListadoSucursales.class);
+        startActivity(intent);
     }
 
     private void registrarSucursal() {
@@ -48,5 +49,12 @@ public class AgregarSucursal extends AppCompatActivity {
         Direccion direccion = new Direccion(campoCalle.getText().toString(),campoAltura.getText().toString(),campoLocalidad.getText().toString(),campoProvincia.getText().toString(),Integer.parseInt(campoCP.getText().toString()));
         appDatabase.daoDireccion().insertarDireccion(direccion);
         appDatabase.daoSucursal().insertarSucursal(new Sucursal(campoNombre.getText().toString(),Integer.parseInt(campoTelefono.getText().toString()),campoCorreo.getText().toString(),direccion));
+
+        Toast.makeText(AgregarSucursal.this, "Sucursal " + campoNombre.getText().toString() + " agregada", Toast.LENGTH_SHORT).show();
+    }
+
+    public void btnListar(View view) {
+        Intent intent = new Intent(this, ListadoSucursales.class);
+        startActivity(intent);
     }
 }

@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Cliente {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public long idCliente;
     public long usuarioClienteId;
     public String nombre;

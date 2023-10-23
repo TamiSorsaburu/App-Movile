@@ -68,8 +68,8 @@ public abstract class AppDataBase extends RoomDatabase {
         if (INSTANCE==null){
             INSTANCE= Room.databaseBuilder(context.getApplicationContext(),
                             AppDataBase.class, "dbServiceAutomotor")
-                            .allowMainThreadQueries()
-                            .build();
+                    .allowMainThreadQueries()
+                    .build();
         }
         return INSTANCE;
     }

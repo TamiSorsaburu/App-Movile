@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 public class Turno {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public long idTurno;
     public long clienteTurnoId;
     public long sucursalTurnoId;

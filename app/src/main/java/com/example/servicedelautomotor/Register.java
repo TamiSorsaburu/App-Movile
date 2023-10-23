@@ -30,8 +30,6 @@ public class Register extends AppCompatActivity {
     private EditText emailEditText;
     private EditText passwordEditText;
     private EditText confirmPasswordEditText;
-
-    private String userID;
     private Button registerButton;
 
     private AppDataBase database;
@@ -58,6 +56,11 @@ public class Register extends AppCompatActivity {
                 registerUser();
             }
         });
+
+        if(mAuth.getCurrentUser() != null) {
+            startActivity(new Intent(Register.this, Iniciar_sesion.class));
+            finish();
+        }
     }
 
     private void registerUser() {
@@ -129,33 +132,6 @@ public class Register extends AppCompatActivity {
         }
     }
 
-
-
-    // Realiza validaciones de entrada y lógica de registro
-
-        //if (contraseña.equals(confirmContraseña)) {
-        //    // Crea un nuevo objeto User
-        //    Usuario usuario = new Usuario("nombreUsuario", "correo", "contraseña");
-        //    usuario.setNombreUsuario(nombreUsuario);
-        //    usuario.setCorreo(correo);
-        //    usuario.setContraseña(contraseña);
-
-            // Inserta el usuario en la base de datos
-       //     new InsertUserTask().execute(usuario);
-
-            // Limpia los campos de entrada
-        //    usernameEditText.setText("");
-       //     emailEditText.setText("");
-       //     passwordEditText.setText("");
-       //     confirmPasswordEditText.setText("");
-
-       //     Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-       // } else {
-       //     // Muestra un mensaje de error si las contraseñas no coinciden
-       //     Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
-        //}
-
-
     private class InsertUserTask extends AsyncTask<Usuario, Void, Void> {
         @Override
         protected Void doInBackground(Usuario... usuario) {
@@ -171,5 +147,3 @@ public class Register extends AppCompatActivity {
         return matcher.matches();
     }
 }
-
-

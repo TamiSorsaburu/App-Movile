@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Presupuesto {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public long idPresupuesto;
     public double total;
 

@@ -40,7 +40,7 @@ public class Iniciar_sesion extends AppCompatActivity {
 
         usernameEditText = findViewById(R.id.textUserLogin);
         passwordEditText = findViewById(R.id.userContraseñaLogin);
-        loginButton = findViewById(R.id.buttonRegister);
+        loginButton = findViewById(R.id.buttonRecuperarContraseña);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
                                            @Override
@@ -49,32 +49,37 @@ public class Iniciar_sesion extends AppCompatActivity {
                                            }
                                        }
         );
+
+        if(mAuth.getCurrentUser() != null) {
+            startActivity(new Intent(Iniciar_sesion.this, Dashboard.class));
+            finish();
+        }
     }
 
     private void loginUser() {
-        String correo = usernameEditText.getText().toString();
-        String contraseña = passwordEditText.getText().toString();
+        final String correo = usernameEditText.getText().toString();
+        final String contraseña = passwordEditText.getText().toString();
 
-        mAuth.signInWithEmailAndPassword(correo, contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    finish();
-                    Intent intent = new Intent(Iniciar_sesion.this, Dashboard.class);
-                    startActivity(intent);
-                    Toast.makeText(Iniciar_sesion.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-                } else{
-                    Toast.makeText(Iniciar_sesion.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
-                }
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(Iniciar_sesion.this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show();
-            }
-        });
-        // Realiza la verificación de inicio de sesión
-        new LoginUserTask().execute(correo, contraseña);
+        mAuth.signInWithEmailAndPassword(correo, contraseña)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // El inicio de sesión en Firebase fue exitoso
+                            // Ahora, busca al usuario en la base de datos local
+                            new LoginUserTask().execute(correo, contraseña);
+                        } else {
+                            // El inicio de sesión en Firebase falló
+                            Toast.makeText(Iniciar_sesion.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Iniciar_sesion.this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     private class LoginUserTask extends AsyncTask<String, Void, Usuario> {
@@ -83,14 +88,14 @@ public class Iniciar_sesion extends AppCompatActivity {
             String correo = credentials[0];
             String contraseña = credentials[1];
 
-            // Consulta la base de datos para verificar las credenciales del usuario
+            // Consulta la base de datos local para verificar las credenciales del usuario
             return database.daoUsuario().obtenerUsuario(correo, contraseña);
         }
 
         @Override
         protected void onPostExecute(Usuario user) {
             if (user != null && user.getContraseña().equals(passwordEditText.getText().toString())) {
-                // Inicio de sesión exitoso
+                // Inicio de sesión exitoso en la base de datos local
                 // Redirige al usuario a la pantalla principal de la aplicación o realiza otras acciones necesarias
                 Toast.makeText(Iniciar_sesion.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Iniciar_sesion.this, Dashboard.class);
@@ -98,9 +103,15 @@ public class Iniciar_sesion extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             } else {
-                // Error de inicio de sesión
-                Toast.makeText(Iniciar_sesion.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
+                // Error de inicio de sesión en la base de datos local
+                Toast.makeText(Iniciar_sesion.this, "Credenciales incorrectas o usuario no encontrado", Toast.LENGTH_SHORT).show();
             }
         }
     }
+
+    public void textRecuperar(View view) {
+        Intent intent = new Intent(this, RecuperarContrasena.class);
+        startActivity(intent);
+    }
+
 }

@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AgregarSucursal">
-
+    tools:context=".UpdateSucursal">
     <TextView
         android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="REGISTRO DE SUCURSAL"
+        android:text="EDICIÓN DE SUCURSAL"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,17 +19,17 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-  <!--  <EditText
-        android:id="@+id/campoId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:hint="id"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/campoNombre"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:ignore="MissingConstraints" /> -->
+    <!--  <EditText
+          android:id="@+id/campoId"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:hint="id"
+          android:minHeight="48dp"
+          app:layout_constraintBottom_toBottomOf="@+id/campoNombre"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView7"
+          tools:ignore="MissingConstraints" /> -->
 
 
     <EditText
@@ -130,27 +129,14 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnRegistro"
+        android:id="@+id/btnEditar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="Registrar Sucursal"
+        android:text="Guardar cambios"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campoCP"
         tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/listar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:onClick="btnListar"
-        android:text="Lista"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistro"
-        tools:ignore="MissingConstraints" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

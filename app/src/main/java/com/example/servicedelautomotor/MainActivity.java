@@ -10,34 +10,24 @@ import android.view.View;
 import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.entidades.Mecanico;
 import com.example.servicedelautomotor.entidades.Usuario;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //llamar BD
+        mAuth = FirebaseAuth.getInstance();
 
-        AppDataBase db= AppDataBase.getInstance(this.getApplicationContext());
-        //insertando un usuario
-
-        db.daoMecanico().insertMecanicos(new Mecanico(4,"Nombre","Apellido",56,true));
-        db.daoMecanico().insertMecanicos(new Mecanico(5,"Nombre5","Apellido5",5,true));
-        db.daoMecanico().insertMecanicos(new Mecanico(6,"Nombre6","Apellido6",6,true));
-        db.daoMecanico().insertMecanicos(new Mecanico(7,"Nombre7","Apellido7",56,true));
-        db.daoMecanico().insertMecanicos(new Mecanico(8,"Nombre8","Apellido8",58,true));
-
-        List<Mecanico> mecanicos = db.daoMecanico().obtenerMecanicos();
-        System.out.println("lista de mecanicos");
-        for (int i=0;i<mecanicos.size();i++) {
-
-            System.out.println(mecanicos.get(i).nombre);
+        if(mAuth.getCurrentUser() != null) {
+            startActivity(new Intent(MainActivity.this, Dashboard.class));
+            finish();
         }
 
     }

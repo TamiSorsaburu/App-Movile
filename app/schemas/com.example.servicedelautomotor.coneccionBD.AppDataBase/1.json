@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "03c9154a70516c57f36169feeeb82314",
+    "identityHash": "8bf95b7c21462d237e357935c75b3319",
     "entities": [
       {
         "tableName": "Administrador",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idAdmin` INTEGER NOT NULL, `UsuarioAdminId` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` TEXT, PRIMARY KEY(`idAdmin`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idAdmin` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `UsuarioAdminId` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` TEXT)",
         "fields": [
           {
             "fieldPath": "idAdmin",
@@ -40,7 +40,7 @@
           }
         ],
         "primaryKey": {
-          "autoGenerate": false,
+          "autoGenerate": true,
           "columnNames": [
             "idAdmin"
           ]
@@ -50,7 +50,7 @@
       },
       {
         "tableName": "Cliente",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER NOT NULL, `usuarioClienteId` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, `idDireccion` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER, PRIMARY KEY(`idCliente`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `usuarioClienteId` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, `idDireccion` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER)",
         "fields": [
           {
             "fieldPath": "idCliente",
@@ -126,7 +126,7 @@
           }
         ],
         "primaryKey": {
-          "autoGenerate": false,
+          "autoGenerate": true,
           "columnNames": [
             "idCliente"
           ]
@@ -186,7 +186,7 @@
       },
       {
         "tableName": "Mecanico",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idMecanico` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER, `guardia` INTEGER, `sucursalMecanicoId` INTEGER NOT NULL, PRIMARY KEY(`idMecanico`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idMecanico` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `guardia` TEXT, `sucursalMecanicoId` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "idMecanico",
@@ -210,12 +210,12 @@
             "fieldPath": "telefono",
             "columnName": "telefono",
             "affinity": "INTEGER",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "guardia",
             "columnName": "guardia",
-            "affinity": "INTEGER",
+            "affinity": "TEXT",
             "notNull": false
           },
           {
@@ -226,7 +226,7 @@
           }
         ],
         "primaryKey": {
-          "autoGenerate": false,
+          "autoGenerate": true,
           "columnNames": [
             "idMecanico"
           ]
@@ -236,7 +236,7 @@
       },
       {
         "tableName": "OrdenReparacion",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idOrden` INTEGER NOT NULL, `fechaIngreso` TEXT, `horaIngreso` TEXT, `motivoIngreso` TEXT, `fechaSalida` TEXT, `horaSalida` TEXT, `vehiculoOrdenId` INTEGER NOT NULL, `sucursalOrdenId` INTEGER NOT NULL, PRIMARY KEY(`idOrden`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idOrden` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `fechaIngreso` TEXT, `horaIngreso` TEXT, `motivoIngreso` TEXT, `fechaSalida` TEXT, `horaSalida` TEXT, `vehiculoOrdenId` INTEGER NOT NULL, `sucursalOrdenId` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "idOrden",
@@ -288,7 +288,7 @@
           }
         ],
         "primaryKey": {
-          "autoGenerate": false,
+          "autoGenerate": true,
           "columnNames": [
             "idOrden"
           ]
@@ -298,7 +298,7 @@
       },
       {
         "tableName": "Presupuesto",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idPresupuesto` INTEGER NOT NULL, `total` REAL NOT NULL, PRIMARY KEY(`idPresupuesto`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idPresupuesto` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `total` REAL NOT NULL)",
         "fields": [
           {
             "fieldPath": "idPresupuesto",
@@ -314,7 +314,7 @@
           }
         ],
         "primaryKey": {
-          "autoGenerate": false,
+          "autoGenerate": true,
           "columnNames": [
             "idPresupuesto"
           ]
@@ -324,7 +324,7 @@
       },
       {
         "tableName": "Servicio",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idServicio` INTEGER NOT NULL, `nombre` TEXT, `descripcion` TEXT, `precio` REAL NOT NULL, PRIMARY KEY(`idServicio`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idServicio` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `descripcion` TEXT, `precio` REAL NOT NULL)",
         "fields": [
           {
             "fieldPath": "idServicio",
@@ -352,7 +352,7 @@
           }
         ],
         "primaryKey": {
-          "autoGenerate": false,
+          "autoGenerate": true,
           "columnNames": [
             "idServicio"
           ]
@@ -436,7 +436,7 @@
       },
       {
         "tableName": "Turno",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idTurno` INTEGER NOT NULL, `clienteTurnoId` INTEGER NOT NULL, `sucursalTurnoId` INTEGER NOT NULL, `dia` TEXT, `hora` TEXT, PRIMARY KEY(`idTurno`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idTurno` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `clienteTurnoId` INTEGER NOT NULL, `sucursalTurnoId` INTEGER NOT NULL, `dia` TEXT, `hora` TEXT)",
         "fields": [
           {
             "fieldPath": "idTurno",
@@ -470,7 +470,7 @@
           }
         ],
         "primaryKey": {
-          "autoGenerate": false,
+          "autoGenerate": true,
           "columnNames": [
             "idTurno"
           ]
@@ -480,7 +480,7 @@
       },
       {
         "tableName": "TurnoTrabajo",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idTurnoTrabajo` INTEGER NOT NULL, `dia` TEXT, `hora` TEXT, PRIMARY KEY(`idTurnoTrabajo`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idTurnoTrabajo` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `dia` TEXT, `hora` TEXT)",
         "fields": [
           {
             "fieldPath": "idTurnoTrabajo",
@@ -502,7 +502,7 @@
           }
         ],
         "primaryKey": {
-          "autoGenerate": false,
+          "autoGenerate": true,
           "columnNames": [
             "idTurnoTrabajo"
           ]
@@ -550,7 +550,7 @@
       },
       {
         "tableName": "Vehiculo",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idVehiculo` INTEGER NOT NULL, `tipoVehiculo` TEXT, `patente` INTEGER NOT NULL, `modelo` TEXT, `marca` TEXT, PRIMARY KEY(`idVehiculo`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idVehiculo` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `tipoVehiculo` TEXT, `patente` INTEGER NOT NULL, `modelo` TEXT, `marca` TEXT)",
         "fields": [
           {
             "fieldPath": "idVehiculo",
@@ -584,7 +584,7 @@
           }
         ],
         "primaryKey": {
-          "autoGenerate": false,
+          "autoGenerate": true,
           "columnNames": [
             "idVehiculo"
           ]
@@ -596,7 +596,9 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '03c9154a70516c57f36169feeeb82314')"
+
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8bf95b7c21462d237e357935c75b3319')"
+
     ]
   }
 }

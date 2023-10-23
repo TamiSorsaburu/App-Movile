@@ -4,8 +4,10 @@ import androidx.room.Embedded;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity
-public class Sucursal {
+public class Sucursal implements Serializable {
     @PrimaryKey(autoGenerate = true)
     public long idSucursal;
 
@@ -21,5 +23,9 @@ public class Sucursal {
         this.telefono = telefono;
         this.correo = correo;
         this.direccion = direccion;
+    }
+
+    public String getNombre(){
+        return nombre;
     }
 }
