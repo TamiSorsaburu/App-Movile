@@ -69,6 +69,13 @@ public class Register extends AppCompatActivity {
         final String contraseña = passwordEditText.getText().toString().trim();
         final String confirmContraseña = confirmPasswordEditText.getText().toString().trim();
 
+        String rol = "";
+        if(correo.equals("admin@gmail.com")){
+            rol = "admin";
+        } else {
+            rol = "usuario";
+        }
+
         if (correo.isEmpty() || contraseña.isEmpty() || confirmContraseña.isEmpty()) {
             Toast.makeText(this, "Ingrese datos !!", Toast.LENGTH_SHORT).show();
         } else if (emailValido(correo)) {
@@ -101,6 +108,8 @@ public class Register extends AppCompatActivity {
             final String nombreUsuario = usernameEditText.getText().toString().trim();
             final String correo = emailEditText.getText().toString().trim();
             final String contraseña = passwordEditText.getText().toString().trim();
+            final String rol = (correo.equals("admin@gmail.com")) ? "admin" : "usuario";
+
             if (emailExists) {
                 Toast.makeText(Register.this, "El correo electrónico ya está registrado", Toast.LENGTH_SHORT).show();
             } else {
@@ -111,7 +120,7 @@ public class Register extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     FirebaseUser user = mAuth.getCurrentUser();
-                                    Usuario usuario = new Usuario(nombreUsuario, correo, contraseña);
+                                    Usuario usuario = new Usuario(nombreUsuario, correo, contraseña, rol);
 
                                     new InsertUserTask().execute(usuario);
 
@@ -145,5 +154,10 @@ public class Register extends AppCompatActivity {
         Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
+    }
+
+    public void textLogin(View v){
+        Intent login = new Intent(this, Iniciar_sesion.class);
+        startActivity(login);
     }
 }

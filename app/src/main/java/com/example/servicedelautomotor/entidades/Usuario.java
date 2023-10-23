@@ -10,11 +10,13 @@ public class Usuario {
     private String nombreUsuario;
     private String correo;
     private String contraseña;
+    private String rol;
 
-    public Usuario(String nombreUsuario, String correo, String contraseña) {
+    public Usuario(String nombreUsuario, String correo, String contraseña, String rol) {
         this.nombreUsuario = nombreUsuario;
         this.correo = correo;
         this.contraseña = contraseña;
+        this.rol = rol;
     }
 
     public int getIdUsuario() {
@@ -47,5 +49,13 @@ public class Usuario {
 
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 }
