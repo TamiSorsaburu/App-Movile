@@ -40,7 +40,7 @@ public class Iniciar_sesion extends AppCompatActivity {
 
         usernameEditText = findViewById(R.id.textUserLogin);
         passwordEditText = findViewById(R.id.userContraseñaLogin);
-        loginButton = findViewById(R.id.buttonRegister);
+        loginButton = findViewById(R.id.buttonRecuperarContraseña);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
                                            @Override
@@ -107,6 +107,11 @@ public class Iniciar_sesion extends AppCompatActivity {
                 Toast.makeText(Iniciar_sesion.this, "Credenciales incorrectas o usuario no encontrado", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    public void textRecuperar(View view) {
+        Intent intent = new Intent(this, RecuperarContrasena.class);
+        startActivity(intent);
     }
 
 }

@@ -12,36 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceDelAutomotor"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".confirmar_contrasena"
+            android:exported="false" />
         <activity
             android:name=".crud.ActualizarMecanico"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".crud.ListaMecanicos"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MenuAdmin"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".UpdateSucursal"
             android:exported="false" />
         <activity
             android:name=".ListadoSucursales"
-            android:exported="false">
-        </activity>
-
+            android:exported="false"></activity>
         <activity
             android:name=".crud.AgregarMecanico"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".AgregarSucursal"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".RecuperarContrasena"
             android:exported="false" />

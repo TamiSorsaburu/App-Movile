@@ -71,6 +71,12 @@
     <string name="text_description_btnRecuperarContraseña">Botón para recuperar contraseña</string>
     <!--Fin string recuperar contraseña-->
 
+    <!--String recuperar contraseña-->
+    <string name="text_confirm_contraseña">Confirma tu contraseña</string>
+    <string name="text_ingresar_contraseña"> Ingrese su nueva contraseña</string>
+    <string name="btn_confir_contraseña">Confirmar Contraseña</string>
+    <string name="text_contraseña_nueva">Contraseña nueva</string>
+
     <!--string contacto-->
     <string name="text_contacto">Contáctanos</string>
     <string name="text_redes_contacto">Siguenos en nuestras redes sociales</string>

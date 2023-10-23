@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/principal"
+    tools:context=".confirmar_contrasena">
+    <ImageView
+
+        android:id="@+id/imageLogo"
+        android:layout_width="285dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="86dp"
+        android:src="@mipmap/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/background_main_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo">
+
+        <TextView
+            android:id="@+id/textConfirmContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/text_confirm_contraseña"
+            android:textAlignment="center"
+            android:textColor="@color/negro"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textReingresarContr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textReingresarContr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/text_ingresar_contraseña"
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textEmailConfir"
+            app:layout_constraintEnd_toEndOf="@+id/textConfirmContraseña"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textConfirmContraseña"
+            app:layout_constraintTop_toBottomOf="@+id/textConfirmContraseña" />
+
+        <EditText
+            android:id="@+id/textEmailConfir"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:autofillHints="username"
+            android:background="@drawable/custom_edittext"
+            android:drawablePadding="8dp"
+            android:hint="@string/text_hint_correo"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:textColor="@color/negro"
+            android:textColorHighlight="@color/cardview_dark_background"
+            app:layout_constraintBottom_toTopOf="@+id/textContraseñaNueva"
+            app:layout_constraintEnd_toEndOf="@+id/textReingresarContr"
+            app:layout_constraintStart_toStartOf="@+id/textReingresarContr"
+            app:layout_constraintTop_toBottomOf="@+id/textReingresarContr" />
+
+        <EditText
+            android:id="@+id/textContraseñaNueva"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:autofillHints="username"
+            android:background="@drawable/custom_edittext"
+            android:drawablePadding="8dp"
+            android:hint="@string/text_contraseña_nueva"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColor="@color/negro"
+            android:textColorHighlight="@color/cardview_dark_background"
+            app:layout_constraintBottom_toTopOf="@+id/btnConfirmContraseña"
+            app:layout_constraintEnd_toEndOf="@+id/textEmailConfir"
+            app:layout_constraintStart_toStartOf="@+id/textEmailConfir"
+            app:layout_constraintTop_toBottomOf="@+id/textEmailConfir" />
+
+        <Button
+            android:id="@+id/btnConfirmContraseña"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_color"
+            android:contentDescription="@string/text_description_btnRecuperarContraseña"
+            android:onClick="buttonLogin"
+            android:text="@string/btn_confir_contraseña"
+            android:textColor="@color/blanco"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textContraseñaNueva" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

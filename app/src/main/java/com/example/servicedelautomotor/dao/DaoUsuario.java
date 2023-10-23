@@ -3,6 +3,7 @@ package com.example.servicedelautomotor.dao;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import com.example.servicedelautomotor.entidades.Cliente;
 import com.example.servicedelautomotor.entidades.Usuario;
@@ -28,5 +29,9 @@ public interface DaoUsuario {
 
     @Query("SELECT * FROM usuario WHERE correo = :correo")
     Usuario getUsuarioPorCorreo(String correo);
+
+    @Update
+    void actualizarContraseña(Usuario usuario);
+
 
 }

@@ -34,7 +34,7 @@
       app:layout_constraintTop_toBottomOf="@+id/imageLogo">
 
     <TextView
-        android:id="@+id/textRecuperarContraseña"
+        android:id="@+id/textConfirmContraseña"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -58,14 +58,14 @@
         android:textAlignment="textStart"
         android:textColor="@color/negro"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textRecordar"
-        app:layout_constraintEnd_toEndOf="@+id/textRecuperarContraseña"
+        app:layout_constraintBottom_toTopOf="@+id/textReingresarContr"
+        app:layout_constraintEnd_toEndOf="@+id/textConfirmContraseña"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textRecuperarContraseña"
-        app:layout_constraintTop_toBottomOf="@+id/textRecuperarContraseña" />
+        app:layout_constraintStart_toStartOf="@+id/textConfirmContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/textConfirmContraseña" />
 
     <TextView
-        android:id="@+id/textRecordar"
+        android:id="@+id/textReingresarContr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -93,13 +93,13 @@
         android:padding="8dp"
         android:textColor="@color/negro"
         android:textColorHighlight="@color/cardview_dark_background"
-        app:layout_constraintBottom_toTopOf="@+id/buttonRegister"
-        app:layout_constraintEnd_toEndOf="@+id/textRecordar"
-        app:layout_constraintStart_toStartOf="@+id/textRecordar"
-        app:layout_constraintTop_toBottomOf="@+id/textRecordar" />
+        app:layout_constraintBottom_toTopOf="@+id/buttonRecuperarContraseña"
+        app:layout_constraintEnd_toEndOf="@+id/textReingresarContr"
+        app:layout_constraintStart_toStartOf="@+id/textReingresarContr"
+        app:layout_constraintTop_toBottomOf="@+id/textReingresarContr" />
 
     <Button
-        android:id="@+id/buttonRegister"
+        android:id="@+id/buttonRecuperarContraseña"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
