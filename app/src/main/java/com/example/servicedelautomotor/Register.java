@@ -146,4 +146,9 @@ public class Register extends AppCompatActivity {
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
+
+    public void textLogin(View v){
+        Intent login = new Intent(this, Iniciar_sesion.class);
+        startActivity(login);
+    }
 }
