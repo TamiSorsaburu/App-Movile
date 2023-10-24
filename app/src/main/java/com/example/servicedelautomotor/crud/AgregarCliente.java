@@ -1,7 +1,4 @@
-package com.example.servicedelautomotor;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
+package com.example.servicedelautomotor.crud;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,30 +9,31 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
+import com.example.servicedelautomotor.Dashboard;
+import com.example.servicedelautomotor.R;
 import com.example.servicedelautomotor.coneccionBD.AppDataBase;
-import com.example.servicedelautomotor.crud.ListaClientes;
 import com.example.servicedelautomotor.entidades.Cliente;
 import com.example.servicedelautomotor.entidades.Direccion;
 import com.example.servicedelautomotor.entidades.Vehiculo;
 
-public class InformacionPersonal extends AppCompatActivity {
+public class AgregarCliente extends AppCompatActivity {
 
     EditText textNombre,textApellido,textTelefono,textProvincia, textCalle,textAltura,textLocalidad,textMarca,textModelo,textPatente,textPostal;
     Button buttonGuardar;
-
     ImageView imagePerfil;
-
-    @SuppressLint("WrongViewCast")
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_informacion_personal);
+        setContentView(R.layout.activity_agregar_cliente);
 
         textNombre=findViewById(R.id.textNombre);
         textApellido=findViewById(R.id.textApellido);
         textTelefono=findViewById(R.id.textTelefono);
         imagePerfil=findViewById(R.id.imagePerfil);
-        textProvincia=findViewById(R.id.textProvincia);
         textCalle=findViewById(R.id.textCalle);
         textAltura=findViewById(R.id.textAltura);
         textLocalidad=findViewById(R.id.textLocalidad);
@@ -43,17 +41,12 @@ public class InformacionPersonal extends AppCompatActivity {
         textModelo=findViewById(R.id.textModelo);
         textPatente=findViewById(R.id.textPatente);
         textPostal=findViewById(R.id.textPostal);
+        textProvincia=findViewById(R.id.textProvincia);
 
-
-        buttonGuardar=findViewById(R.id.buttonGuardar);
-    }
-
+        buttonGuardar=findViewById(R.id.btnRegistro);
+}
     public void onClick(View v){
         registrarCliente();
-        Intent intent = new Intent(this, InformacionPersonal.class);
-        startActivity(intent);
-    }
-    public void btnListarClientes(View view) {
         Intent intent = new Intent(this, ListaClientes.class);
         startActivity(intent);
     }
@@ -67,12 +60,18 @@ public class InformacionPersonal extends AppCompatActivity {
 
         Direccion direccion=new Direccion(textCalle.getText().toString(),textAltura.getText().toString(),textLocalidad.getText().toString(),textProvincia.getText().toString(),Integer.parseInt(textPostal.getText().toString()));
         Vehiculo vehiculo=new Vehiculo(textPatente.getText().toString(),textModelo.getText().toString(),textMarca.getText().toString());
-        appDatabase.daoCliente().insertarCliente(new Cliente(textNombre.getText().toString(),textApellido.getText().toString(),Integer.parseInt(textTelefono.getText().toString()),
-                imagePerfil.toString().toString(),direccion,vehiculo));
-        Toast.makeText(InformacionPersonal.this,"Tus datos se guardaron Exitosamente!!!",Toast.LENGTH_LONG).show();
+        appDatabase.daoCliente().insertarCliente(new Cliente(textNombre.getText().toString(),textApellido.getText().toString(),Integer.parseInt(textTelefono.getText().toString()),imagePerfil.toString(),direccion,vehiculo));
+        Toast.makeText(AgregarCliente.this,"Tus datos se guardaron Exitosamente!!!",Toast.LENGTH_LONG).show();
     }
+
+
+
     public void botonCancelar(View V){
         Intent cancelar=new Intent(this, Dashboard.class);
         startActivity(cancelar);
+    }
+    public void btnListarClientes(View view) {
+        Intent intent = new Intent(this, ListaClientes.class);
+        startActivity(intent);
     }
 }

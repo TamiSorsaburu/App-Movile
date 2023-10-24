@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InformacionPersonal">
+    tools:context=".crud.AgregarCliente">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -13,11 +14,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:background="@drawable/background_main_login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
@@ -29,7 +28,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/tituloip1"
+            android:text="Cargar Cliente"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -43,7 +42,7 @@
             android:id="@+id/imagePerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:contentDescription="ImgPerfil"
             app:layout_constraintEnd_toEndOf="@+id/infoPersonal"
             app:layout_constraintStart_toStartOf="@+id/infoPersonal"
@@ -55,12 +54,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="389dp"
             android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonGuardar"
             app:layout_constraintEnd_toEndOf="@+id/infoPersonal"
             app:layout_constraintStart_toStartOf="@+id/infoPersonal"
-            app:layout_constraintTop_toBottomOf="@+id/imagePerfil">
+            app:layout_constraintTop_toTopOf="parent">
 
             <EditText
                 android:id="@+id/textNombre"
@@ -91,10 +92,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="@+id/infoPersonal"
+            app:layout_constraintHorizontal_bias="0.375"
             app:layout_constraintStart_toStartOf="@+id/infoPersonal"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
@@ -117,10 +119,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+            app:layout_constraintHorizontal_bias="0.406"
             app:layout_constraintStart_toStartOf="@+id/linearLayout2"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
@@ -165,10 +167,10 @@
             android:id="@+id/linearLayout4"
             android:layout_width="346dp"
             android:layout_height="60dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginTop="336dp"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="303dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="296dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="318dp"
             android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -178,7 +180,7 @@
             <EditText
                 android:id="@+id/textLocalidad"
                 android:layout_width="208dp"
-                android:layout_height="50dp"
+                android:layout_height="48dp"
                 android:autofillHints="postalAddress"
                 android:hint="@string/inpip7"
                 android:inputType="text"
@@ -188,7 +190,7 @@
             <EditText
                 android:id="@+id/textPostal"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="48dp"
                 android:autofillHints="postalAddress"
                 android:hint="Codigo Postal"
                 android:inputType="text"
@@ -200,11 +202,12 @@
             android:id="@+id/textViewInfoVehiculo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="4dp"
             android:text="@string/tituloip2"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+            app:layout_constraintHorizontal_bias="0.478"
             app:layout_constraintStart_toStartOf="@+id/linearLayout4"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
@@ -213,10 +216,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+            app:layout_constraintHorizontal_bias="0.64"
             app:layout_constraintStart_toStartOf="@+id/linearLayout4"
             app:layout_constraintTop_toBottomOf="@+id/textViewInfoVehiculo">
 
@@ -237,7 +241,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
@@ -264,56 +268,55 @@
                 android:inputType="text" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/buttonEditar"
-            android:layout_width="105dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/btn_color"
-            android:text="@string/btn_ipeditar"
-            android:textColor="@color/blanco"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/buttonGuardar"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
 
         <Button
             android:id="@+id/buttonGuardar"
-            android:layout_width="105dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="347dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="545dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="81dp"
             android:background="@drawable/btn_color"
             android:onClick="onClick"
-            android:text="@string/btn_ipguardar"
+            android:text="Registrar cliente"
             android:textColor="@color/blanco"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/buttonCancelar"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/buttonEditar"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/buttonCancelar"
-            android:layout_width="105dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="103dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="255dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/btn_color"
             android:onClick="botonCancelar"
             android:text="@string/btn_ipCancelar"
             android:textColor="@color/blanco"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/buttonGuardar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonGuardar" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="261dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_color"
+            android:onClick="btnListarClientes"
+            android:text="Lista clientes"
+            android:textColor="@color/blanco"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/buttonGuardar"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+            app:layout_constraintStart_toStartOf="@+id/buttonGuardar"
+            app:layout_constraintTop_toBottomOf="@+id/buttonGuardar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
