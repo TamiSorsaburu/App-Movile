@@ -12,6 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceDelAutomotor"
         tools:targetApi="31">
+
+
+        <activity
+            android:name=".crud.ListaClientes"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".crud.ActualizarCliente"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".crud.AgregarCliente"
+            android:exported="true">
+        </activity>
         <activity
             android:name=".confirmar_contrasena"
             android:exported="false" />

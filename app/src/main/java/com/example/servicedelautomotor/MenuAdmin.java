@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.servicedelautomotor.crud.AgregarCliente;
 import com.example.servicedelautomotor.crud.AgregarMecanico;
 
 public class MenuAdmin extends AppCompatActivity {
@@ -27,6 +28,11 @@ public class MenuAdmin extends AppCompatActivity {
 
     public void crudSucursal(View V) {
         Intent i = new Intent(this, AgregarSucursal.class);
+        startActivity(i);
+    }
+
+    public void crudCliente(View V) {
+        Intent i = new Intent(this, AgregarCliente.class);
         startActivity(i);
     }
 

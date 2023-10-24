@@ -11,15 +11,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="2dp"
         android:text="Cargar Mecanicos"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <LinearLayout
@@ -40,39 +38,39 @@
             android:id="@+id/textNombre"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_margin="5dp"
             android:ems="10"
             android:hint="Nombre"
-            android:inputType="text"
-            android:layout_margin="5dp"/>
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/txtApellido"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_margin="5dp"
             android:ems="10"
             android:hint="apellido"
-            android:inputType="text"
-            android:layout_margin="5dp"/>
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/txtTelefono"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_margin="5dp"
             android:ems="10"
             android:hint="telefono"
             android:inputType="phone"
-            android:layout_margin="5dp"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/txtSucursal"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_margin="5dp"
             android:ems="10"
             android:hint="N° de sucursal"
             android:inputType="numberSigned"
-            android:layout_margin="5dp"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
 
         <LinearLayout
@@ -87,7 +85,7 @@
                 android:layout_weight="1"
                 android:onClick="onclick"
                 android:text="Guardia"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtGuardia"
@@ -106,11 +104,11 @@
     <LinearLayout
         android:id="@+id/linearLayout10"
         android:layout_width="408dp"
-        android:layout_height="86dp"
-        android:layout_marginTop="385dp"
-        android:layout_marginBottom="260dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="443dp"
+        android:layout_marginBottom="255dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/barraMenu"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout9"
         app:layout_constraintStart_toStartOf="@+id/linearLayout9"
         app:layout_constraintTop_toTopOf="parent">
@@ -121,13 +119,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:background="@drawable/background_dorado"
             android:text="Guardar"
-            android:textSize="18sp"/>
+            android:textColor="@color/blanco"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout11"
         android:layout_width="407dp"
-        android:layout_height="140dp"
+        android:layout_height="186dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:orientation="vertical"
@@ -139,20 +140,37 @@
         <Button
             android:id="@+id/btnIrLista"
             android:layout_width="180dp"
-            android:layout_height="68dp"
+            android:layout_height="60dp"
             android:layout_marginStart="110dp"
-            android:textSize="18sp"
-            android:text="Lista mecanicos" />
+            android:background="@drawable/background_dorado"
+            android:text="Lista mecanicos"
+            android:textColor="@color/blanco"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnVolver"
             android:layout_width="180dp"
-            android:layout_height="68dp"
+            android:layout_height="60dp"
             android:layout_marginStart="110dp"
-            android:textSize="18sp"
-            android:text="@string/cancelar" />
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_dorado"
+            android:text="@string/cancelar"
+            android:textColor="@color/blanco"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+        app:menu="@menu/menu_home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
