@@ -21,7 +21,7 @@ import com.example.servicedelautomotor.entidades.Vehiculo;
 
 public class AgregarCliente extends AppCompatActivity {
 
-    EditText textNombre,textApellido,textTelefono,textProvincia, textCalle,textAltura,textLocalidad,textMarca,textModelo,textPatente,textPostal;
+    EditText textTipo,textNombre,textApellido,textTelefono,textProvincia, textCalle,textAltura,textLocalidad,textMarca,textModelo,textPatente,textPostal;
     Button buttonGuardar;
     ImageView imagePerfil;
     @SuppressLint("MissingInflatedId")
@@ -42,6 +42,7 @@ public class AgregarCliente extends AppCompatActivity {
         textPatente=findViewById(R.id.textPatente);
         textPostal=findViewById(R.id.textPostal);
         textProvincia=findViewById(R.id.textProvincia);
+        textTipo=findViewById(R.id.textTipo);
 
         buttonGuardar=findViewById(R.id.btnRegistro);
 }
@@ -59,7 +60,7 @@ public class AgregarCliente extends AppCompatActivity {
         ).allowMainThreadQueries().build();
 
         Direccion direccion=new Direccion(textCalle.getText().toString(),textAltura.getText().toString(),textLocalidad.getText().toString(),textProvincia.getText().toString(),Integer.parseInt(textPostal.getText().toString()));
-        Vehiculo vehiculo=new Vehiculo(textPatente.getText().toString(),textModelo.getText().toString(),textMarca.getText().toString());
+        Vehiculo vehiculo=new Vehiculo(textPatente.getText().toString(),textTipo.getText().toString(),textModelo.getText().toString(),textMarca.getText().toString());
         appDatabase.daoCliente().insertarCliente(new Cliente(textNombre.getText().toString(),textApellido.getText().toString(),Integer.parseInt(textTelefono.getText().toString()),imagePerfil.toString(),direccion,vehiculo));
         Toast.makeText(AgregarCliente.this,"Tus datos se guardaron Exitosamente!!!",Toast.LENGTH_LONG).show();
     }

@@ -225,6 +225,15 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewInfoVehiculo">
 
             <EditText
+                android:id="@+id/textTipo"
+                android:layout_width="166dp"
+                android:layout_height="match_parent"
+                android:autofillHints="postalAddress"
+                android:hint="Tipo vehiculo"
+                android:inputType="text"
+                android:minWidth="48dp"
+                android:minHeight="48dp" />
+            <EditText
                 android:id="@+id/textMarca"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

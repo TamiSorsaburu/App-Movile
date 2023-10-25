@@ -68,7 +68,7 @@
             android:name=".InformacionAuto"
             android:exported="false" />
         <activity
-            android:name=".InformacionPersonal"
+            android:name=".CargarInformacionPersonal"
             android:exported="false" />
         <activity
             android:name=".ConfirmarTurno"
