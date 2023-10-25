@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Dashboard extends AppCompatActivity {
     FirebaseAuth mAuth;
+    private ImageView adminImage;
+    private TextView adminText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +43,22 @@ public class Dashboard extends AppCompatActivity {
                 return false;
             }
         });
+
+        String currentUserEmail = mAuth.getCurrentUser().getEmail();
+
+        // Encuentra la imagen Admin por su ID
+        adminImage = findViewById(R.id.imgAdmin);
+        adminText = findViewById(R.id.textAdmin);
+
+        if(currentUserEmail != null && currentUserEmail.equals("admin@gmail.com")){
+            // Si el usuario es un administrador, muestra el botón Admin
+            adminImage.setVisibility(View.VISIBLE);
+            adminText.setVisibility(View.VISIBLE);
+        }else {
+            // Si el usuario no es un administrador, oculta el botón Admin
+            adminImage.setVisibility(View.GONE);
+            adminText.setVisibility(View.GONE);
+        }
     }
 
     //metodo para botones
