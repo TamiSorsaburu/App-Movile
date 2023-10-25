@@ -81,7 +81,7 @@
             android:background="@drawable/custom_edittext"
             android:drawablePadding="8dp"
             android:hint="@string/text_hint_password"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             android:padding="8dp"
             android:textColor="@color/negro"
             android:textColorHighlight="@color/cardview_dark_background"
@@ -92,7 +92,7 @@
 
 
         <Button
-            android:id="@+id/buttonRegister"
+            android:id="@+id/buttonRecuperarContraseña"
             android:layout_width="210dp"
             android:layout_height="50dp"
             android:layout_marginTop="92dp"
@@ -102,13 +102,13 @@
             android:text="@string/text_login"
             android:textColor="@color/blanco"
             android:textSize="21sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintBottom_toTopOf="@+id/textOlvidoContraseña"
             app:layout_constraintEnd_toEndOf="@+id/userContraseñaLogin"
             app:layout_constraintStart_toStartOf="@+id/userContraseñaLogin"
             app:layout_constraintTop_toBottomOf="@+id/userContraseñaLogin" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textOlvidoContraseña"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -117,12 +117,12 @@
             android:textColor="@color/negro"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/buttonRegister"
-            app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
+            app:layout_constraintStart_toStartOf="@+id/buttonRecuperarContraseña"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRecuperarContraseña"
             app:layout_constraintVertical_bias="0.508" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textRecuperar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -130,15 +130,15 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="16dp"
             android:minHeight="48dp"
-            android:onClick="textLogin"
+            android:onClick="textRecuperar"
             android:text="@string/text_recuperar"
             android:textColor="@color/secundario"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/buttonRegister"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
+            app:layout_constraintEnd_toEndOf="@+id/buttonRecuperarContraseña"
+            app:layout_constraintStart_toEndOf="@+id/textOlvidoContraseña"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRecuperarContraseña" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

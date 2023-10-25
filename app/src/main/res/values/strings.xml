@@ -29,7 +29,7 @@
     <string name="btnTurnos">Mis Turnos</string>
     <string name="btnSiniestros">Siniestros</string>
     <string name="btnPerfil">Mi perfil</string>
-    <string name="btnConfiguracion">Setting</string>
+    <string name="btnPresupuesto">Cotización</string>
     <string name="btnMiAuto">Mi Auto</string>
     <string name="btnContacto">Contácto</string>
     <!--Fin String home-->
@@ -41,12 +41,12 @@
     <string name="text_cuenta">No tienes una cuenta?</string>
     <string name="text_register">Regístrate</string>
     <string name="btn_login">INICIAR SESIÓN</string>
-    <string name="text_recover">Recuperar</string>
+    <string name="text_recuperar">Recuperar</string>
     <!--Fin string presentacion-->
 
     <!--string login-->
     <string name="text_login">Iniciar Sesión</string>
-    <string name="text_hint_user">Email o Nombre de Usuario</string>
+    <string name="text_hint_user">Email</string>
     <string name="text_forget">Olvidó su contraseña?</string>
     <string name="text_description_btnLogin">Botón para iniciar sesión en la aplicación</string>
     <string name="text_hint_password">Contraseña</string>
@@ -62,14 +62,31 @@
     <string name="text_cuenta2">Ya tienes cuenta?</string>
     <!--Fin string register-->
 
+    <!--String recuperar contraseña-->
+    <string name="text_recuperar_contraseña">Recuperá tu contraseña</string>
+    <string name="text_olvidaste_contraseña">¿Olvidaste tu contraseña?</string>
+    <string name="text_ingresar_correo"> ¡No te preocupes! Escribí el mail de tu cuenta y recibí instrucciones para recuperarla.</string>
+    <string name="text_hintEmail">Email</string>
+    <string name="btn_recuperarContraseña">Recuperar Contraseña</string>
+    <string name="text_description_btnRecuperarContraseña">Botón para recuperar contraseña</string>
+    <!--Fin string recuperar contraseña-->
+
+    <!--String recuperar contraseña-->
+    <string name="text_confirm_contraseña">Confirma tu contraseña</string>
+    <string name="text_ingresar_contraseña"> Ingrese su nueva contraseña</string>
+    <string name="btn_confir_contraseña">Confirmar Contraseña</string>
+    <string name="text_contraseña_nueva">Contraseña nueva</string>
+
     <!--string contacto-->
-    <string name="text_contacto">Visítenos, llámenos o envíenos email</string>
-    <string name="text_ubicacion_contacto">Sucursal central Av de Mayo 300</string>
-    <string name="text_telefono_contacto">(11)11111111</string>
-    <string name="text_mail_contacto">servicedelautomotor@gmail.com</string>
+    <string name="text_contacto">Contáctanos</string>
     <string name="text_redes_contacto">Siguenos en nuestras redes sociales</string>
     <string name="text_logo_facebook">Logo de Facebook</string>
     <string name="text_logo_instagram">Logo de Instagram</string>
+    <string name="text_mensaje">Mensaje</string>
+    <string name="btn_enviar">Enviar</string>
+    <string name="text_hint_IngreseNombre">Ingrese su nombre</string>
+    <string name="text_hint_IngreseCorreo">Ingrese su correo</string>
+    <string name="text_hint_IngreseMensaje">Ingrese su mensaje</string>
     <!--Fin string contacto-->
 
     <!--string mecanico-->
@@ -144,6 +161,7 @@ la reparación del auto depende del daño.</string>
     <string name="btnAgregar">Agregar</string>
     <string name="btnEliminar">Eliminar</string>
     <string name="detalleUsuarioTitulo">Información Personal</string>
+    <string name="btnPrueba">PruebaRepo</string>
 
     //detalle-usuario
 
@@ -190,18 +208,6 @@ la reparación del auto depende del daño.</string>
     <string name="cancelarTurno"><u>Cancelar</u></string>
     <!--mis turnos-->
 
-
-
-
-
-
-
-
-
-
-
-
-
     //Servicios
     <string name="title_activity_servicios">Servicios</string>
     <!-- Strings used for fragments for navigation -->
@@ -215,4 +221,11 @@ la reparación del auto depende del daño.</string>
     <string name="Neumaticos">Neumáticos</string>
     <string name="Cambio_de_Aceite">Cambio de Aceite</string>
     <string name="Solicitar_turno">Solicitar Turno</string>
+    //servicios
+
+    //menu_home
+    <string name="m_home">Home</string>
+    <string name="m_notificacion">Notificación</string>
+    <string name="m_setting">Configuración</string>
+    <string name="m_salir">Salir</string>
 </resources>

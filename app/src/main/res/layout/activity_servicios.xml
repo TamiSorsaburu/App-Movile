@@ -22,13 +22,13 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="ExtraText">
 
         <ImageView
             android:id="@+id/back_btn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="51dp"
+            android:layout_height="48dp"
             android:layout_marginTop="4dp"
             android:contentDescription="@string/back_btn"
             android:importantForAccessibility="no"
@@ -47,27 +47,26 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="131dp"
-            android:layout_marginTop="137dp"
+            android:layout_marginTop="84dp"
             android:layout_marginEnd="131dp"
-            android:layout_marginBottom="512dp"
             android:text="SERVICIOS"
             android:textColor="@color/negro"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="HardcodedText,MissingConstraints,VisualLintOverlap,TextSizeCheck" />
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
-            android:layout_width="351dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="583dp"
+            android:layout_width="348dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="599dp"
             android:background="@drawable/background_btn_principal"
             android:backgroundTint="#1AE1F5FE"
             android:longClickable="true"
@@ -92,7 +91,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.548"
+            app:layout_constraintVertical_bias="0.397"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -133,6 +132,7 @@
                 android:layout_height="54dp"
                 android:layout_marginEnd="4dp"
                 android:background="@drawable/background_azul"
+                android:onClick="botonSolicitarTurno"
                 android:text="@string/Solicitar_turno"
                 android:textAlignment="center"
                 android:textColor="@color/blanco"
@@ -162,7 +162,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.326"
+            app:layout_constraintVertical_bias="0.204"
             tools:ignore="MissingConstraints">
 
 
@@ -175,6 +175,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/background_azul"
+                android:onClick="botonSolicitarTurno"
                 android:text="@string/Solicitar_turno"
                 android:textAlignment="center"
                 android:textColor="@color/blanco"
@@ -226,7 +227,8 @@
             android:id="@+id/linearLayout3"
             android:layout_width="331dp"
             android:layout_height="105dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="124dp"
             android:background="@drawable/round_back_white10_20"
             android:orientation="horizontal"
             android:padding="20dp"
@@ -234,6 +236,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -276,6 +279,7 @@
                 android:layout_height="54dp"
                 android:layout_marginStart="9dp"
                 android:background="@drawable/background_azul"
+                android:onClick="botonSolicitarTurno"
                 android:text="@string/Solicitar_turno"
                 android:textAlignment="center"
                 android:textColor="@color/blanco"
@@ -304,7 +308,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.761"
+            app:layout_constraintVertical_bias="0.591"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -341,6 +345,7 @@
                 android:layout_height="54dp"
                 android:layout_marginStart="9dp"
                 android:background="@drawable/background_azul"
+                android:onClick="botonSolicitarTurno"
                 android:text="@string/Solicitar_turno"
                 android:textAlignment="center"
                 android:textColor="@color/blanco"
@@ -354,6 +359,23 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="HardcodedText,SmallSp,TextSizeCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="266dp"
+            android:layout_marginTop="628dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/background_dorado"
+            android:onClick="botonCancelar"
+            android:text="@string/cancelar"
+            android:textColor="@color/blanco"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

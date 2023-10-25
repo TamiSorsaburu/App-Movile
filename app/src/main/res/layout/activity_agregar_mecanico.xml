@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".crud.AgregarMecanico">
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cargar Mecanicos"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="383dp"
+        android:layout_height="308dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="360dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/textNombre"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/txtApellido"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:hint="apellido"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/txtTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:hint="telefono"
+            android:inputType="phone"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/txtSucursal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:hint="N° de sucursal"
+            android:inputType="numberSigned"
+            android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/switchGuardia"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onclick"
+                android:text="Guardia"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtGuardia"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="No disponible"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="408dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="443dp"
+        android:layout_marginBottom="255dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/barraMenu"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout9"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout9"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+            android:id="@+id/botonGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/background_dorado"
+            android:text="Guardar"
+            android:textColor="@color/blanco"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="407dp"
+        android:layout_height="186dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout10">
+
+        <Button
+            android:id="@+id/btnIrLista"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="110dp"
+            android:background="@drawable/background_dorado"
+            android:text="Lista mecanicos"
+            android:textColor="@color/blanco"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_dorado"
+            android:text="@string/cancelar"
+            android:textColor="@color/blanco"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+        app:menu="@menu/menu_home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

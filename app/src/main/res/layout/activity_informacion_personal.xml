@@ -69,8 +69,7 @@
                 android:layout_weight="1"
                 android:autofillHints="name"
                 android:hint="@string/inpip1"
-                android:inputType="textPersonName">
-            </EditText>
+                android:inputType="textPersonName"></EditText>
 
             <EditText
                 android:id="@+id/textApellido"
@@ -164,25 +163,37 @@
 
         <LinearLayout
             android:id="@+id/linearLayout4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="346dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="336dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="303dp"
             android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout3"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <EditText
                 android:id="@+id/textLocalidad"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="208dp"
+                android:layout_height="50dp"
                 android:autofillHints="postalAddress"
                 android:hint="@string/inpip7"
                 android:inputType="text"
                 android:minWidth="48dp"
-                android:minHeight="48dp"/>
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/textPostal"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:autofillHints="postalAddress"
+                android:hint="Codigo Postal"
+                android:inputType="text"
+                android:minWidth="48dp"
+                android:minHeight="48dp" />
         </LinearLayout>
 
         <TextView
@@ -217,7 +228,7 @@
                 android:hint="@string/inpip8"
                 android:inputType="text"
                 android:minWidth="48dp"
-                android:minHeight="48dp"/>
+                android:minHeight="48dp" />
 
         </LinearLayout>
 
@@ -242,16 +253,15 @@
                 android:hint="@string/inpip9"
                 android:inputType="text"
                 android:minWidth="48dp"
-                android:minHeight="48dp"/>
+                android:minHeight="48dp" />
 
             <EditText
                 android:id="@+id/textPatente"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:autofillHints="phone"
                 android:hint="@string/inpip10"
-                android:inputType="text"/>
+                android:inputType="text" />
         </LinearLayout>
 
         <Button
@@ -261,8 +271,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/btn_ipeditar"
             android:background="@drawable/btn_color"
+            android:text="@string/btn_ipeditar"
+            android:textColor="@color/blanco"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonGuardar"
             app:layout_constraintHorizontal_bias="0.5"
@@ -277,9 +288,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/btn_ipguardar"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:background="@drawable/btn_color"
+            android:onClick="onClick"
+            android:text="@string/btn_ipguardar"
+            android:textColor="@color/blanco"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/buttonCancelar"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/buttonEditar"
@@ -293,7 +306,9 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/btn_color"
+            android:onClick="botonCancelar"
             android:text="@string/btn_ipCancelar"
+            android:textColor="@color/blanco"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
