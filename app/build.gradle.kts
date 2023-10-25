@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.servicedelautomotor"
-        minSdk = 24
+        minSdk = 21
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -54,5 +54,11 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:$room_version")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
+    val activity_version = "1.7.0"
 
+    // Java language implementation
+    implementation("androidx.activity:activity:$activity_version")
+    // Kotlin
+    implementation("androidx.activity:activity-ktx:$activity_version")
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
 }
