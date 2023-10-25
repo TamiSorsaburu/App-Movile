@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="80dp"
+        android:layout_height="121dp"
+        android:layout_weight="1"
+        android:text="Item"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtDescripcion"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtDescripcion"
+        android:layout_width="80dp"
+        android:layout_height="121dp"
+        android:layout_weight="1"
+        android:text="Item"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/txtNombre"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <ImageView
+        android:id="@+id/campoImagen"
+        android:layout_width="130dp"
+        android:layout_height="118dp"
+        app:layout_constraintStart_toEndOf="@+id/txtDescripcion"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="55dp" />
+
+    <Button
+        android:id="@+id/editar"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_weight="1"
+        android:background="@android:drawable/ic_menu_edit"
+        android:baselineAligned="false"
+        app:layout_constraintStart_toEndOf="@+id/campoImagen"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="85dp" />
+
+    <Button
+        android:id="@+id/borrar"
+        android:layout_width="31dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:background="@android:drawable/ic_menu_delete"
+        android:baselineAligned="false"
+        android:onClick="delete"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editar"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -84,6 +84,9 @@
     <string name="text_logo_instagram">Logo de Instagram</string>
     <string name="text_mensaje">Mensaje</string>
     <string name="btn_enviar">Enviar</string>
+    <string name="text_hint_IngreseNombre">Ingrese su nombre</string>
+    <string name="text_hint_IngreseCorreo">Ingrese su correo</string>
+    <string name="text_hint_IngreseMensaje">Ingrese su mensaje</string>
     <!--Fin string contacto-->
 
     <!--string mecanico-->
