@@ -1,6 +1,7 @@
 package com.example.servicedelautomotor.entidades;
 
-import androidx.room.ColumnInfo;
+import android.net.Uri;
+
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -13,7 +14,7 @@ public class Servicio {
     public double precio;
 
     //@ColumnInfo(name = "image", typeAffinity = ColumnInfo.BLOB)
-    private String image;
+    public String image;
 
     public Servicio(String nombre, String descripcion, double precio, String image) {
         this.nombre = nombre;
