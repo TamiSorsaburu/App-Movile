@@ -10,11 +10,14 @@
         android:id="@+id/toolbar"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="182dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/imgServicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -34,32 +37,45 @@
 
     <ImageView
         android:id="@+id/imgServicio"
-        android:layout_width="241dp"
-        android:layout_height="254dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp"
+        android:layout_width="244dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="34dp"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:srcCompat="@drawable/mecani_ayuda"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="125dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="522dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="139dp"
         android:background="@drawable/background_dorado"
         android:backgroundTint="#F6BB46"
         android:onClick="btnHome"
         android:text="@string/botón_volver"
-        android:textColor="#000000"
+        android:textColor="@color/blanco"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgServicio"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_home" />
 </androidx.constraintlayout.widget.ConstraintLayout>

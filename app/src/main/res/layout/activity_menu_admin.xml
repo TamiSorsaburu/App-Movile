@@ -56,6 +56,7 @@
             android:layout_marginTop="80dp"
             android:background="@drawable/background_dorado"
             android:text="Servicios"
+            android:onClick="crudServicio"
             android:textColor="@color/blanco"
             android:textSize="16sp"
             tools:layout_editor_absoluteX="57dp"

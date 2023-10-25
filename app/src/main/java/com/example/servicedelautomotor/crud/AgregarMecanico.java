@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.servicedelautomotor.Contacto;
 import com.example.servicedelautomotor.Dashboard;
+import com.example.servicedelautomotor.MenuAdmin;
 import com.example.servicedelautomotor.R;
 import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.entidades.Mecanico;
@@ -97,7 +98,10 @@ public class AgregarMecanico extends AppCompatActivity {
             }
         }
     }
-
+    public void botonCancelar(View V){
+        Intent intent=new Intent(this, MenuAdmin.class);
+        startActivity(intent);
+    }
 
 }
 

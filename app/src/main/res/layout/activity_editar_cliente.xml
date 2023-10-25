@@ -209,7 +209,7 @@
         android:layout_marginBottom="233dp"
         android:background="@drawable/background_dorado"
         android:onClick="onClick"
-        android:text="Button"
+        android:text="Actualizar"
         android:textColor="@color/blanco"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -223,6 +223,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginBottom="161dp"
         android:background="@drawable/background_dorado"
+        android:onClick="botonCancelar"
         android:text="@string/cancelar"
         android:textColor="@color/blanco"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -231,23 +232,33 @@
         app:layout_constraintStart_toStartOf="@+id/btnActualizar"
         app:layout_constraintTop_toBottomOf="@+id/btnActualizar" />
 
+
     <Button
         android:id="@+id/btnCargarFoto"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:layout_marginStart="234dp"
-        android:layout_marginTop="268dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="532dp"
+        android:layout_marginStart="213dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="537dp"
+        android:background="@drawable/background_dorado"
         android:text="Cargar Img"
+        android:textColor="@color/blanco"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
         tools:ignore="MissingConstraints" />
 
-
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_home" />
 </androidx.constraintlayout.widget.ConstraintLayout>

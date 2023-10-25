@@ -69,7 +69,7 @@ public class CargarInformacionPersonal extends AppCompatActivity {
 
     public void onClick(View v){
         registrarCliente();
-        Intent intent = new Intent(this, CargarInformacionPersonal.class);
+        Intent intent = new Intent(this, LeerInformacionPersonal.class);
         startActivity(intent);
     }
     public void btnListarClientes(View view) {

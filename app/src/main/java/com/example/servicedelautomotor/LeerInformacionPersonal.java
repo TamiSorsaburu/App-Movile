@@ -1,7 +1,9 @@
 package com.example.servicedelautomotor;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,7 +27,7 @@ public class LeerInformacionPersonal extends AppCompatActivity {
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editar_info_personal);
+        setContentView(R.layout.activity_ver_info_personal);
 
         cliente=(Cliente)getIntent().getSerializableExtra("classs");
 
@@ -82,5 +84,10 @@ public class LeerInformacionPersonal extends AppCompatActivity {
         });
 
 
+
+    }
+    public void botonCancelar(View V){
+        Intent cancelar=new Intent(this, CargarInformacionPersonal.class);
+        startActivity(cancelar);
     }
 }

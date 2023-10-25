@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.servicedelautomotor.dao.DaoCliente;
+import com.example.servicedelautomotor.entidades.Cliente;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -16,6 +18,9 @@ public class Dashboard extends AppCompatActivity {
     FirebaseAuth mAuth;
     private ImageView adminImage;
     private TextView adminText;
+
+    private boolean datosCargados = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,8 +103,14 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public void botonPerfil(View V){
-        Intent perfil=new Intent(this, CargarInformacionPersonal.class);
-        startActivity(perfil);
+        if(datosCargados){
+            Intent perfil=new Intent(this, LeerInformacionPersonal.class);
+            startActivity(perfil);
+        }else{
+            Intent perfil=new Intent(this,CargarInformacionPersonal.class);
+            startActivity(perfil);
+        }
+
     }
 
     public void botonPresupuesto(View V){
