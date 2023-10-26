@@ -1,5 +1,6 @@
 package com.example.servicedelautomotor.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -13,6 +14,9 @@ public interface DaoCliente {
 
     @Query("SELECT * FROM cliente WHERE idCliente=:client")
     Cliente obtenerCliente(String client);
+
+    @Query("SELECT * FROM cliente LIMIT 1")
+    LiveData<Cliente>getCurrentCliente();
 
     @Insert
     void insertarCliente(Cliente...clientes);

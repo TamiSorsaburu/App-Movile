@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="404dp"
+        android:layout_height="555dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="155dp"
         android:background="@drawable/background_dorado"
@@ -118,56 +118,49 @@
 
     <Button
         android:id="@+id/buttonConfirmar"
-        android:layout_width="172dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="630dp"
-        android:layout_marginEnd="223dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="666dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="68dp"
         android:background="@drawable/background_dorado"
         android:onClick="botonConfirmar"
         android:text="@string/botón_confirmar"
         android:textColor="@color/blanco"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/barraMenu"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCancelar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonCancelar"
-        android:layout_width="172dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginStart="223dp"
-        android:layout_marginTop="630dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
         android:background="@drawable/background_dorado"
         android:onClick="botonCancelar"
         android:text="@string/cancelar"
         android:textColor="@color/blanco"
         android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonConfirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonConfirmar" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="239dp"
-        android:gravity="center"
-        android:text="@string/descripcion4"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonConfirmar"
+        app:menu="@menu/menu_home" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

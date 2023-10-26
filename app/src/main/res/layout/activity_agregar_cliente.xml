@@ -225,6 +225,15 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewInfoVehiculo">
 
             <EditText
+                android:id="@+id/textTipo"
+                android:layout_width="166dp"
+                android:layout_height="match_parent"
+                android:autofillHints="postalAddress"
+                android:hint="Tipo vehiculo"
+                android:inputType="text"
+                android:minWidth="48dp"
+                android:minHeight="48dp" />
+            <EditText
                 android:id="@+id/textMarca"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -317,6 +326,16 @@
             app:layout_constraintTop_toBottomOf="@+id/buttonGuardar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

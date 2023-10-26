@@ -1,6 +1,8 @@
 package com.example.servicedelautomotor;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.room.Room;
 
 import android.annotation.SuppressLint;
@@ -10,26 +12,40 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.servicedelautomotor.coneccionBD.AppDataBase;
+import com.example.servicedelautomotor.crud.ClienteViewModel;
 import com.example.servicedelautomotor.crud.ListaClientes;
 import com.example.servicedelautomotor.entidades.Cliente;
 import com.example.servicedelautomotor.entidades.Direccion;
 import com.example.servicedelautomotor.entidades.Vehiculo;
 
-public class InformacionPersonal extends AppCompatActivity {
+public class CargarInformacionPersonal extends AppCompatActivity {
 
-    EditText textNombre,textApellido,textTelefono,textProvincia, textCalle,textAltura,textLocalidad,textMarca,textModelo,textPatente,textPostal;
+    EditText textTipo,textNombre,textApellido,textTelefono,textProvincia, textCalle,textAltura,textLocalidad,textMarca,textModelo,textPatente,textPostal;
     Button buttonGuardar;
 
+    Cliente cliente;
     ImageView imagePerfil;
 
-    @SuppressLint("WrongViewCast")
+    AppDataBase appDatabase;
+
+    ClienteViewModel clienteViewModel;
+
+    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion_personal);
+        //setContentView(R.layout.activity_editar_info_personal);
+
+        appDatabase = Room.databaseBuilder(
+                getApplicationContext(),
+                AppDataBase.class,
+                "dbServiceAutomotor"
+        ).allowMainThreadQueries().build();
 
         textNombre=findViewById(R.id.textNombre);
         textApellido=findViewById(R.id.textApellido);
@@ -43,14 +59,17 @@ public class InformacionPersonal extends AppCompatActivity {
         textModelo=findViewById(R.id.textModelo);
         textPatente=findViewById(R.id.textPatente);
         textPostal=findViewById(R.id.textPostal);
+        textTipo=findViewById(R.id.textTipo);
 
 
         buttonGuardar=findViewById(R.id.buttonGuardar);
+        //cliente=(Cliente)getIntent().getSerializableExtra("classs");
+
     }
 
     public void onClick(View v){
         registrarCliente();
-        Intent intent = new Intent(this, InformacionPersonal.class);
+        Intent intent = new Intent(this, LeerInformacionPersonal.class);
         startActivity(intent);
     }
     public void btnListarClientes(View view) {
@@ -66,10 +85,10 @@ public class InformacionPersonal extends AppCompatActivity {
         ).allowMainThreadQueries().build();
 
         Direccion direccion=new Direccion(textCalle.getText().toString(),textAltura.getText().toString(),textLocalidad.getText().toString(),textProvincia.getText().toString(),Integer.parseInt(textPostal.getText().toString()));
-        Vehiculo vehiculo=new Vehiculo(textPatente.getText().toString(),textModelo.getText().toString(),textMarca.getText().toString());
+        Vehiculo vehiculo=new Vehiculo(textPatente.getText().toString(),textTipo.getText().toString(),textModelo.getText().toString(),textMarca.getText().toString());
         appDatabase.daoCliente().insertarCliente(new Cliente(textNombre.getText().toString(),textApellido.getText().toString(),Integer.parseInt(textTelefono.getText().toString()),
                 imagePerfil.toString().toString(),direccion,vehiculo));
-        Toast.makeText(InformacionPersonal.this,"Tus datos se guardaron Exitosamente!!!",Toast.LENGTH_LONG).show();
+        Toast.makeText(CargarInformacionPersonal.this,"Tus datos se guardaron Exitosamente!!!",Toast.LENGTH_LONG).show();
     }
     public void botonCancelar(View V){
         Intent cancelar=new Intent(this, Dashboard.class);

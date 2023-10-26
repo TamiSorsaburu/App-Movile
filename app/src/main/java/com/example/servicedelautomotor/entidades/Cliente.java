@@ -2,6 +2,7 @@ package com.example.servicedelautomotor.entidades;
 
 import androidx.room.Embedded;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
@@ -21,6 +22,7 @@ public class Cliente implements Serializable {
 
     @Embedded
     public Vehiculo Vehiculo;
+
 
     public Cliente() {
     }

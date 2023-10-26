@@ -143,18 +143,17 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="372dp"
-        android:layout_height="211dp"
-        android:layout_margin="20dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/button7"
-            android:layout_width="136dp"
-            android:layout_height="58dp"
-            android:layout_marginStart="210dp"
-            android:layout_marginTop="119dp"
-            android:layout_marginEnd="26dp"
-            android:layout_marginBottom="34dp"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="215dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="153dp"
             android:background="@drawable/background_dorado"
             android:onClick="botonVolver"
             android:text="@string/botón_volver"
@@ -164,6 +163,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/barraMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/principal"
+            app:itemIconTint="@color/blanco"
+            app:itemTextColor="@color/blanco"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/menu_home" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InformacionPersonal">
+    tools:context=".CargarInformacionPersonal">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -117,7 +117,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
@@ -166,7 +165,7 @@
             android:layout_width="346dp"
             android:layout_height="60dp"
             android:layout_marginStart="19dp"
-            android:layout_marginTop="336dp"
+            android:layout_marginTop="300dp"
             android:layout_marginEnd="14dp"
             android:layout_marginBottom="303dp"
             android:padding="10dp"
@@ -200,11 +199,12 @@
             android:id="@+id/textViewInfoVehiculo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
             android:text="@string/tituloip2"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+            app:layout_constraintHorizontal_bias="0.478"
             app:layout_constraintStart_toStartOf="@+id/linearLayout4"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
@@ -220,6 +220,15 @@
             app:layout_constraintStart_toStartOf="@+id/linearLayout4"
             app:layout_constraintTop_toBottomOf="@+id/textViewInfoVehiculo">
 
+            <EditText
+                android:id="@+id/textTipo"
+                android:layout_width="155dp"
+                android:layout_height="match_parent"
+                android:autofillHints="postalAddress"
+                android:hint="Tipo vehiculo"
+                android:inputType="text"
+                android:minWidth="48dp"
+                android:minHeight="48dp" />
             <EditText
                 android:id="@+id/textMarca"
                 android:layout_width="match_parent"
@@ -316,4 +325,16 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_home" />
 </androidx.constraintlayout.widget.ConstraintLayout>

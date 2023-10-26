@@ -36,4 +36,9 @@ public class MenuAdmin extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void crudServicio(View V) {
+        Intent i = new Intent(this, AgregarServicio.class);
+        startActivity(i);
+    }
+
 }
