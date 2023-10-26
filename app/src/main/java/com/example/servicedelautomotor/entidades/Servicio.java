@@ -5,8 +5,10 @@ import android.net.Uri;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity
-public class Servicio {
+public class Servicio implements Serializable {
     @PrimaryKey(autoGenerate = true)
     public long idServicio;
     public String nombre;

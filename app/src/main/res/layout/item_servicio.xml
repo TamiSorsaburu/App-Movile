@@ -9,11 +9,13 @@
         android:id="@+id/txtNombre"
         android:layout_width="80dp"
         android:layout_height="121dp"
+        android:layout_marginStart="5dp"
         android:layout_weight="1"
         android:text="Item"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/txtDescripcion"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -40,7 +42,7 @@
         android:id="@+id/editar"
         android:layout_width="30dp"
         android:layout_height="35dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="8dp"
         android:layout_weight="1"
         android:background="@android:drawable/ic_menu_edit"
         android:baselineAligned="false"
@@ -52,14 +54,13 @@
         android:id="@+id/borrar"
         android:layout_width="31dp"
         android:layout_height="35dp"
-        android:layout_marginEnd="16dp"
         android:layout_weight="1"
         android:background="@android:drawable/ic_menu_delete"
         android:baselineAligned="false"
         android:onClick="delete"
         app:layout_constraintBaseline_toBaselineOf="@+id/editar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toEndOf="@+id/editar"
         tools:ignore="MissingConstraints" />
 

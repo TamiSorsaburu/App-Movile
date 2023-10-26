@@ -2,9 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnVolver"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AgregarServicio">
+    android:onClick="volver"
+    tools:context=".UpdateServiicio">
 
     <TextView
         android:id="@+id/textView7"
@@ -73,8 +75,8 @@
 
     <ImageView
         android:id="@+id/imgServicio"
-        android:layout_width="260dp"
-        android:layout_height="140dp"
+        android:layout_width="134dp"
+        android:layout_height="124dp"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
 
@@ -83,30 +85,26 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnRegistro"
+        android:id="@+id/btnEditar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:onClick="onClick"
-        android:text="Registrar Servicio"
+        android:text="Guardar cambios"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgServicio"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/listar"
+        android:id="@+id/btnAtras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:onClick="btnListar"
-        android:text="Lista"
+        android:layout_marginTop="20dp"
+        android:onClick="volver"
+        android:text="Volver"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistro"
-        tools:ignore="MissingConstraints" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/btnEditar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

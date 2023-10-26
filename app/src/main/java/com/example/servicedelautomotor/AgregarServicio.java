@@ -7,6 +7,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.PickVisualMediaRequest;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.activity.result.contract.ActivityResultContracts.PickVisualMedia;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -38,6 +39,8 @@ import com.example.servicedelautomotor.entidades.Direccion;
 import com.example.servicedelautomotor.entidades.Servicio;
 import com.example.servicedelautomotor.entidades.Sucursal;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.regex.Matcher;
@@ -55,33 +58,9 @@ public class AgregarServicio extends AppCompatActivity {
     File auxFile;
     File f;
 
-    // Registers a photo picker activity launcher in single-select mode.
-    ActivityResultLauncher<PickVisualMediaRequest> pickMedia =
-            registerForActivityResult(new PickVisualMedia(), uri -> {
-                // Callback is invoked after the user selects a media item or closes the
-                // photo picker.
-                if (uri != null) {
-                    Log.d("PhotoPicker", "Selected URI: " + uri);
-                    imgServicio.setImageURI(uri);
-                    uriString = String.valueOf(uri);
-                    Log.d("UriGuardada", "URI guardada: " + uriString);
-                    String path = uri.getPath();
-                    Log.d("Path", "Path: " + path);
-
-                    uriAConvertir = uri;
 
 
-
-
-
-
-                } else {
-                    Log.d("PhotoPicker", "No media selected");
-                }
-            });
-
-    public AgregarServicio() throws IOException {
-    }
+    private final static int LOCATION_REQUEST_CODE = 23;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,97 +73,37 @@ public class AgregarServicio extends AppCompatActivity {
 
         imgServicio = findViewById(R.id.imgServicio);
 
-        //isStoragePermissionGranted();
-        checkExternalStoragePermission();
-
-   /*     File imagenArchivo = null;
-        try {
-            imagenArchivo = crearImagen();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Uri fotoUri = FileProvider.getUriForFile(this, "com.example.servicedelautomotor.files", imagenArchivo);
-        Log.d("fotoUri", "fotoUri: " + fotoUri);
-
-    */
-
 
 
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    protected void onStart() {
+        super.onStart();
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) !=
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    LOCATION_REQUEST_CODE);
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull @NotNull String[] permissions, @NonNull @NotNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if(grantResults[0]== PackageManager.PERMISSION_GRANTED){
-
-
-            // permission granted
-
+        switch (requestCode) {
+            case LOCATION_REQUEST_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "Gracias por conceder los permisos para " +
+                            "leer el almacenamiento, estos permisos son necesarios para poder " +
+                            "escoger tu foto de perfil", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "No podemos realizar el registro si no nos concedes los permisos para leer el almacenamiento.", Toast.LENGTH_SHORT).show();
+                }
+                break;
         }
     }
- /*
-
- private File crearImagen() throws IOException {
-
-        String nombreImagen = "foto_";
-        //File directorio = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        File file = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        //File file = new File(Environment.getExternalStorageDirectory(), "read.me");
-        Uri uris = Uri.fromFile(file);
-        auxFile = new File(uriAConvertir.getPath());
-        //assertEquals(file.getAbsolutePath(), auxFile.getAbsolutePath());
-        //Log.d("Path2", "PathStorege: " + auxFile);
-        //Log.d("Path3", "PathUris: " + uris);
-
-        //File imagen = File.createTempFile(nombreImagen, ".jpg", directorio);
-        //File imagen = File.createTempFile(nombreImagen, ".jpg", file);
-        //String rutaImagen = imagen.getAbsolutePath();
-        //Log.d("ruteImagen", "rutaImagen: " + rutaImagen);
-        //return imagen;
-
-
-
-    }
-    private Context context;
-    File file = new File(getRealPathFromURI(context,uriAConvertir));
-
-
-    public String getPath(Uri uri)
-    {
-        String[] projection = { MediaStore.Images.Media.DATA };
-        Cursor cursor = getContentResolver().query(uri, projection, null, null,null);
-        //if (cursor == null) return null;
-        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-        cursor.moveToFirst();
-        String s=cursor.getString(column_index);
-        cursor.close();
-        Log.d("nuevaPrueba", "nuevaPrueba: " + s);
-        return s;
-    }
-
-    public String getRealPathFromURI(Context context, Uri contentUri) {
-        Cursor cursor = null;
-        try {
-            String[] proj = { MediaStore.Images.Media.DATA };
-            cursor = context.getContentResolver().query(contentUri,  proj, null, null, null);
-            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-            cursor.moveToFirst();
-            Log.d("nuevaPrueba", "nuevaPrueba: " + cursor.getString(column_index));
-            return cursor.getString(column_index);
-        } finally {
-            if (cursor != null) {
-                cursor.close();
-            }
-        }
-    }
-
-  */
 
     public void seleccionarImagen(View view) {
         cargarImagen();
-       // pickMedia.launch(new PickVisualMediaRequest.Builder()
-       //         .setMediaType(PickVisualMedia.ImageOnly.INSTANCE)
-       //         .build());
 
     }
 
@@ -245,33 +164,7 @@ public class AgregarServicio extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public  boolean isStoragePermissionGranted() {
-        if (Build.VERSION.SDK_INT >= 23) {
-            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                Log.i("Entrada", "1");
-                return true;
-            } else {
 
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-                Log.i("Entrada", "2");
-                return false;
-            }
-        }
-        else { //permission is automatically granted on sdk<23 upon installation
-            Log.i("Entrada", "3");
-            return true;
-        }
-    }
 
-    private void checkExternalStoragePermission() {
-        int permissionCheck = ContextCompat.checkSelfPermission(
-                this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-            Log.i("Mensaje", "No se tiene permiso para leer.");
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 225);
-        } else {
-            Log.i("Mensaje", "Se tiene permiso para leer!");
 
-        }
-    }
 }

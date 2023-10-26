@@ -20,8 +20,8 @@ public interface DaoServicio {
     @Insert
     void insertarServicio(Servicio...servicios);
 
-    @Query("UPDATE servicio SET nombre=:nombre, descripcion=:descripcion, precio=:precio WHERE idServicio=:idServicio")
-    void actualizarServicio(long idServicio, String nombre, String descripcion, Double precio );
+    @Query("UPDATE servicio SET nombre=:nombre, descripcion=:descripcion, precio=:precio, image=:imagen WHERE idServicio=:idServicio")
+    void actualizarServicio(long idServicio, String nombre, String descripcion, Double precio, String imagen );
 
     @Query("DELETE FROM servicio WHERE idServicio=:idServicio")
     void eliminarServicio(long idServicio);

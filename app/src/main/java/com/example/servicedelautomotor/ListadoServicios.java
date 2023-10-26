@@ -3,6 +3,7 @@ package com.example.servicedelautomotor;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.PickVisualMediaRequest;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -35,6 +36,8 @@ import java.util.ArrayList;
 import java.util.List;
 import android.Manifest;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ListadoServicios extends AppCompatActivity {
     ListView li;
     private List<Servicio> servicios;
@@ -45,7 +48,7 @@ public class ListadoServicios extends AppCompatActivity {
     Intent intent;
 
     AppDataBase appDatabase;
-
+    private final static int LOCATION_REQUEST_CODE = 23;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,28 +69,34 @@ public class ListadoServicios extends AppCompatActivity {
         AdapterServicio adapterServicio = new AdapterServicio(this);
         li.setAdapter(adapterServicio);
 
-       // if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            //Verifica permisos para Android 6.0+
-        //    checkExternalStoragePermission();
-       // }
-
-        //checkExternalStoragePermission();
-        isStoragePermissionGranted();
-        //checkExternalStoragePermission();
-
 
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if(grantResults[0]== PackageManager.PERMISSION_GRANTED){
-
-
-            // permission granted
-
+    protected void onStart() {
+        super.onStart();
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) !=
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    LOCATION_REQUEST_CODE);
         }
     }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull @NotNull String[] permissions, @NonNull @NotNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case LOCATION_REQUEST_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "Gracias por conceder los permisos para " +
+                            "leer el almacenamiento, estos permisos son necesarios para poder " +
+                            "escoger tu foto de perfil", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "No podemos realizar el registro si no nos concedes los permisos para leer el almacenamiento.", Toast.LENGTH_SHORT).show();
+                }
+                break;
+        }
+    }
+
 
     class AdapterServicio extends ArrayAdapter<Servicio> {
         AppCompatActivity appCompatActivity;
@@ -104,15 +113,15 @@ public class ListadoServicios extends AppCompatActivity {
             LayoutInflater inflater = appCompatActivity.getLayoutInflater();
             View item = inflater.inflate(R.layout.item_servicio,null);
 //Borrar
-         /*   long idSucur = sucursales.get(i).idSucursal;
-            Sucursal sucur = sucursales.get(i);
+            long idServ = servicios.get(i).idServicio;
+            Servicio serv = servicios.get(i);
             delete = item.findViewById(R.id.borrar);
             delete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    appDatabase.daoSucursal().eliminarSucursal(idSucur);
+                    appDatabase.daoServicio().eliminarServicio(idServ);
 
-                    Toast.makeText(getContext(), "Se eliminó la Sucursal de id " + idSucur, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Se eliminó el Servicio" + servicios.get(i).nombre, Toast.LENGTH_SHORT).show();
 
                     finish();
                     startActivity(getIntent());
@@ -120,20 +129,16 @@ public class ListadoServicios extends AppCompatActivity {
             });
 
 //Editar
+
             update= item.findViewById(R.id.editar);
             update.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    abrirVentanaModificacion(sucur);
-                    Toast.makeText(getContext(), "Se modificará la Sucursal de id " + idSucur, Toast.LENGTH_SHORT).show();
+                    abrirVentanaModificacion(serv);
+                    Toast.makeText(getContext(), "Se modificará el servicio " + servicios.get(i).nombre, Toast.LENGTH_SHORT).show();
 
                 }
             });
-
-            */
-
-
-
 
             //vincular con los xml del item
             TextView txtNombre = (TextView) item.findViewById(R.id.txtNombre);
@@ -142,55 +147,22 @@ public class ListadoServicios extends AppCompatActivity {
             txtNombre.setText(servicios.get(i).nombre);
             txtDescripcion.setText(servicios.get(i).descripcion);
 
-            //checkExternalStoragePermission();
-
-            //imgServicio.setImageURI(Uri.parse(servicios.get(i).image));
-            imgServicio.setImageURI(Uri.parse("/storage/emulated/0/Pictures/hombre-de-limpieza.jpg"));
-
+            imgServicio.setImageURI(Uri.parse(servicios.get(i).image));
 
             return item;
         }
 
 
 
-     /*   public void abrirVentanaModificacion(Sucursal sucur){
-            Intent intent = new Intent(this.getContext(), UpdateSucursal.class);
-            intent.putExtra("class",sucur);
+      public void abrirVentanaModificacion(Servicio servicio){
+            Intent intent = new Intent(this.getContext(), UpdateServiicio.class);
+            intent.putExtra("class",servicio);
             startActivity(intent);
         }
-        */
+
 
 
 
     }
 
-    private void checkExternalStoragePermission() {
-        int permissionCheck = ContextCompat.checkSelfPermission(
-                this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-            Log.i("Mensaje", "No se tiene permiso para leer.");
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 225);
-        } else {
-            Log.i("Mensaje", "Se tiene permiso para leer!");
-
-        }
-    }
-
-    public  boolean isStoragePermissionGranted() {
-        if (Build.VERSION.SDK_INT >= 23) {
-            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                Log.i("Entrada", "1");
-                return true;
-            } else {
-
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-                Log.i("Entrada", "2");
-                return false;
-            }
-        }
-        else { //permission is automatically granted on sdk<23 upon installation
-            Log.i("Entrada", "3");
-            return true;
-        }
-    }
 }
