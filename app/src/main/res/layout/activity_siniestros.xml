@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="30dp"
-    android:paddingRight="30dp"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
     tools:context=".SiniestrosActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -20,27 +19,42 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textSolicitarGrua"
         android:layout_width="0dp"
         android:layout_height="47dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="20dp"
         android:text="@string/siniestros_title"
         android:textAlignment="center"
         android:textSize="26sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Descripción del mapa para la accesibilidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSolicitarGrua"
+        map:cameraZoom="10"
+        map:uiRotateGestures="true"
+        map:uiZoomControls="true" />
+
+<!--    Falta implementar el boton para activar ubicacion y darle los permisos-->
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnActivarUbicacion"
         android:layout_width="337dp"
         android:layout_height="61dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/background_dorado"
         android:backgroundTint="#F6BB46"
         android:text="@string/btn_ubicacion"
@@ -48,92 +62,36 @@
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/map" />
 
     <TextView
-        android:id="@+id/textRecuperar"
-        android:layout_width="161dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/ubicacion"
-        android:textSize="21sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.285"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="340dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/estilo_bordes"
-        android:ems="10"
-        android:inputType="text"
-        android:paddingTop="20sp"
-        android:paddingBottom="20sp"
-        android:text="@string/ubicacion_cliente"
-        android:textAlignment="textStart"
-        android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.381"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="316dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/demora"
-        android:textSize="21sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
-
-    <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/TextUbicacion"
         android:layout_width="354dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="@string/tiempo"
+        android:text=""
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/btnActivarUbicacion" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgGrua1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="7dp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/TextUbicacion"
         app:srcCompat="@drawable/tow_truck" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnConfirmarGrua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/background_dorado"
         android:backgroundTint="#F6BB46"
         android:onClick="btnConfirmaAyuda"
@@ -144,17 +102,15 @@
         android:text="@string/botón_confirmar"
         android:textColor="@color/blanco"
         android:textSize="22sp"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintBottom_toTopOf="@+id/barraMenu"
+        app:layout_constraintStart_toStartOf="@+id/TextUbicacion"
+        app:layout_constraintTop_toBottomOf="@+id/imgGrua1" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnVolver1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/background_dorado"
         android:backgroundTint="#F6BB46"
         android:onClick="btnHome"
@@ -165,9 +121,24 @@
         android:text="@string/botón_volver"
         android:textColor="@color/blanco"
         android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/barraMenu"
+        app:layout_constraintEnd_toEndOf="@+id/TextUbicacion"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toEndOf="@+id/btnConfirmarGrua"
+        app:layout_constraintTop_toBottomOf="@+id/imgGrua1" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_home" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
