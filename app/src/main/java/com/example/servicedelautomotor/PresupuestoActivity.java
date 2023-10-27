@@ -69,7 +69,7 @@ public class PresupuestoActivity extends AppCompatActivity {
                 } else if (buttonView == switchNeumaticos) {
                     precioActual += 25000; // Por ejemplo, $25,000
                 }
-                serviciosSeleccionados += buttonView.getText().toString() + "\n" + "\n";
+                serviciosSeleccionados += buttonView.getText().toString() + "\n";
             } else {
                 // El Switch está desactivado, resta el precio correspondiente
                 if (buttonView == switchLavadero) {
@@ -81,7 +81,7 @@ public class PresupuestoActivity extends AppCompatActivity {
                 } else if (buttonView == switchNeumaticos) {
                     precioActual -= 25000;
                 }
-                serviciosSeleccionados = serviciosSeleccionados.replace(buttonView.getText().toString() + "\n" + "\n", "");
+                serviciosSeleccionados = serviciosSeleccionados.replace(buttonView.getText().toString() + "\n", "");
             }
 
             // Actualiza el TextView con el nuevo precio

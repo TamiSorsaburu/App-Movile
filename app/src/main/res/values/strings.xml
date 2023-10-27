@@ -166,12 +166,14 @@ la reparación del auto depende del daño.</string>
     //detalle-usuario
 
     <!--solicitar turno-->
+    <string name="seleccion_fecha_hora">Seleccione fecha y hora del turno</string>
     <string name="servicio_turno">Servicios:</string>
     <string name="direccion_turno">Dirección:</string>
     <string name="vehiculo_turno">Tipo de vehículo:</string>
     <string name="fecha_turno">Fecha:</string>
     <string name="precio_turno">Precio:</string>
-    <string name="hora_turno">Hora:</string>
+    <string name="elegir_horario">Elegir Horario</string>
+    <string name="hora_Turno">Hora:</string>
     <string name="btn_confirmar_turno">Confirmar</string>
     <string name="btn_cancelar_turno">Cancelar</string>
 

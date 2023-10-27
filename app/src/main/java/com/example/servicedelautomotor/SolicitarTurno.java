@@ -9,11 +9,15 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
 import android.widget.TimePicker;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SolicitarTurno extends AppCompatActivity {
     private CalendarView calendarView;
@@ -98,12 +102,28 @@ public class SolicitarTurno extends AppCompatActivity {
             }
         });
 
+        BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
+        Menu menu = bottomNavigationView.getMenu();
+        menu.findItem(R.id.menu_exit).setVisible(false); // Oculta el ícono de cierre de sesión
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                if (item.getItemId() == R.id.menu_home) {
+                    Intent intent = new Intent(SolicitarTurno.this, Dashboard.class);
+                    startActivity(intent);
+                    return true;
+                }
+                return false;
+            }
+        });
+
     }
 
     // Método para actualizar el TextView con la hora seleccionada
     private void actualizarTextViewHora() {
         String horaFormateada = String.format("%02d:%02d", horaSeleccionada, minutoSeleccionado);
-        txtHoraSeleccionada.setText("Hora: " + horaFormateada);
+        txtHoraSeleccionada.setText(horaFormateada);
     }
 
 
