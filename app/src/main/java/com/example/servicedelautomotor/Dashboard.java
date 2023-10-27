@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.servicedelautomotor.dao.DaoCliente;
 import com.example.servicedelautomotor.entidades.Cliente;
+import com.example.servicedelautomotor.entidades.Usuario;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -21,12 +22,16 @@ public class Dashboard extends AppCompatActivity {
 
     private boolean datosCargados = false;
 
+    Usuario usua;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        String name = getIntent().getStringExtra("nombreUsuario");
+        //String name = getIntent().getStringExtra("nombreUsuario");
+        usua = (Usuario) getIntent().getSerializableExtra("class");
+        String name = usua.getNombreUsuario();
         TextView nameTextView = findViewById(R.id.name);
         nameTextView.setText(name);
 
@@ -103,11 +108,13 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public void botonPerfil(View V){
+        usua = (Usuario) getIntent().getSerializableExtra("class");
         if(datosCargados){
             Intent perfil=new Intent(this, LeerInformacionPersonal.class);
             startActivity(perfil);
         }else{
             Intent perfil=new Intent(this,CargarInformacionPersonal.class);
+            perfil.putExtra("class1",usua);
             startActivity(perfil);
         }
 

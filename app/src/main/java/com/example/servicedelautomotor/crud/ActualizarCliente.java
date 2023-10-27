@@ -69,13 +69,13 @@ public class ActualizarCliente extends AppCompatActivity {
     }
 
     public void onClick(View v){
-        editarCliente();
+        //editarCliente();
         Intent intent = new Intent(this, ListaClientes.class);
         startActivity(intent);
     }
     
 
-    private void editarCliente(){
+ /*   private void editarCliente(){
         appDataBase.daoCliente().
                 actualizarCliente(cliente.idCliente,
                         aNombre.getText().toString(),
@@ -92,6 +92,8 @@ public class ActualizarCliente extends AppCompatActivity {
                         aPatente.getText().toString());
 
     }
+
+  */
 
     public void botonCancelar(View V){
         Intent intent=new Intent(this, ListaClientes.class);
