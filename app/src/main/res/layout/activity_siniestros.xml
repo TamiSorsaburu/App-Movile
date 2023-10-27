@@ -9,13 +9,14 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="370dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -65,23 +66,32 @@
         app:layout_constraintTop_toBottomOf="@+id/map" />
 
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/ubicacion"
+        android:textColor="@color/negro"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="@+id/btnActivarUbicacion"
+        app:layout_constraintTop_toBottomOf="@+id/btnActivarUbicacion" />
+
+    <TextView
         android:id="@+id/TextUbicacion"
         android:layout_width="354dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:text=""
-        android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnActivarUbicacion" />
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/imgGrua1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="123dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextUbicacion"
@@ -89,9 +99,10 @@
 
     <Button
         android:id="@+id/btnConfirmarGrua"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="159dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/background_dorado"
         android:backgroundTint="@color/secundario"
         android:onClick="btnConfirmaAyuda"
@@ -103,28 +114,8 @@
         android:textColor="@color/blanco"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/barraMenu"
-        app:layout_constraintStart_toStartOf="@+id/TextUbicacion"
-        app:layout_constraintTop_toBottomOf="@+id/imgGrua1" />
-
-    <Button
-        android:id="@+id/btnVolver1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/background_dorado"
-        android:backgroundTint="@color/secundario"
-        android:onClick="btnHome"
-        android:paddingLeft="10sp"
-        android:paddingTop="10sp"
-        android:paddingRight="10sp"
-        android:paddingBottom="10sp"
-        android:text="@string/botón_volver"
-        android:textColor="@color/blanco"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/barraMenu"
         app:layout_constraintEnd_toEndOf="@+id/TextUbicacion"
-        app:layout_constraintHorizontal_bias="0.825"
-        app:layout_constraintStart_toEndOf="@+id/btnConfirmarGrua"
+        app:layout_constraintStart_toStartOf="@+id/TextUbicacion"
         app:layout_constraintTop_toBottomOf="@+id/imgGrua1" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
