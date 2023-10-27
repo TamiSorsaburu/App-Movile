@@ -8,6 +8,7 @@
     <string name="ubicacion">Su ubicación es:</string>
     <string name="ubicacion_cliente">Av.Corrientes 300</string>
     <string name="demora">Demora estimada:</string>
+    <string name="description_map">Descripción del mapa para la accesibilidad</string>
 
     //confirma-ayuda
     <string name="ayudaTitulo">Nuestro profesional esta en camino!</string>
