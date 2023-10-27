@@ -20,6 +20,7 @@ import com.example.servicedelautomotor.crud.ClienteViewModel;
 import com.example.servicedelautomotor.crud.ListaClientes;
 import com.example.servicedelautomotor.entidades.Cliente;
 import com.example.servicedelautomotor.entidades.Direccion;
+import com.example.servicedelautomotor.entidades.Usuario;
 import com.example.servicedelautomotor.entidades.Vehiculo;
 
 public class CargarInformacionPersonal extends AppCompatActivity {
@@ -33,6 +34,7 @@ public class CargarInformacionPersonal extends AppCompatActivity {
     AppDataBase appDatabase;
 
     ClienteViewModel clienteViewModel;
+    Usuario usuar;
 
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
@@ -85,9 +87,13 @@ public class CargarInformacionPersonal extends AppCompatActivity {
         ).allowMainThreadQueries().build();
 
         Direccion direccion=new Direccion(textCalle.getText().toString(),textAltura.getText().toString(),textLocalidad.getText().toString(),textProvincia.getText().toString(),Integer.parseInt(textPostal.getText().toString()));
+        appDatabase.daoDireccion().insertarDireccion(direccion);
         Vehiculo vehiculo=new Vehiculo(textPatente.getText().toString(),textTipo.getText().toString(),textModelo.getText().toString(),textMarca.getText().toString());
+        appDatabase.daoVehiculo().insertarVehiculo(vehiculo);
+
+        usuar = (Usuario) getIntent().getSerializableExtra("class1");
         appDatabase.daoCliente().insertarCliente(new Cliente(textNombre.getText().toString(),textApellido.getText().toString(),Integer.parseInt(textTelefono.getText().toString()),
-                imagePerfil.toString().toString(),direccion,vehiculo));
+                "imagePerfil.toString()",usuar.getIdUsuario(),direccion,vehiculo));
         Toast.makeText(CargarInformacionPersonal.this,"Tus datos se guardaron Exitosamente!!!",Toast.LENGTH_LONG).show();
     }
     public void botonCancelar(View V){

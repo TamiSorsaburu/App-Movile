@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "408fdd612a823474344da2e7f95fe1cd",
+    "identityHash": "55fc65b5c43c70b948d3cd06eaca4c0e",
     "entities": [
       {
         "tableName": "Administrador",
@@ -50,7 +50,7 @@
       },
       {
         "tableName": "Cliente",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, `idDireccion` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER, `idVehiculo` INTEGER, `tipoVehiculo` TEXT, `patente` TEXT, `modelo` TEXT, `marca` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, `usuarioClienteId` INTEGER NOT NULL, `idDireccion` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER, `idVehiculo` INTEGER, `tipoVehiculo` TEXT, `patente` TEXT, `modelo` TEXT, `marca` TEXT, FOREIGN KEY(`usuarioClienteId`) REFERENCES `usuario`(`idUsuario`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
         "fields": [
           {
             "fieldPath": "idCliente",
@@ -81,6 +81,12 @@
             "columnName": "imagen",
             "affinity": "TEXT",
             "notNull": false
+          },
+          {
+            "fieldPath": "usuarioClienteId",
+            "columnName": "usuarioClienteId",
+            "affinity": "INTEGER",
+            "notNull": true
           },
           {
             "fieldPath": "direccion.idDireccion",
@@ -156,7 +162,19 @@
           ]
         },
         "indices": [],
-        "foreignKeys": []
+        "foreignKeys": [
+          {
+            "table": "usuario",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "usuarioClienteId"
+            ],
+            "referencedColumns": [
+              "idUsuario"
+            ]
+          }
+        ]
       },
       {
         "tableName": "Direccion",
@@ -626,7 +644,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '408fdd612a823474344da2e7f95fe1cd')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '55fc65b5c43c70b948d3cd06eaca4c0e')"
     ]
   }
 }

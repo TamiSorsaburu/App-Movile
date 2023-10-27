@@ -7,7 +7,11 @@ import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
-@Entity
+@Entity(tableName = "Cliente",foreignKeys = @ForeignKey(
+        entity = Usuario.class,
+        parentColumns = "idUsuario",
+        childColumns = "usuarioClienteId"
+))
 public class Cliente implements Serializable {
     @PrimaryKey(autoGenerate = true)
     public int idCliente;
@@ -16,6 +20,8 @@ public class Cliente implements Serializable {
     public String apellido;
     public int telefono;
     public String imagen;
+
+    public int usuarioClienteId;
 
     @Embedded
     public Direccion direccion;
@@ -27,12 +33,13 @@ public class Cliente implements Serializable {
     public Cliente() {
     }
 
-    public Cliente(String nombre, String apellido, int telefono,String imagen, Direccion direccion, Vehiculo vehiculo) {
+    public Cliente(String nombre, String apellido, int telefono,String imagen, int usuarioClienteId, Direccion direccion, Vehiculo vehiculo) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.imagen = imagen;
+        this.usuarioClienteId = usuarioClienteId;
         this.direccion = direccion;
         Vehiculo = vehiculo;
     }

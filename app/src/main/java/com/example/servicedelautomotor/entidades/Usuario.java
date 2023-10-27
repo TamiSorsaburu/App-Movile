@@ -3,8 +3,10 @@ package com.example.servicedelautomotor.entidades;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity(tableName = "usuario")
-public class Usuario {
+public class Usuario implements Serializable {
     @PrimaryKey(autoGenerate = true)
     private int idUsuario;
     private String nombreUsuario;
