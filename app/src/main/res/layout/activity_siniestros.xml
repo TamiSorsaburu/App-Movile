@@ -48,7 +48,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textSolicitarGrua"
         map:cameraZoom="10"
         map:uiRotateGestures="true"
-        map:uiZoomControls="true" />
+        map:uiZoomControls="true"
+        tools:ignore="FragmentTag"/>
 
 <!--    Falta implementar el boton para activar ubicacion y darle los permisos-->
     <Button
