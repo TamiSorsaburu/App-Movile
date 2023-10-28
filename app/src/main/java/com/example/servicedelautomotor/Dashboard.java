@@ -1,19 +1,27 @@
 package com.example.servicedelautomotor;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.example.servicedelautomotor.dao.DaoCliente;
 import com.example.servicedelautomotor.entidades.Cliente;
 import com.example.servicedelautomotor.entidades.Usuario;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+
+import org.jetbrains.annotations.NotNull;
 
 public class Dashboard extends AppCompatActivity {
     FirebaseAuth mAuth;
@@ -23,7 +31,7 @@ public class Dashboard extends AppCompatActivity {
     private boolean datosCargados = false;
 
     Usuario usua;
-
+    private final static int LOCATION_REQUEST_CODE = 23;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +75,31 @@ public class Dashboard extends AppCompatActivity {
             // Si el usuario no es un administrador, oculta el botón Admin
             adminImage.setVisibility(View.GONE);
             adminText.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE) !=
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    LOCATION_REQUEST_CODE);
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull @NotNull String[] permissions, @NonNull @NotNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case LOCATION_REQUEST_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "Gracias por conceder los permisos para " +
+                            "leer el almacenamiento, estos permisos son necesarios para poder " +
+                            "escoger tu foto de perfil", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "No podemos realizar el registro si no nos concedes los permisos para leer el almacenamiento.", Toast.LENGTH_SHORT).show();
+                }
+                break;
         }
     }
 
@@ -121,7 +154,7 @@ public class Dashboard extends AppCompatActivity {
         startActivity(perfil);
     }
 
-    }
+
 
     public void botonPresupuesto(View V){
         Intent presupuesto=new Intent(this, PresupuestoActivity.class);

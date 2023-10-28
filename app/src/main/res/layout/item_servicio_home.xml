@@ -21,6 +21,7 @@
             android:layout_height="179dp"
             android:layout_weight="1" />
 
+
         <TextView
             android:id="@+id/textServicio"
             android:layout_width="96dp"

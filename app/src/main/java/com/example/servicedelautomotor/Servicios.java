@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,7 +23,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.room.Room;
@@ -32,6 +36,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.File;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,6 +48,7 @@ public class Servicios extends AppCompatActivity {
     ArrayList<Servicio> c = new ArrayList<Servicio>();
 
     AppDataBase appDatabase;
+    ImageView imageView;
 
     private final static int LOCATION_REQUEST_CODE = 23;
 
@@ -79,16 +86,19 @@ public class Servicios extends AppCompatActivity {
 
        AdapterServicio adapterServicio=new AdapterServicio(this);
        li.setAdapter(adapterServicio);
-    }
 
-    public void botonCancelar(View V) {
-        Intent cancelar = new Intent(this, Dashboard.class);
-        startActivity(cancelar);
-    }
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //toolbar.setTitle(username);
+        setSupportActionBar(toolbar);
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
 
-    public void botonSolicitarTurno(View V) {
-        Intent solicitarT = new Intent(this, SolicitarTurno.class);
-        startActivity(solicitarT);
+        // Enable the Up button
+        if (ab != null) {
+            ab.setDisplayHomeAsUpEnabled(true);
+        } else {
+            throw new NullPointerException("Something went wrong");
+        }
     }
 
     @Override
@@ -115,6 +125,19 @@ public class Servicios extends AppCompatActivity {
     }
 
 
+    public void botonCancelar(View V) {
+        Intent cancelar = new Intent(this, Dashboard.class);
+        startActivity(cancelar);
+    }
+
+    public void botonSolicitarTurno(View V) {
+        Intent solicitarT = new Intent(this, SolicitarTurno.class);
+        startActivity(solicitarT);
+    }
+
+
+
+
     class AdapterServicio extends ArrayAdapter<Servicio> {
         AppCompatActivity appCompatActivity;
         private Context context;
@@ -136,25 +159,24 @@ public class Servicios extends AppCompatActivity {
 
             //vincular con los xml del item
 
-            @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+            //@SuppressLint({"MissingInflatedId", "LocalSuppress"})
             TextView txtNombre = (TextView) item.findViewById(R.id.textServicio);
 
-            @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+           // @SuppressLint({"MissingInflatedId", "LocalSuppress"})
             TextView txtDescripcion = (TextView) item.findViewById(R.id.textDescripcion);
 
             TextView txtPrecio=(TextView) item.findViewById(R.id.textPrecio);
 
-            @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+            //@SuppressLint({"MissingInflatedId", "LocalSuppress"})
             ImageView imgServicio = item.findViewById(R.id.imageServicio);
 
             txtNombre.setText(servicios.get(i).nombre);
             txtDescripcion.setText(servicios.get(i).descripcion);
-            imgServicio.setImageURI(Uri.parse(servicios.get(i).image));
             txtPrecio.setText(String.valueOf(servicios.get(i).precio));
+            imgServicio.setImageURI(Uri.parse(servicios.get(i).image));
 
             return item;
         }
-
 
 
         public void abrirVentanaModificacion(Servicio servicio){
