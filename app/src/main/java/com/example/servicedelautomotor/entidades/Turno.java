@@ -13,4 +13,6 @@ public class Turno {
     public long sucursalTurnoId;
     public String dia;
     public String hora;
+    public String precio;
+    public String servicios;
 }
