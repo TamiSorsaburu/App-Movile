@@ -30,10 +30,10 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         //String name = getIntent().getStringExtra("nombreUsuario");
-        usua = (Usuario) getIntent().getSerializableExtra("class");
-        String name = usua.getNombreUsuario();
-        TextView nameTextView = findViewById(R.id.name);
-        nameTextView.setText(name);
+//        usua = (Usuario) getIntent().getSerializableExtra("class");
+//        String name = usua.getNombreUsuario();
+//        TextView nameTextView = findViewById(R.id.name);
+//        nameTextView.setText(name);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
 
