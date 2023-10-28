@@ -26,7 +26,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAuw8XpEVZKwhmpNaeMur5P6PjQyZiLEws" />
-
+        <activity
+            android:name=".SolicitarTurnoServicio"
+            android:exported="false" />
         <activity
             android:name=".UpdateServiicio"
             android:exported="false" />

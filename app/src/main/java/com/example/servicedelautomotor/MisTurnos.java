@@ -15,6 +15,7 @@ public class MisTurnos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mis_turnos);
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
         Menu menu = bottomNavigationView.getMenu();
         menu.findItem(R.id.menu_exit).setVisible(false); // Oculta el ícono de cierre de sesión

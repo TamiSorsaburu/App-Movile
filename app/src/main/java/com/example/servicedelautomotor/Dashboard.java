@@ -22,7 +22,7 @@ public class Dashboard extends AppCompatActivity {
 
     private boolean datosCargados = false;
 
-    Usuario usua;
+    Cliente miPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +30,11 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         //String name = getIntent().getStringExtra("nombreUsuario");
-        usua = (Usuario) getIntent().getSerializableExtra("class");
+
+        /*usua = (Usuario) getIntent().getSerializableExtra("class");
         String name = usua.getNombreUsuario();
         TextView nameTextView = findViewById(R.id.name);
-        nameTextView.setText(name);
+        nameTextView.setText(name);*/
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
 
@@ -108,16 +109,17 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public void botonPerfil(View V){
-        usua = (Usuario) getIntent().getSerializableExtra("class");
-        if(datosCargados){
-            Intent perfil=new Intent(this, LeerInformacionPersonal.class);
-            startActivity(perfil);
-        }else{
-            Intent perfil=new Intent(this,CargarInformacionPersonal.class);
-            perfil.putExtra("class1",usua);
-            startActivity(perfil);
-        }
+        /*
+        se necesita saber que usuario esta logeado para traer su info de la base de datos
+        if(){
+        Intent perfil=new Intent(this, LeerInformacionPersonal.class);
+        }si no{
+           Intent perfil=new Intent(this, CargarInformacionPersonal.class);
+        }  */
+        Intent perfil=new Intent(this, LeerInformacionPersonal.class);
 
+        //miPerfil = (Cliente) getIntent().getSerializableExtra("class");
+        startActivity(perfil);
     }
 
     public void botonPresupuesto(View V){

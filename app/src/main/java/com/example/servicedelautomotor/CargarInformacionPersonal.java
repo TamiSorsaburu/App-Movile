@@ -69,11 +69,7 @@ public class CargarInformacionPersonal extends AppCompatActivity {
 
     }
 
-    public void onClick(View v){
-        registrarCliente();
-        Intent intent = new Intent(this, LeerInformacionPersonal.class);
-        startActivity(intent);
-    }
+
     public void btnListarClientes(View view) {
         Intent intent = new Intent(this, ListaClientes.class);
         startActivity(intent);
@@ -87,6 +83,11 @@ public class CargarInformacionPersonal extends AppCompatActivity {
         ).allowMainThreadQueries().build();
 
         Direccion direccion=new Direccion(textCalle.getText().toString(),textAltura.getText().toString(),textLocalidad.getText().toString(),textProvincia.getText().toString(),Integer.parseInt(textPostal.getText().toString()));
+       /*
+       falta que acepte campos vacios
+       if(direccion.getCalle().equals("")){
+            direccion.setCalle("");
+        }*/
         appDatabase.daoDireccion().insertarDireccion(direccion);
         Vehiculo vehiculo=new Vehiculo(textPatente.getText().toString(),textTipo.getText().toString(),textModelo.getText().toString(),textMarca.getText().toString());
         appDatabase.daoVehiculo().insertarVehiculo(vehiculo);
@@ -95,9 +96,15 @@ public class CargarInformacionPersonal extends AppCompatActivity {
         appDatabase.daoCliente().insertarCliente(new Cliente(textNombre.getText().toString(),textApellido.getText().toString(),Integer.parseInt(textTelefono.getText().toString()),
                 "imagePerfil.toString()",usuar.getIdUsuario(),direccion,vehiculo));
         Toast.makeText(CargarInformacionPersonal.this,"Tus datos se guardaron Exitosamente!!!",Toast.LENGTH_LONG).show();
+
     }
     public void botonCancelar(View V){
         Intent cancelar=new Intent(this, Dashboard.class);
         startActivity(cancelar);
+    }
+    public void onClick(View v){
+        registrarCliente();
+        Intent intent = new Intent(this, LeerInformacionPersonal.class);
+        startActivity(intent);
     }
 }
