@@ -54,8 +54,9 @@ public class AgregarServicio extends AppCompatActivity {
     Button btnSeleccionarImg;
     String uriString;
     String realPath;
-    Uri uriAConvertir;
-    File auxFile;
+    String imagen = "";
+    //Uri uriAConvertir;
+    //File auxFile;
     File f;
 
 
@@ -70,7 +71,6 @@ public class AgregarServicio extends AppCompatActivity {
         campoDescripcion = findViewById(R.id.campoDescripcion);
         campoPrecio = findViewById(R.id.campoPrecio);
         btnSeleccionarImg = findViewById(R.id.btnSeleccionarImg);
-
         imgServicio = findViewById(R.id.imgServicio);
 
 
@@ -108,12 +108,31 @@ public class AgregarServicio extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        registrarServicio();
-        Intent intent = new Intent(this, ListadoServicios.class);
-        startActivity(intent);
+        validarDatosYRegistrar();
+
     }
 
-    private void registrarServicio() {
+    public void validarDatosYRegistrar(){
+        String nombre = campoNombre.getText().toString();
+        String descripcion = campoDescripcion.getText().toString();
+        String precio = campoPrecio.getText().toString();
+        final String regex = "^[0-9]+(\\.[0-9]+){0,1}$";
+        if(nombre.isEmpty() || descripcion.isEmpty() || precio.isEmpty()){
+            Toast.makeText(AgregarServicio.this, "Debe completar todos los campos", Toast.LENGTH_SHORT).show();
+            //this.recreate();
+        } else if (imagen.isEmpty()) {
+            Toast.makeText(AgregarServicio.this, "Debe seleccionar una imagen", Toast.LENGTH_SHORT).show();
+            //this.recreate();
+        } else if (!precio.matches(regex)) {
+            Toast.makeText(AgregarServicio.this, "Debe insertar un número en el campo precio", Toast.LENGTH_LONG).show();
+        } else {
+            registrarServicio();
+            Intent intent = new Intent(this, ListadoServicios.class);
+            startActivity(intent);
+        }
+    }
+
+    public void registrarServicio() {
 
         AppDataBase appDatabase = Room.databaseBuilder(
                 getApplicationContext(),
@@ -121,9 +140,12 @@ public class AgregarServicio extends AppCompatActivity {
                 "dbServiceAutomotor"
         ).allowMainThreadQueries().build();
 
-        appDatabase.daoServicio().insertarServicio(new Servicio(campoNombre.getText().toString(),campoDescripcion.getText().toString(),Double.parseDouble(campoPrecio.getText().toString()),realPath));
+            appDatabase.daoServicio().insertarServicio(new Servicio(campoNombre.getText().toString(),campoDescripcion.getText().toString(),Double.parseDouble(campoPrecio.getText().toString()),realPath));
 
-        Toast.makeText(AgregarServicio.this, "Servicio " + campoNombre.getText().toString() + " agregado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(AgregarServicio.this, "Servicio " + campoNombre.getText().toString() + " agregado", Toast.LENGTH_SHORT).show();
+
+
+
     }
 
     private void cargarImagen(){
@@ -156,11 +178,17 @@ public class AgregarServicio extends AppCompatActivity {
         }
         Log.d("result", "result: " + result);
         this.realPath = result;
+        this.imagen = result;
         return result;
     }
 
     public void btnListar(View view) {
         Intent intent = new Intent(this, ListadoServicios.class);
+        startActivity(intent);
+    }
+
+    public void btnCancelar(View view){
+        Intent intent = new Intent(this, MenuAdmin.class);
         startActivity(intent);
     }
 

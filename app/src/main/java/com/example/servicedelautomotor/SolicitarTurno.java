@@ -21,7 +21,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SolicitarTurno extends AppCompatActivity {
     private CalendarView calendarView;
-    private TextView txtHoraSeleccionada, btnHora, fechaTurnoTextView;
+    private TextView txtHoraSeleccionada, btnHora, fechaTurnoTextView, serviciosSeleccionados, fechaTurno, horaTurno, precioTurno;
     private int horaSeleccionada, minutoSeleccionado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,7 +128,25 @@ public class SolicitarTurno extends AppCompatActivity {
 
 
     public void botonConfirmar(View V) {
+        // Obtén los datos que deseas pasar
+        serviciosSeleccionados = findViewById(R.id.servicios_seleccionados);
+        fechaTurno = findViewById(R.id.fecha_seleccionada);
+        horaTurno = findViewById(R.id.hora_turno);
+        precioTurno = findViewById(R.id.textPrecioTotal);
+
+        String servicio = serviciosSeleccionados.getText().toString();
+        String fecha = fechaTurno.getText().toString();
+        String hora = horaTurno.getText().toString();
+        String precio = precioTurno.getText().toString();
+
         Intent confirmar = new Intent(this, ConfirmarTurno.class);
+
+        // Adjunta los datos al Intent
+        confirmar.putExtra("servicio", servicio);
+        confirmar.putExtra("fecha", fecha);
+        confirmar.putExtra("hora", hora);
+        confirmar.putExtra("precio", precio);
+
         startActivity(confirmar);
     }
     public void botonCancelar(View V) {

@@ -22,7 +22,7 @@ public class Dashboard extends AppCompatActivity {
 
     private boolean datosCargados = false;
 
-    Cliente miPerfil;
+    Usuario usua;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +30,10 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         //String name = getIntent().getStringExtra("nombreUsuario");
-
-        /*usua = (Usuario) getIntent().getSerializableExtra("class");
-        String name = usua.getNombreUsuario();
-        TextView nameTextView = findViewById(R.id.name);
-        nameTextView.setText(name);*/
+//        usua = (Usuario) getIntent().getSerializableExtra("class");
+//        String name = usua.getNombreUsuario();
+//        TextView nameTextView = findViewById(R.id.name);
+//        nameTextView.setText(name);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
 
@@ -120,6 +119,8 @@ public class Dashboard extends AppCompatActivity {
 
         //miPerfil = (Cliente) getIntent().getSerializableExtra("class");
         startActivity(perfil);
+    }
+
     }
 
     public void botonPresupuesto(View V){
