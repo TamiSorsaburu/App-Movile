@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -42,8 +43,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Servicios extends AppCompatActivity {
-    ListView li;
 
+    private String serviciosSeleccionados = "";
+
+    private TextView textPrecio,textServicio;
+    ListView li;
+    Button btnReservar;
     private List<Servicio> servicios;
     ArrayList<Servicio> c = new ArrayList<Servicio>();
 
@@ -52,10 +57,16 @@ public class Servicios extends AppCompatActivity {
 
     private final static int LOCATION_REQUEST_CODE = 23;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_servicios);
+
+        textPrecio=findViewById(R.id.textPrecio);
+        textServicio=findViewById(R.id.textServicio);
+        //btnReservar=findViewById(R.id.btnReservar);
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
         Menu menu = bottomNavigationView.getMenu();
@@ -99,6 +110,8 @@ public class Servicios extends AppCompatActivity {
         } else {
             throw new NullPointerException("Something went wrong");
         }
+
+
     }
 
     @Override
@@ -130,10 +143,15 @@ public class Servicios extends AppCompatActivity {
         startActivity(cancelar);
     }
 
-    public void botonSolicitarTurno(View V) {
-        Intent solicitarT = new Intent(this, SolicitarTurno.class);
+    public void botonReservar(View V) {
+        //String precio = precioTextView.getText().toString();
+        //String nombre = textServicio.getText().toString();
+        Intent solicitarT = new Intent(this, SolicitarTurnoServicio.class);
+        //solicitarT.putExtra("nombre",nombre);
         startActivity(solicitarT);
     }
+
+
 
 
 

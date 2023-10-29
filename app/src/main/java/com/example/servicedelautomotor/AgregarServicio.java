@@ -28,6 +28,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,6 +40,7 @@ import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.entidades.Direccion;
 import com.example.servicedelautomotor.entidades.Servicio;
 import com.example.servicedelautomotor.entidades.Sucursal;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -73,7 +76,21 @@ public class AgregarServicio extends AppCompatActivity {
         btnSeleccionarImg = findViewById(R.id.btnSeleccionarImg);
         imgServicio = findViewById(R.id.imgServicio);
 
+        BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
+        Menu menu = bottomNavigationView.getMenu();
+        menu.findItem(R.id.menu_exit).setVisible(false); // Oculta el ícono de cierre de sesión
 
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                if (item.getItemId() == R.id.menu_home) {
+                    Intent intent = new Intent(AgregarServicio.this, Dashboard.class);
+                    startActivity(intent);
+                    return true;
+                }
+                return false;
+            }
+        });
 
     }
 

@@ -2,17 +2,21 @@ package com.example.servicedelautomotor;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -39,6 +43,7 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
         //setContentView(R.layout.activity_bienvenida);
 
         //String name = getIntent().getStringExtra("nombreUsuario");
@@ -152,12 +157,14 @@ public class Dashboard extends AppCompatActivity {
         startActivity(contacto);
     }
 
-    public void botonPerfil(View V){
+    public void botonPerfil(View view){
         /*
         se necesita saber que usuario esta logeado para traer su info de la base de datos
         }  */
         Intent perfil=new Intent(this, LeerInformacionPersonal.class);
         startActivity(perfil);
+
+
     }
 
 
