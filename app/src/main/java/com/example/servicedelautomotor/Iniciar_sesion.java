@@ -36,7 +36,7 @@ public class Iniciar_sesion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion);
-gi8t a
+
         database = Room.databaseBuilder(getApplicationContext(), AppDataBase.class, "dbServiceAutomotor").build();
 
         mAuth = FirebaseAuth.getInstance();

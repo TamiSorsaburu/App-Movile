@@ -52,8 +52,10 @@
             android:exported="true"></activity>
         <activity
             android:name=".AgregarServicio"
+            android:exported="true"/>
+        <activity
+            android:name=".Nosotros"
             android:exported="true">
-
         </activity>
         <activity
             android:name=".confirmar_contrasena"

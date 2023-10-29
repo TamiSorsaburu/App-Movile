@@ -1,6 +1,7 @@
 package com.example.servicedelautomotor;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ public class Dashboard extends AppCompatActivity {
 
     Usuario usua;
     private final static int LOCATION_REQUEST_CODE = 23;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,6 +107,12 @@ public class Dashboard extends AppCompatActivity {
                 }
                 break;
         }
+    }
+
+    //para boton nosotros
+    public void botonNosotros(View V) {
+        Intent i = new Intent(this, MecanicoActivity.class);
+        startActivity(i);
     }
 
     //metodo para botones
