@@ -27,6 +27,7 @@
             android:layout_width="96dp"
             android:layout_height="46dp"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_weight="1"
             android:text="TextView"
             android:textColor="@color/negro"
@@ -49,6 +50,7 @@
             android:id="@+id/textDescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
             android:text="TextView"
             android:textSize="16dp"
             android:layout_marginTop="20dp"/>
@@ -57,6 +59,7 @@
             android:id="@+id/textPrecio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
             android:text="TextView"
             android:textSize="16dp"
             android:layout_marginTop="20dp"/>
