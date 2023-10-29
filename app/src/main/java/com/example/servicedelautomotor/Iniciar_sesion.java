@@ -1,9 +1,12 @@
 package com.example.servicedelautomotor;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -45,6 +48,7 @@ public class Iniciar_sesion extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
                                            @Override
                                            public void onClick(View v) {
+
                                                loginUser();
                                            }
                                        }
@@ -94,8 +98,8 @@ public class Iniciar_sesion extends AppCompatActivity {
                 // Redirige al usuario a la pantalla principal de la aplicación o realiza otras acciones necesarias
                 Toast.makeText(Iniciar_sesion.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Iniciar_sesion.this, Dashboard.class);
-                //intent.putExtra("nombreUsuario", user.getNombreUsuario());
-                intent.putExtra("class",user);
+                intent.putExtra("nombreUsuario", user.getNombreUsuario());
+                //intent.putExtra("class",user);
                 startActivity(intent);
                 finish();
             } else {

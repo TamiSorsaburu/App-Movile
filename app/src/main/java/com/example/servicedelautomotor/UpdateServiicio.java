@@ -15,6 +15,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +26,7 @@ import android.widget.Toast;
 import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.entidades.Servicio;
 import com.example.servicedelautomotor.entidades.Sucursal;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -46,6 +49,21 @@ public class UpdateServiicio extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_serviicio);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
+        Menu menu = bottomNavigationView.getMenu();
+        menu.findItem(R.id.menu_exit).setVisible(false); // Oculta el ícono de cierre de sesión
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                if (item.getItemId() == R.id.menu_home) {
+                    Intent intent = new Intent(UpdateServiicio.this, Dashboard.class);
+                    startActivity(intent);
+                    return true;
+                }
+                return false;
+            }
+        });
 
         appDatabase = Room.databaseBuilder(
                 getApplicationContext(),

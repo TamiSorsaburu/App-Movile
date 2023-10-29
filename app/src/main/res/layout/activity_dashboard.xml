@@ -10,7 +10,9 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="648dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -85,16 +87,17 @@
 
     <ScrollView
         android:id="@+id/scroll"
-        android:layout_width="425dp"
-        android:layout_height="600dp"
-        android:layout_marginTop="215dp"
-        android:layout_marginBottom="99dp"
+        android:layout_width="426dp"
+        android:layout_height="571dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="77dp"
         android:background="@color/blanco"
         android:contentDescription="home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TableLayout
             android:id="@+id/tableLayout"
@@ -103,6 +106,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/constraintLayout">
+
 
             <TableRow
                 android:layout_width="match_parent"
@@ -276,7 +280,6 @@
                 </LinearLayout><!--grua-->
 
             </TableRow>
-
 
             <TableRow
                 android:layout_width="match_parent"
@@ -679,6 +682,61 @@
 
                 </LinearLayout><!--admin-->
 
+                <LinearLayout
+                    android:id="@+id/lineaTaller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:orientation="vertical"
+                    tools:layout_margin="16dp"><!--admin-->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="91dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_btn">
+
+                        <ImageView
+                            android:id="@+id/FondoTaller"
+                            android:layout_width="87dp"
+                            android:layout_height="77dp"
+                            android:layout_margin="10dp"
+                            android:contentDescription="imagen fondo"
+                            android:src="@mipmap/btn"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imgTaller"
+                            android:layout_width="81dp"
+                            android:layout_height="69dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="18dp"
+                            android:contentDescription="logo taller"
+                            android:onClick="botonMenuAdmin"
+                            android:src="@mipmap/taller"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textTaller"
+                        android:layout_width="match_parent"
+                        android:layout_height="48sp"
+                        android:text="Nosotros"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout><!--Nosotros-->
 
             </TableRow>
 
@@ -687,8 +745,8 @@
 
     </ScrollView>
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
         android:layout_width="412dp"
         android:layout_height="63dp"
         android:layout_marginTop="782dp"
@@ -700,7 +758,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/menu_home"
-        android:id="@+id/barraMenu"/>
+        app:menu="@menu/menu_home" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
