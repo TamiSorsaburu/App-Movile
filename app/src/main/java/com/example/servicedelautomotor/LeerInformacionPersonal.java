@@ -5,12 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.net.Uri;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -21,12 +22,13 @@ import androidx.room.Room;
 import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.crud.ClienteViewModel;
 import com.example.servicedelautomotor.entidades.Cliente;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.servicedelautomotor.entidades.Usuario;
 
 public class LeerInformacionPersonal extends AppCompatActivity {
     Cliente cliente;
     ImageView imagePerfil;
 
+    Usuario user;
     AppDataBase appDatabase;
 
     ClienteViewModel clienteViewModel;
@@ -36,23 +38,6 @@ public class LeerInformacionPersonal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_info_personal);
-
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
-        Menu menu = bottomNavigationView.getMenu();
-        menu.findItem(R.id.menu_exit).setVisible(false); // Oculta el ícono de cierre de sesión
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem item) {
-                if (item.getItemId() == R.id.menu_home) {
-                    Intent intent = new Intent(LeerInformacionPersonal.this, Dashboard.class);
-                    startActivity(intent);
-                    return true;
-                }
-                return false;
-            }
-        });
 
         cliente=(Cliente)getIntent().getSerializableExtra("classs");
 
@@ -104,6 +89,10 @@ public class LeerInformacionPersonal extends AppCompatActivity {
                     TextView pTipo=findViewById(R.id.pTipo);
                     pTipo.setText(cliente.getVehiculo().tipoVehiculo);
 
+                    imagePerfil = findViewById(R.id.imagePerfil);
+                    imagePerfil.setImageURI(Uri.parse(cliente.getImagen()));
+                   // Log.d("img", "imagen: " + cliente.getImagen());
+
                 }
             }
         });
@@ -116,8 +105,12 @@ public class LeerInformacionPersonal extends AppCompatActivity {
         startActivity(cancelar);
     }
 
-    public void botonCargarDatos(View V){
-        Intent cancelar=new Intent(this, CargarInformacionPersonal.class);
-        startActivity(cancelar);
+    public void cargarInfo(View v){
+        Intent editar = new Intent(this, CargarInformacionPersonal.class);
+        //editar.putExtra("class2",user);
+        //if(user == null){
+        //    Toast.makeText(this, "Ningún usuario logueado, no podrá cargar informacion", Toast.LENGTH_SHORT).show();
+        //}
+        startActivity(editar);
     }
 }
