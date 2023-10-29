@@ -19,6 +19,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -32,6 +34,7 @@ import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.entidades.Direccion;
 import com.example.servicedelautomotor.entidades.Servicio;
 import com.example.servicedelautomotor.entidades.Sucursal;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -68,6 +71,22 @@ public class ListadoServicios extends AppCompatActivity {
         } else {
             throw new NullPointerException("Something went wrong");
         }
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
+        Menu menu = bottomNavigationView.getMenu();
+        menu.findItem(R.id.menu_exit).setVisible(false); // Oculta el ícono de cierre de sesión
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                if (item.getItemId() == R.id.menu_home) {
+                    Intent intent = new Intent(ListadoServicios.this, Dashboard.class);
+                    startActivity(intent);
+                    return true;
+                }
+                return false;
+            }
+        });
 
         li = (ListView) findViewById(R.id.lista_servicios);
 
