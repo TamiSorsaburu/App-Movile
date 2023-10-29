@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Presupuesto">
+    tools:context=".PresupuestoActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -71,7 +71,8 @@
                 android:layout_width="380dp"
                 android:layout_height="48dp"
                 android:text="@string/presupuesto_texto7"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textColor="@color/blanco"/>
         </LinearLayout>
 
         <LinearLayout
@@ -91,7 +92,8 @@
                 android:layout_width="390dp"
                 android:layout_height="49dp"
                 android:text="@string/presupuesto_texto6"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textColor="@color/blanco"/>
         </LinearLayout>
 
         <LinearLayout
@@ -111,7 +113,8 @@
                 android:layout_width="388dp"
                 android:layout_height="48dp"
                 android:text="@string/presupuesto_texto5"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textColor="@color/blanco"/>
         </LinearLayout>
 
         <Switch
@@ -119,6 +122,7 @@
             android:layout_width="380dp"
             android:layout_height="48dp"
             android:text="@string/presupuesto_texto4"
+            android:textColor="@color/blanco"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/linearLayout12"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout12"

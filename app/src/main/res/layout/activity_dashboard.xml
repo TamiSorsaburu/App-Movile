@@ -687,6 +687,7 @@
 
     </ScrollView>
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="412dp"
         android:layout_height="63dp"

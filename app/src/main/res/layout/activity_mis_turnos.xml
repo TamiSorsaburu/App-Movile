@@ -164,6 +164,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/barraMenu"
             android:layout_width="0dp"
@@ -174,7 +176,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/menu_home" />
+            app:menu="@menu/menu_home"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

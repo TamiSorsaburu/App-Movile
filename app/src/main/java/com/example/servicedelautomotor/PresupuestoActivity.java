@@ -26,6 +26,8 @@ public class PresupuestoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_presupuesto);
 
+
+
         switchLavadero = findViewById(R.id.presupuesto_texto4);
         switchCambioAceite = findViewById(R.id.presupuesto_texto5);
         switchTapizado = findViewById(R.id.presupuesto_texto6);

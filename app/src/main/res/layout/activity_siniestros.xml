@@ -60,7 +60,7 @@
         android:background="@drawable/background_dorado"
         android:backgroundTint="@color/secundario"
         android:text="@string/btn_ubicacion"
-        android:textColor="@color/negro"
+        android:textColor="@color/blanco"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

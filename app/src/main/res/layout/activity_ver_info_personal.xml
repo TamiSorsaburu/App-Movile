@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="127dp"
-        android:text="info personla"
+        android:text="@string/tituloip1"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView4"
@@ -60,7 +60,7 @@
                     android:layout_height="50dp"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:text="Nombre"
+                    android:text="@string/inpip1"
                     android:textSize="24dp"
                     android:textStyle="italic"
                     android:padding="5dp"
@@ -72,7 +72,7 @@
                     android:layout_height="50dp"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:text="Apellido"
+                    android:text="@string/inpip2"
                     android:textSize="24dp"
                     android:textStyle="italic"
                     android:padding="5dp"
@@ -95,7 +95,7 @@
                         android:layout_height="50dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Telefono"
+                        android:text="@string/inpip3"
                         android:textSize="24dp"
                         android:textStyle="italic"
                         android:padding="5dp"
@@ -120,7 +120,7 @@
                         android:layout_height="50dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Calle"
+                        android:text="@string/inpip5"
                         android:textSize="24dp"
                         android:textStyle="italic"
                         android:padding="5dp"
@@ -132,7 +132,7 @@
                         android:layout_height="50dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Altura"
+                        android:text="@string/inpip6"
                         android:textSize="24dp"
                         android:textStyle="italic"
                         android:padding="5dp"
@@ -157,7 +157,7 @@
                         android:layout_height="50dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Provincia"
+                        android:text="@string/inpip4"
                         android:textSize="24dp"
                         android:textStyle="italic"
                         android:padding="5dp"
@@ -169,7 +169,7 @@
                         android:layout_height="50dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Localiad"
+                        android:text="@string/inpip7"
                         android:textSize="24dp"
                         android:textStyle="italic"
                         android:padding="5dp"
@@ -193,7 +193,7 @@
                         android:layout_height="50dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Codigo Postal"
+                        android:text="@string/cp"
                         android:textSize="24dp"
                         android:textStyle="italic"
                         android:padding="5dp"
@@ -217,7 +217,7 @@
                         android:layout_height="50dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Tipo vehiculo"
+                        android:text="@string/tipo"
                         android:textSize="24dp"
                         android:textStyle="italic"
                         android:padding="5dp"
@@ -229,7 +229,7 @@
                         android:layout_height="50dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Modelo"
+                        android:text="@string/inpip8"
                         android:textSize="24dp"
                         android:textStyle="italic"
                         android:padding="5dp"
@@ -253,7 +253,7 @@
                         android:layout_height="50dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Marca"
+                        android:text="@string/inpip9"
                         android:textSize="24dp"
                         android:textStyle="italic"
                         android:padding="5dp"
@@ -265,7 +265,7 @@
                         android:layout_height="50dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Patente"
+                        android:text="@string/inpip10"
                         android:textSize="24dp"
                         android:textStyle="italic"
                         android:background="@drawable/background_btn"
@@ -276,7 +276,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="163dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -284,30 +284,31 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <Button
+                    <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button8"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Editar Perfil"
-                        android:textColor="@color/blanco"
-                        android:background="@drawable/background_dorado"
-                        android:layout_marginTop="20dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="5dp"/>
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_dorado"
+                        android:text="@string/btn_ipguardar"
+                        android:onClick="botonCargarDatos"
+                        android:textColor="@color/blanco" />
 
-                    <Button
+                    <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button9"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Cancelar"
-                        android:onClick="botonCancelar"
-                        android:textColor="@color/blanco"
-                        android:background="@drawable/background_dorado"
-                        android:layout_marginTop="20dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="5dp"/>
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_dorado"
+                        android:onClick="botonCancelar"
+                        android:text="@string/btn_cancelar_turno"
+                        android:textColor="@color/blanco" />
                 </LinearLayout>
             </LinearLayout>
 

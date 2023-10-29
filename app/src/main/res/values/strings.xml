@@ -144,8 +144,10 @@ la reparación del auto depende del daño.</string>
     <string name="inpip8">Marca</string>
     <string name="inpip9">Modelo</string>
     <string name="inpip10">Patente</string>
+    <string name="cp">Codigo Postal</string>
+    <string name="tipo">Tipo vehiculo</string>
     <string name="btn_ipeditar">Editar</string>
-    <string name="btn_ipguardar">Guardar</string>
+    <string name="btn_ipguardar">Perfil</string>
     <string name="btn_ipCancelar">Cancelar</string>
 
 

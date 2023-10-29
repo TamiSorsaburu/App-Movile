@@ -1,9 +1,12 @@
 package com.example.servicedelautomotor;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,6 +27,7 @@ public class Dashboard extends AppCompatActivity {
 
     Usuario usua;
 
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +57,8 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
+
+
         String currentUserEmail = mAuth.getCurrentUser().getEmail();
 
         // Encuentra la imagen Admin por su ID
@@ -68,6 +74,9 @@ public class Dashboard extends AppCompatActivity {
             adminImage.setVisibility(View.GONE);
             adminText.setVisibility(View.GONE);
         }
+
+
+
     }
 
     //metodo para botones
@@ -87,8 +96,9 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public void botonMisTurnos(View v) {
-        Intent miTurno = new Intent(this, MisTurnos.class);
-        startActivity(miTurno);
+            Intent servicio = new Intent(this, MisTurnos.class);
+        startActivity(servicio);
+
     }
 
     public void botonServicio(View V) {
@@ -110,18 +120,29 @@ public class Dashboard extends AppCompatActivity {
     public void botonPerfil(View V){
         /*
         se necesita saber que usuario esta logeado para traer su info de la base de datos
-        if(){
-        Intent perfil=new Intent(this, LeerInformacionPersonal.class);
-        }si no{
-           Intent perfil=new Intent(this, CargarInformacionPersonal.class);
         }  */
-        Intent perfil=new Intent(this, LeerInformacionPersonal.class);
+        SharedPreferences preferences = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("formularioCompletado", true);
+        editor.apply();
 
-        //miPerfil = (Cliente) getIntent().getSerializableExtra("class");
-        startActivity(perfil);
+        //SharedPreferences preferences = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+        boolean formularioCompletado = preferences.getBoolean("formularioCompletado", false);
+        if (formularioCompletado) {
+            // El usuario ha completado el formulario, muestra la actividad principal.
+            Intent perfil=new Intent(this, LeerInformacionPersonal.class);
+
+            startActivity(perfil);
+        } else {
+            // El usuario no ha completado el formulario, muestra el formulario.
+            Intent perfil=new Intent(this, CargarInformacionPersonal.class);
+
+            startActivity(perfil);
+        }
+
     }
 
-    }
+
 
     public void botonPresupuesto(View V){
         Intent presupuesto=new Intent(this, PresupuestoActivity.class);
