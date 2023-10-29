@@ -237,6 +237,17 @@ la reparación del auto depende del daño.</string>
     <string name="Solicitar_turno">Solicitar Turno</string>
     //servicios
 
+    //QuienesSomos
+    <string name="txtqs01">
+    Quienes Somos
+    </string>
+    <string name="txtqs02">
+Somos una solución que combina talleres mecánicos y servicios en una sola plataforma, un taller cuyo único objetivo y compromiso es el de realizar un buen servicio de última generación, fusionándonos con la tecnología para generar el mayor grado de confort y soluciones a nuestros clientes.
+</string>
+    <string name="txtqs03">
+    Nuestra preparación, conocimiento del mercado, y experiencia técnica, nos avala para entender las necesidades de nuestros clientes en todos nuestros servicios.
+</string>
+
     //menu_home
     <string name="m_home">Home</string>
     <string name="m_notificacion">Notificación</string>
