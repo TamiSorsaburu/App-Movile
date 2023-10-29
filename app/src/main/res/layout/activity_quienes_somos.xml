@@ -72,13 +72,16 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="375dp"
+            android:layout_width="wrap_content"
             android:layout_height="143dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtqs03"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@mipmap/empresarios"
-            tools:layout_editor_absoluteY="329dp" />
+            app:layout_constraintTop_toBottomOf="@+id/txtqs02"
+            app:srcCompat="@mipmap/empresarios" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -101,6 +104,8 @@
         android:background="@color/principal"
         app:itemIconTint="@color/blanco"
         app:itemTextColor="@color/blanco"
-        app:menu="@menu/menu_home"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="664dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_home" />
+</androidx.constraintlayout.widget.ConstraintLayout>
