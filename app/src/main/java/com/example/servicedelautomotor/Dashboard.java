@@ -1,6 +1,5 @@
 package com.example.servicedelautomotor;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,14 +8,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.example.servicedelautomotor.dao.DaoCliente;
 import com.example.servicedelautomotor.entidades.Cliente;
 import com.example.servicedelautomotor.entidades.Usuario;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+
+import org.jetbrains.annotations.NotNull;
 
 public class Dashboard extends AppCompatActivity {
     FirebaseAuth mAuth;
@@ -26,8 +31,7 @@ public class Dashboard extends AppCompatActivity {
     private boolean datosCargados = false;
 
     Usuario usua;
-
-    Button button;
+    private final static int LOCATION_REQUEST_CODE = 23;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,8 +61,6 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
-
-
         String currentUserEmail = mAuth.getCurrentUser().getEmail();
 
         // Encuentra la imagen Admin por su ID
@@ -74,9 +76,31 @@ public class Dashboard extends AppCompatActivity {
             adminImage.setVisibility(View.GONE);
             adminText.setVisibility(View.GONE);
         }
+    }
 
-
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE) !=
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    LOCATION_REQUEST_CODE);
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull @NotNull String[] permissions, @NonNull @NotNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case LOCATION_REQUEST_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "Gracias por conceder los permisos para " +
+                            "leer el almacenamiento, estos permisos son necesarios para poder " +
+                            "escoger tu foto de perfil", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "No podemos realizar el registro si no nos concedes los permisos para leer el almacenamiento.", Toast.LENGTH_SHORT).show();
+                }
+                break;
+        }
     }
 
     //metodo para botones
@@ -96,9 +120,8 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public void botonMisTurnos(View v) {
-            Intent servicio = new Intent(this, MisTurnos.class);
-        startActivity(servicio);
-
+        Intent miTurno = new Intent(this, MisTurnos.class);
+        startActivity(miTurno);
     }
 
     public void botonServicio(View V) {
@@ -120,28 +143,16 @@ public class Dashboard extends AppCompatActivity {
     public void botonPerfil(View V){
         /*
         se necesita saber que usuario esta logeado para traer su info de la base de datos
+        if(){
+        Intent perfil=new Intent(this, LeerInformacionPersonal.class);
+        }si no{
+           Intent perfil=new Intent(this, CargarInformacionPersonal.class);
         }  */
-        SharedPreferences preferences = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putBoolean("formularioCompletado", true);
-        editor.apply();
+        Intent perfil=new Intent(this, LeerInformacionPersonal.class);
 
-        //SharedPreferences preferences = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
-        boolean formularioCompletado = preferences.getBoolean("formularioCompletado", false);
-        if (formularioCompletado) {
-            // El usuario ha completado el formulario, muestra la actividad principal.
-            Intent perfil=new Intent(this, LeerInformacionPersonal.class);
-
-            startActivity(perfil);
-        } else {
-            // El usuario no ha completado el formulario, muestra el formulario.
-            Intent perfil=new Intent(this, CargarInformacionPersonal.class);
-
-            startActivity(perfil);
-        }
-
+        //miPerfil = (Cliente) getIntent().getSerializableExtra("class");
+        startActivity(perfil);
     }
-
 
 
     public void botonPresupuesto(View V){

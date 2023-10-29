@@ -17,6 +17,9 @@ import android.widget.CalendarView;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.example.servicedelautomotor.coneccionBD.AppDataBase;
+import com.example.servicedelautomotor.dao.DaoTurno;
+import com.example.servicedelautomotor.entidades.Turno;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SolicitarTurno extends AppCompatActivity {
@@ -138,6 +141,17 @@ public class SolicitarTurno extends AppCompatActivity {
         String fecha = fechaTurno.getText().toString();
         String hora = horaTurno.getText().toString();
         String precio = precioTurno.getText().toString();
+
+        // Crear una instancia de la entidad Turno
+        Turno turno = new Turno();
+        turno.servicios = servicio;
+        turno.dia = fecha;
+        turno.hora = hora;
+        turno.precio = precio;
+
+        // Insertar el turno en la base de datos usando el DAO
+        DaoTurno daoTurno = AppDataBase.getInstance(this).daoTurno();
+        daoTurno.insertarTurno(turno);
 
         Intent confirmar = new Intent(this, ConfirmarTurno.class);
 
