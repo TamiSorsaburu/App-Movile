@@ -13,8 +13,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,7 +27,6 @@ import com.example.servicedelautomotor.entidades.Cliente;
 import com.example.servicedelautomotor.entidades.Direccion;
 import com.example.servicedelautomotor.entidades.Usuario;
 import com.example.servicedelautomotor.entidades.Vehiculo;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.io.File;
 
@@ -40,15 +37,12 @@ public class CargarInformacionPersonal extends AppCompatActivity {
 
     Cliente cliente;
     ImageView imagePerfil;
-
+    File f;
+    String realPath;
     AppDataBase appDatabase;
 
     ClienteViewModel clienteViewModel;
     Usuario usuar;
-
-
-    File f;
-    String realPath;
 
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
@@ -56,21 +50,6 @@ public class CargarInformacionPersonal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion_personal);
         //setContentView(R.layout.activity_editar_info_personal);
-        BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
-        Menu menu = bottomNavigationView.getMenu();
-        menu.findItem(R.id.menu_exit).setVisible(false); // Oculta el ícono de cierre de sesión
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem item) {
-                if (item.getItemId() == R.id.menu_home) {
-                    Intent intent = new Intent(CargarInformacionPersonal.this, Dashboard.class);
-                    startActivity(intent);
-                    return true;
-                }
-                return false;
-            }
-        });
 
         appDatabase = Room.databaseBuilder(
                 getApplicationContext(),
@@ -98,11 +77,7 @@ public class CargarInformacionPersonal extends AppCompatActivity {
 
     }
 
-    public void onClick(View v){
-        registrarCliente();
-        Intent intent = new Intent(this, LeerInformacionPersonal.class);
-        startActivity(intent);
-    }
+
     public void btnListarClientes(View view) {
         Intent intent = new Intent(this, ListaClientes.class);
         startActivity(intent);
@@ -154,33 +129,37 @@ public class CargarInformacionPersonal extends AppCompatActivity {
         ).allowMainThreadQueries().build();
 
         //usuar = (Usuario) getIntent().getSerializableExtra("class2");
-        // if(usuar == null){
-        //     Toast.makeText(this, "Ningún usuario logueado, no se puede cargar informacion", Toast.LENGTH_SHORT).show();
-        // }else{
-        Direccion direccion=new Direccion(textCalle.getText().toString(),textAltura.getText().toString(),textLocalidad.getText().toString(),textProvincia.getText().toString(),Integer.parseInt(textPostal.getText().toString()));
+       // if(usuar == null){
+       //     Toast.makeText(this, "Ningún usuario logueado, no se puede cargar informacion", Toast.LENGTH_SHORT).show();
+       // }else{
+            Direccion direccion=new Direccion(textCalle.getText().toString(),textAltura.getText().toString(),textLocalidad.getText().toString(),textProvincia.getText().toString(),Integer.parseInt(textPostal.getText().toString()));
        /*
        falta que acepte campos vacios
        if(direccion.getCalle().equals("")){
             direccion.setCalle("");
         }*/
-        appDatabase.daoDireccion().insertarDireccion(direccion);
-        Vehiculo vehiculo=new Vehiculo(textPatente.getText().toString(),textTipo.getText().toString(),textModelo.getText().toString(),textMarca.getText().toString());
-        appDatabase.daoVehiculo().insertarVehiculo(vehiculo);
+            appDatabase.daoDireccion().insertarDireccion(direccion);
+            Vehiculo vehiculo=new Vehiculo(textPatente.getText().toString(),textTipo.getText().toString(),textModelo.getText().toString(),textMarca.getText().toString());
+            appDatabase.daoVehiculo().insertarVehiculo(vehiculo);
 
 
 
-        appDatabase.daoCliente().insertarCliente(new Cliente(textNombre.getText().toString(),textApellido.getText().toString(),Integer.parseInt(textTelefono.getText().toString()),
-                realPath,1,direccion,vehiculo));
-        Toast.makeText(CargarInformacionPersonal.this,"Tus datos se guardaron Exitosamente!!!",Toast.LENGTH_LONG).show();
-    }
-    //Log.d("real", "realPath: " + realPath);
+            appDatabase.daoCliente().insertarCliente(new Cliente(textNombre.getText().toString(),textApellido.getText().toString(),Integer.parseInt(textTelefono.getText().toString()),
+                    realPath,1,direccion,vehiculo));
+            Toast.makeText(CargarInformacionPersonal.this,"Tus datos se guardaron Exitosamente!!!",Toast.LENGTH_LONG).show();
+        }
+       // Log.d("real", "realPath: " + realPath);
 
 
 
-    // }
+   // }
     public void botonCancelar(View V){
         Intent cancelar=new Intent(this, Dashboard.class);
         startActivity(cancelar);
     }
-
+    public void onClick(View v){
+        registrarCliente();
+        Intent intent = new Intent(this, Dashboard.class);
+        startActivity(intent);
     }
+}

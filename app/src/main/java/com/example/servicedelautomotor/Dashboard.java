@@ -20,6 +20,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.room.Room;
 
 import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.dao.DaoCliente;
@@ -34,9 +35,10 @@ public class Dashboard extends AppCompatActivity {
     FirebaseAuth mAuth;
     private ImageView adminImage,imgMiPerfil;
     private TextView adminText;
+    AppDataBase database;
 
     private boolean datosCargados = false;
-    AppDataBase database;
+
     Usuario usua;
     private final static int LOCATION_REQUEST_CODE = 23;
     @SuppressLint("MissingInflatedId")
@@ -48,12 +50,21 @@ public class Dashboard extends AppCompatActivity {
         //setContentView(R.layout.activity_bienvenida);
 
         //String name = getIntent().getStringExtra("nombreUsuario");
-//        usua = (Usuario) getIntent().getSerializableExtra("class");
-//        String name = usua.getNombreUsuario();
-//        TextView nameTextView = findViewById(R.id.name);
-//        nameTextView.setText(name);
+        mAuth = FirebaseAuth.getInstance();
+        //String correoFirebase = getIntent().getStringExtra("correoFire");
+        //Log.d("dash", "DashbCorreo: " + correoFirebase);
 
-
+        database = Room.databaseBuilder(getApplicationContext(), AppDataBase.class, "dbServiceAutomotor").build();
+        //usua = database.daoUsuario().getUsuarioPorCorreo(correoFirebase);
+       // usua = database.daoUsuario().getUsuarioById(1);
+       // if(usua != null){
+       //     String name = usua.getNombreUsuario();
+       //     TextView nameTextView = findViewById(R.id.name);
+      //      nameTextView.setText(name);
+     //   }else{
+      //      Toast.makeText(this, "Ningun usuario logueado", Toast.LENGTH_SHORT).show();
+      //  }
+//
 
         findViewById(R.id.imgMiPerfil).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +74,9 @@ public class Dashboard extends AppCompatActivity {
         });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
+
+
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -77,7 +91,6 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
-        mAuth = FirebaseAuth.getInstance();
         String currentUserEmail = mAuth.getCurrentUser().getEmail();
 
         // Encuentra la imagen Admin por su ID
@@ -93,8 +106,6 @@ public class Dashboard extends AppCompatActivity {
             adminImage.setVisibility(View.GONE);
             adminText.setVisibility(View.GONE);
         }
-
-
     }
 
     @Override
