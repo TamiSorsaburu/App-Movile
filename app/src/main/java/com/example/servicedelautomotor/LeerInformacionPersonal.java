@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,7 +12,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
-
+import com.example.servicedelautomotor.entidades.Usuario;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.lifecycle.Observer;
@@ -28,7 +29,7 @@ public class LeerInformacionPersonal extends AppCompatActivity {
     ImageView imagePerfil;
 
     AppDataBase appDatabase;
-
+    Usuario user;
     ClienteViewModel clienteViewModel;
 
 
@@ -103,6 +104,9 @@ public class LeerInformacionPersonal extends AppCompatActivity {
 
                     TextView pTipo=findViewById(R.id.pTipo);
                     pTipo.setText(cliente.getVehiculo().tipoVehiculo);
+
+                    imagePerfil = findViewById(R.id.imagePerfil);
+                    imagePerfil.setImageURI(Uri.parse(cliente.getImagen()));
 
                 }
             }

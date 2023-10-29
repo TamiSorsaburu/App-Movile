@@ -83,7 +83,8 @@
             android:background="@drawable/background_dorado"
             android:text="@string/Solicitar_turno"
             android:textColor="@color/blanco"
-            android:layout_marginLeft="150dp"/>
+            android:layout_marginLeft="150dp"
+            android:onClick="botonReservar"/>
     </LinearLayout>
 
 

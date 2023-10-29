@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "72a525320ecc501205c99d1fb3aba810",
+    "identityHash": "5c1b24b5493ba8c6e3ae7fc060d128a7",
     "entities": [
       {
         "tableName": "Administrador",
@@ -50,7 +50,7 @@
       },
       {
         "tableName": "Cliente",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, `idDireccion` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER, `idVehiculo` INTEGER, `tipoVehiculo` TEXT, `patente` TEXT, `modelo` TEXT, `marca` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, `usuarioClienteId` INTEGER NOT NULL, `idDireccion` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER, `idVehiculo` INTEGER, `tipoVehiculo` TEXT, `patente` TEXT, `modelo` TEXT, `marca` TEXT)",
         "fields": [
           {
             "fieldPath": "idCliente",
@@ -81,6 +81,12 @@
             "columnName": "imagen",
             "affinity": "TEXT",
             "notNull": false
+          },
+          {
+            "fieldPath": "usuarioClienteId",
+            "columnName": "usuarioClienteId",
+            "affinity": "INTEGER",
+            "notNull": true
           },
           {
             "fieldPath": "direccion.idDireccion",
@@ -638,7 +644,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '72a525320ecc501205c99d1fb3aba810')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5c1b24b5493ba8c6e3ae7fc060d128a7')"
     ]
   }
 }

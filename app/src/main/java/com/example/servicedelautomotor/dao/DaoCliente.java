@@ -21,8 +21,8 @@ public interface DaoCliente {
     @Insert
     void insertarCliente(Cliente...clientes);
 
-    @Query("UPDATE cliente SET nombre=:nombre,apellido=:apellido,imagen=:imagen,telefono=:telefono, calle=:calle,altura=:altura,localidad=:localidad,provincia=:provincia,codigoPostal=:postal,modelo=:modelo,marca=:marca,patente=:patente WHERE idCliente=:client")
-    void actualizarCliente(int client,String nombre, String apellido,String imagen,int telefono, String calle,String altura,String localidad,String provincia,int postal,String modelo,String marca,String patente);
+    @Query("UPDATE cliente SET nombre=:nombre,apellido=:apellido,imagen=:imagen,telefono=:telefono, usuarioClienteId=:usuarioClienteId,calle=:calle,altura=:altura,localidad=:localidad,provincia=:provincia,codigoPostal=:postal,modelo=:modelo,marca=:marca,patente=:patente WHERE idCliente=:client")
+    void actualizarCliente(int client,String nombre, String apellido,String imagen,int telefono,int usuarioClienteId, String calle,String altura,String localidad,String provincia,int postal,String modelo,String marca,String patente);
 
     @Query("DELETE FROM cliente WHERE idCliente=:client")
     void eliminarCliente(long client);

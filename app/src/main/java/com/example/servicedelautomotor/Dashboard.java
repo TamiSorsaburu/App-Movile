@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.dao.DaoCliente;
 import com.example.servicedelautomotor.entidades.Cliente;
 import com.example.servicedelautomotor.entidades.Usuario;
@@ -35,7 +36,7 @@ public class Dashboard extends AppCompatActivity {
     private TextView adminText;
 
     private boolean datosCargados = false;
-
+    AppDataBase database;
     Usuario usua;
     private final static int LOCATION_REQUEST_CODE = 23;
     @SuppressLint("MissingInflatedId")
@@ -52,6 +53,8 @@ public class Dashboard extends AppCompatActivity {
 //        TextView nameTextView = findViewById(R.id.name);
 //        nameTextView.setText(name);
 
+
+
         findViewById(R.id.imgMiPerfil).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,9 +63,6 @@ public class Dashboard extends AppCompatActivity {
         });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
-
-        mAuth = FirebaseAuth.getInstance();
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -77,6 +77,7 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
+        mAuth = FirebaseAuth.getInstance();
         String currentUserEmail = mAuth.getCurrentUser().getEmail();
 
         // Encuentra la imagen Admin por su ID
