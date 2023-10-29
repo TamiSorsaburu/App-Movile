@@ -2,10 +2,13 @@ package com.example.servicedelautomotor;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -15,11 +18,13 @@ import androidx.room.Room;
 import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.crud.ClienteViewModel;
 import com.example.servicedelautomotor.entidades.Cliente;
+import com.example.servicedelautomotor.entidades.Usuario;
 
 public class LeerInformacionPersonal extends AppCompatActivity {
     Cliente cliente;
     ImageView imagePerfil;
 
+    Usuario user;
     AppDataBase appDatabase;
 
     ClienteViewModel clienteViewModel;
@@ -79,15 +84,28 @@ public class LeerInformacionPersonal extends AppCompatActivity {
                     TextView pTipo=findViewById(R.id.pTipo);
                     pTipo.setText(cliente.getVehiculo().tipoVehiculo);
 
+                    imagePerfil = findViewById(R.id.imagePerfil);
+                    imagePerfil.setImageURI(Uri.parse(cliente.getImagen()));
+                    Log.d("img", "imagen: " + cliente.getImagen());
+
                 }
             }
         });
 
-
+    //user = (Usuario) getIntent().getSerializableExtra("class1");
 
     }
     public void botonCancelar(View V){
-        Intent cancelar=new Intent(this, CargarInformacionPersonal.class);
+        Intent cancelar=new Intent(this, Dashboard.class);
         startActivity(cancelar);
+    }
+
+    public void cargarInfo(View v){
+        Intent editar = new Intent(this, CargarInformacionPersonal.class);
+        //editar.putExtra("class2",user);
+        //if(user == null){
+        //    Toast.makeText(this, "Ningún usuario logueado, no podrá cargar informacion", Toast.LENGTH_SHORT).show();
+        //}
+        startActivity(editar);
     }
 }

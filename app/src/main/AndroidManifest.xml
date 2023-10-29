@@ -97,7 +97,9 @@
             android:exported="false" />
         <activity
             android:name=".CargarInformacionPersonal"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".ConfirmarTurno"
             android:exported="true" />

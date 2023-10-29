@@ -95,7 +95,7 @@ public class Iniciar_sesion extends AppCompatActivity {
                 Toast.makeText(Iniciar_sesion.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Iniciar_sesion.this, Dashboard.class);
                 //intent.putExtra("nombreUsuario", user.getNombreUsuario());
-                intent.putExtra("class",user);
+                //intent.putExtra("class",user);
                 startActivity(intent);
                 finish();
             } else {

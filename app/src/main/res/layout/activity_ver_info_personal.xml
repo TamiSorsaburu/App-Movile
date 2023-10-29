@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="127dp"
-        android:text="info personla"
+        android:text="Mi información"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView4"
@@ -169,11 +169,11 @@
                         android:layout_height="50dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Localiad"
-                        android:textSize="24dp"
-                        android:textStyle="italic"
+                        android:background="@drawable/background_btn"
                         android:padding="5dp"
-                        android:background="@drawable/background_btn"/>
+                        android:text="Localidad"
+                        android:textSize="24dp"
+                        android:textStyle="italic" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -285,16 +285,17 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button8"
+                        android:id="@+id/btnEditarPerfil"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Editar Perfil"
-                        android:textColor="@color/blanco"
-                        android:background="@drawable/background_dorado"
-                        android:layout_marginTop="20dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="5dp"/>
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_dorado"
+                        android:onClick="cargarInfo"
+                        android:text="Editar Perfil"
+                        android:textColor="@color/blanco" />
 
                     <Button
                         android:id="@+id/button9"

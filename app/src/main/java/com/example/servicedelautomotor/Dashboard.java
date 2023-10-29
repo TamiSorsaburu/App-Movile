@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,7 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.room.Room;
 
+import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.dao.DaoCliente;
 import com.example.servicedelautomotor.entidades.Cliente;
 import com.example.servicedelautomotor.entidades.Usuario;
@@ -27,6 +30,7 @@ public class Dashboard extends AppCompatActivity {
     FirebaseAuth mAuth;
     private ImageView adminImage;
     private TextView adminText;
+    AppDataBase database;
 
     private boolean datosCargados = false;
 
@@ -38,14 +42,25 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         //String name = getIntent().getStringExtra("nombreUsuario");
-//        usua = (Usuario) getIntent().getSerializableExtra("class");
-//        String name = usua.getNombreUsuario();
-//        TextView nameTextView = findViewById(R.id.name);
-//        nameTextView.setText(name);
+        mAuth = FirebaseAuth.getInstance();
+        //String correoFirebase = getIntent().getStringExtra("correoFire");
+        //Log.d("dash", "DashbCorreo: " + correoFirebase);
+
+        database = Room.databaseBuilder(getApplicationContext(), AppDataBase.class, "dbServiceAutomotor").build();
+        //usua = database.daoUsuario().getUsuarioPorCorreo(correoFirebase);
+       // usua = database.daoUsuario().getUsuarioById(1);
+       // if(usua != null){
+       //     String name = usua.getNombreUsuario();
+       //     TextView nameTextView = findViewById(R.id.name);
+      //      nameTextView.setText(name);
+     //   }else{
+      //      Toast.makeText(this, "Ningun usuario logueado", Toast.LENGTH_SHORT).show();
+      //  }
+//
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
 
-        mAuth = FirebaseAuth.getInstance();
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -76,6 +91,9 @@ public class Dashboard extends AppCompatActivity {
             adminImage.setVisibility(View.GONE);
             adminText.setVisibility(View.GONE);
         }
+
+
+        //Log.d("usuario", "usuarioRegistrado: " + usua.getNombreUsuario());
     }
 
     @Override
@@ -149,7 +167,7 @@ public class Dashboard extends AppCompatActivity {
            Intent perfil=new Intent(this, CargarInformacionPersonal.class);
         }  */
         Intent perfil=new Intent(this, LeerInformacionPersonal.class);
-
+        //perfil.putExtra("class1",usua);
         //miPerfil = (Cliente) getIntent().getSerializableExtra("class");
         startActivity(perfil);
     }
