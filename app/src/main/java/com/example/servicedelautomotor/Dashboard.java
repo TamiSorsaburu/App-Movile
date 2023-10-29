@@ -157,7 +157,7 @@ public class Dashboard extends AppCompatActivity {
 
     //para boton nosotros
     public void botonNosotros(View V) {
-        Intent i = new Intent(this, MecanicoActivity.class);
+        Intent i = new Intent(this, QuienesSomos.class);
         startActivity(i);
     }
 

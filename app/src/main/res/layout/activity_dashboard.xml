@@ -718,7 +718,7 @@
                             android:layout_marginEnd="5dp"
                             android:layout_marginBottom="18dp"
                             android:contentDescription="logo taller"
-                            android:onClick="botonMenuAdmin"
+                            android:onClick="botonNosotros"
                             android:src="@mipmap/taller"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
