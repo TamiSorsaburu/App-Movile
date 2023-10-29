@@ -294,7 +294,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/background_dorado"
                         android:text="@string/btn_ipguardar"
-                        android:onClick="botonCargarDatos"
+                        android:onClick="cargarInfo"
                         android:textColor="@color/blanco" />
 
                     <androidx.appcompat.widget.AppCompatButton

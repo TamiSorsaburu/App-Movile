@@ -109,11 +109,11 @@ public class AgregarServicio extends AppCompatActivity {
         switch (requestCode) {
             case LOCATION_REQUEST_CODE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "Gracias por conceder los permisos para " +
+                   /* Toast.makeText(this, "Gracias por conceder los permisos para " +
                             "leer el almacenamiento, estos permisos son necesarios para poder " +
-                            "escoger tu foto de perfil", Toast.LENGTH_SHORT).show();
+                            "escoger tu foto de perfil", Toast.LENGTH_SHORT).show();*/
                 } else {
-                    Toast.makeText(this, "No podemos realizar el registro si no nos concedes los permisos para leer el almacenamiento.", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this, "No podemos realizar el registro si no nos concedes los permisos para leer el almacenamiento.", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
@@ -144,8 +144,7 @@ public class AgregarServicio extends AppCompatActivity {
             Toast.makeText(AgregarServicio.this, "Debe insertar un número en el campo precio", Toast.LENGTH_LONG).show();
         } else {
             registrarServicio();
-            Intent intent = new Intent(this, ListadoServicios.class);
-            startActivity(intent);
+
         }
     }
 

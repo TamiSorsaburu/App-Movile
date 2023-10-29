@@ -89,8 +89,8 @@ public class LeerInformacionPersonal extends AppCompatActivity {
                     TextView pTipo=findViewById(R.id.pTipo);
                     pTipo.setText(cliente.getVehiculo().tipoVehiculo);
 
-                    imagePerfil = findViewById(R.id.imagePerfil);
-                    imagePerfil.setImageURI(Uri.parse(cliente.getImagen()));
+                    //imagePerfil = findViewById(R.id.imagePerfil);
+                    //imagePerfil.setImageURI(Uri.parse(cliente.getImagen()));
                    // Log.d("img", "imagen: " + cliente.getImagen());
 
                 }
