@@ -7,19 +7,30 @@
     android:background="@color/principal"
     tools:context=".Contacto">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2459b4b3a43665a48b2a395dd86f95af674f30d5
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
+<<<<<<< HEAD
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="64dp"
+=======
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+>>>>>>> 2459b4b3a43665a48b2a395dd86f95af674f30d5
         android:background="@drawable/background_main_login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+<<<<<<< HEAD
         tools:ignore="ExtraText">
 
         <LinearLayout
@@ -56,6 +67,32 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
             android:fontFamily="@font/roboto"
+=======
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ExtraText">
+
+
+        <TextView
+            android:id="@+id/textContactenos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="@string/text_contacto"
+            android:textAlignment="center"
+            android:textColor="@color/negro"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/redes"
+            android:layout_width="249dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="196dp"
+>>>>>>> 2459b4b3a43665a48b2a395dd86f95af674f30d5
             android:text="@string/text_redes_contacto"
             android:textAlignment="center"
             android:textColor="@color/negro"
@@ -63,7 +100,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.0"
+=======
+>>>>>>> 2459b4b3a43665a48b2a395dd86f95af674f30d5
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="TextSizeCheck">
 
@@ -73,6 +113,7 @@
             android:id="@+id/imageFacebook"
             android:layout_width="53dp"
             android:layout_height="45dp"
+<<<<<<< HEAD
             android:layout_marginStart="132dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
@@ -83,11 +124,22 @@
             app:layout_constraintTop_toBottomOf="@+id/redes"
             app:srcCompat="@mipmap/facebook"
             android:contentDescription="@string/text_logo_facebook"/>
+=======
+            android:layout_marginStart="72dp"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="@string/text_logo_facebook"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/redes"
+            app:layout_constraintTop_toBottomOf="@+id/redes"
+            app:layout_constraintVertical_bias="0.301"
+            app:srcCompat="@mipmap/facebook" />
+>>>>>>> 2459b4b3a43665a48b2a395dd86f95af674f30d5
 
         <ImageView
             android:id="@+id/imageInstagram"
             android:layout_width="53dp"
             android:layout_height="45dp"
+<<<<<<< HEAD
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="132dp"
@@ -98,6 +150,16 @@
             app:layout_constraintTop_toBottomOf="@+id/redes"
             app:srcCompat="@mipmap/instagram"
             android:contentDescription="@string/text_logo_instagram" />
+=======
+            android:layout_marginEnd="68dp"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="@string/text_logo_instagram"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/redes"
+            app:layout_constraintTop_toBottomOf="@+id/redes"
+            app:layout_constraintVertical_bias="0.301"
+            app:srcCompat="@mipmap/instagram" />
+>>>>>>> 2459b4b3a43665a48b2a395dd86f95af674f30d5
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -105,15 +167,22 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
+<<<<<<< HEAD
         android:layout_marginTop="110dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="220dp"
+=======
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="280dp"
+>>>>>>> 2459b4b3a43665a48b2a395dd86f95af674f30d5
         android:background="@drawable/background_main_contacto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+<<<<<<< HEAD
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
@@ -203,4 +272,134 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+=======
+
+        <TextView
+            android:id="@+id/textNombreContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/nombre"
+            android:textColor="@color/negro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editNombre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editNombre"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edittext_background"
+            android:ems="10"
+            android:hint="@string/text_hint_IngreseNombre"
+            android:autofillHints="name"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textCorreoContacto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textNombreContacto" />
+
+        <TextView
+            android:id="@+id/textCorreoContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/text_hint_correo"
+            android:textColor="@color/negro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editCorreo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editNombre" />
+
+        <EditText
+            android:id="@+id/editCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edittext_background"
+            android:ems="10"
+            android:hint="@string/text_hint_IngreseCorreo"
+            android:autofillHints="emailAddress"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textMensajeContacto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCorreoContacto" />
+
+        <TextView
+            android:id="@+id/textMensajeContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/text_mensaje"
+            android:textColor="@color/negro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editMensaje"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editCorreo" />
+
+        <EditText
+            android:id="@+id/editMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:minHeight="48dp"
+            android:background="@drawable/edittext_background"
+            android:ems="10"
+            android:hint="@string/text_hint_IngreseMensaje"
+            android:autofillHints="textMultiline"
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textMensajeContacto" />
+
+        <Button
+            android:id="@+id/btn_enviar"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:background="@drawable/background_azul"
+            android:text="@string/btn_enviar"
+            android:textColor="@color/blanco"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editMensaje"
+            app:layout_constraintStart_toStartOf="@+id/editMensaje"
+            app:layout_constraintTop_toBottomOf="@+id/editMensaje" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_home" />
+
+>>>>>>> 2459b4b3a43665a48b2a395dd86f95af674f30d5
 </androidx.constraintlayout.widget.ConstraintLayout>
