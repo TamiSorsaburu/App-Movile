@@ -31,7 +31,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class Dashboard extends AppCompatActivity {
     FirebaseAuth mAuth;
-    private ImageView adminImage;
+    private ImageView adminImage,imgMiPerfil;
     private TextView adminText;
 
     private boolean datosCargados = false;
@@ -51,6 +51,13 @@ public class Dashboard extends AppCompatActivity {
 //        String name = usua.getNombreUsuario();
 //        TextView nameTextView = findViewById(R.id.name);
 //        nameTextView.setText(name);
+
+        findViewById(R.id.imgMiPerfil).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mostrarDialogo();
+            }
+        });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
 
@@ -113,7 +120,29 @@ public class Dashboard extends AppCompatActivity {
                 break;
         }
     }
+    private void mostrarDialogo(){
+        AlertDialog.Builder builder=new AlertDialog.Builder(Dashboard.this);
+        builder.setTitle("Cargar perfil");
+        builder.setMessage("Completa tu perfil y disfruta de todos los servicios para tu vehiculo!")
+                .setPositiveButton("si", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(),"Perfil",Toast.LENGTH_SHORT).show();
+                        Intent perfil=new Intent(Dashboard.this,LeerInformacionPersonal.class);
+                        startActivity(perfil);
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent perfil=new Intent(Dashboard.this,Dashboard.class);
+                        startActivity(perfil);
+                        Toast.makeText(getApplicationContext(),"Cancelar..",Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
+                }).show();
 
+    }
     //para boton nosotros
     public void botonNosotros(View V) {
         Intent i = new Intent(this, MecanicoActivity.class);
