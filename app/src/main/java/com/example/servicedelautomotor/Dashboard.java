@@ -1,11 +1,12 @@
 package com.example.servicedelautomotor;
 
+import android.Manifest;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,6 +37,7 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        //setContentView(R.layout.activity_bienvenida);
 
         //String name = getIntent().getStringExtra("nombreUsuario");
 //        usua = (Usuario) getIntent().getSerializableExtra("class");
@@ -76,6 +78,8 @@ public class Dashboard extends AppCompatActivity {
             adminImage.setVisibility(View.GONE);
             adminText.setVisibility(View.GONE);
         }
+
+
     }
 
     @Override
@@ -143,14 +147,8 @@ public class Dashboard extends AppCompatActivity {
     public void botonPerfil(View V){
         /*
         se necesita saber que usuario esta logeado para traer su info de la base de datos
-        if(){
-        Intent perfil=new Intent(this, LeerInformacionPersonal.class);
-        }si no{
-           Intent perfil=new Intent(this, CargarInformacionPersonal.class);
         }  */
         Intent perfil=new Intent(this, LeerInformacionPersonal.class);
-
-        //miPerfil = (Cliente) getIntent().getSerializableExtra("class");
         startActivity(perfil);
     }
 
@@ -165,6 +163,3 @@ public class Dashboard extends AppCompatActivity {
         startActivity(i);
     }
 }
-
-
-

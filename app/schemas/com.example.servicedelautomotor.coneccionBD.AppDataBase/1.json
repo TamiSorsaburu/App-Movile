@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "408fdd612a823474344da2e7f95fe1cd",
+    "identityHash": "72a525320ecc501205c99d1fb3aba810",
     "entities": [
       {
         "tableName": "Administrador",
@@ -466,7 +466,7 @@
       },
       {
         "tableName": "Turno",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idTurno` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `clienteTurnoId` INTEGER NOT NULL, `sucursalTurnoId` INTEGER NOT NULL, `dia` TEXT, `hora` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idTurno` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `clienteTurnoId` INTEGER NOT NULL, `sucursalTurnoId` INTEGER NOT NULL, `dia` TEXT, `hora` TEXT, `precio` TEXT, `servicios` TEXT)",
         "fields": [
           {
             "fieldPath": "idTurno",
@@ -495,6 +495,18 @@
           {
             "fieldPath": "hora",
             "columnName": "hora",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "precio",
+            "columnName": "precio",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "servicios",
+            "columnName": "servicios",
             "affinity": "TEXT",
             "notNull": false
           }
@@ -626,7 +638,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '408fdd612a823474344da2e7f95fe1cd')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '72a525320ecc501205c99d1fb3aba810')"
     ]
   }
 }

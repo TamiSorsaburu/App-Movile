@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="REGISTRO DE SERVICIO"
+        android:text="EDITAR SERVICIO"
         android:textAlignment="center"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -73,7 +73,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campoPrecio"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:textColor="@color/blanco"/>
 
     <ImageView
         android:id="@+id/imgServicio"
@@ -98,7 +99,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgServicio"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:textColor="@color/blanco"/>
 
     <Button
         android:id="@+id/btnAtras"
@@ -110,5 +112,18 @@
         android:background="@drawable/background_dorado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEditar" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEditar"
+        android:textColor="@color/blanco"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_home" />
 </androidx.constraintlayout.widget.ConstraintLayout>
