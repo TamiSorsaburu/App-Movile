@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".crud.ActualizarCliente">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="804dp"
+        android:padding="10dp"
+        android:text="Editar Cliente"
+        android:textAlignment="center"
+        android:textSize="24sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editNombre"
+        android:layout_width="206dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="205dp"
+        android:layout_marginBottom="637dp"
+        android:ems="10"
+        android:hint="Nombre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editApellido"
+        android:layout_width="204dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="206dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="638dp"
+        android:ems="10"
+        android:hint="Apellido"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginBottom="587dp"
+        android:ems="10"
+        android:hint="Telefono"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editImagen"
+        android:layout_width="192dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="219dp"
+        android:layout_marginBottom="538dp"
+        android:ems="10"
+        android:hint="Imagen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editCalle"
+        android:layout_width="206dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="193dp"
+        android:layout_marginEnd="205dp"
+        android:layout_marginBottom="494dp"
+        android:ems="10"
+        android:hint="Calle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editAltura"
+        android:layout_width="199dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="213dp"
+        android:layout_marginTop="193dp"
+        android:layout_marginBottom="493dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Altura"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editProvincia"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="238dp"
+        android:layout_marginEnd="201dp"
+        android:layout_marginBottom="448dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Provincia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editLocalidad"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="238dp"
+        android:layout_marginBottom="449dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Localidad"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editCPostal"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="283dp"
+        android:layout_marginEnd="199dp"
+        android:layout_marginBottom="403dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Codigo Postal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editModelo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="199dp"
+        android:layout_marginBottom="358dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Modelo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="202dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginBottom="358dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Marca"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editPatente"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="373dp"
+        android:layout_marginEnd="199dp"
+        android:layout_marginBottom="313dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Patente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnActualizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="233dp"
+        android:background="@drawable/background_dorado"
+        android:onClick="onClick"
+        android:text="Actualizar"
+        android:textColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="161dp"
+        android:background="@drawable/background_dorado"
+        android:onClick="botonCancelar"
+        android:text="@string/cancelar"
+        android:textColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnActualizar"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/btnActualizar"
+        app:layout_constraintTop_toBottomOf="@+id/btnActualizar" />
+
+
+    <Button
+        android:id="@+id/btnCargarFoto"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="213dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="537dp"
+        android:background="@drawable/background_dorado"
+        android:text="Cargar Img"
+        android:textColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_home" />
+</androidx.constraintlayout.widget.ConstraintLayout>

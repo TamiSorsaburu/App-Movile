@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Presupuesto">
+    tools:context=".PresupuestoActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,118 +15,119 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:context=".Presupuesto">
 
-        <LinearLayout
-            android:layout_width="411dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="173dp"
-            android:layout_marginBottom="488dp"
-            android:background="@drawable/estilo_bordes"
-            android:backgroundTint="#F6BB46"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
+
+        <TextView
+            android:id="@+id/textPresupuesto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/presupuesto_texto00"
+            android:textColor="@color/negro"
+            android:textSize="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="359dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/presupuesto_texto1"
+            android:textColor="@color/negro"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPresupuesto" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout12"
+            android:layout_width="411dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/estilo_bordes"
+            android:backgroundTint="@color/secundario"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <LinearLayout
             android:id="@+id/linearLayout7"
             android:layout_width="411dp"
             android:layout_height="70dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="436dp"
-            android:layout_marginBottom="225dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/estilo_bordes"
-            android:backgroundTint="#F6BB46"
+            android:backgroundTint="@color/secundario"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout14">
 
             <Switch
                 android:id="@+id/presupuesto_texto7"
                 android:layout_width="380dp"
                 android:layout_height="48dp"
                 android:text="@string/presupuesto_texto7"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textColor="@color/blanco"/>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout14"
             android:layout_width="411dp"
             android:layout_height="70dp"
-            android:layout_marginTop="349dp"
-            android:layout_marginBottom="312dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/estilo_bordes"
-            android:backgroundTint="#F6BB46"
+            android:backgroundTint="@color/secundario"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout13">
 
             <Switch
                 android:id="@+id/presupuesto_texto6"
                 android:layout_width="390dp"
                 android:layout_height="49dp"
                 android:text="@string/presupuesto_texto6"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textColor="@color/blanco"/>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout13"
             android:layout_width="411dp"
             android:layout_height="70dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="263dp"
-            android:layout_marginBottom="398dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/estilo_bordes"
-            android:backgroundTint="#F6BB46"
+            android:backgroundTint="@color/secundario"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout12">
 
             <Switch
                 android:id="@+id/presupuesto_texto5"
                 android:layout_width="388dp"
                 android:layout_height="48dp"
                 android:text="@string/presupuesto_texto5"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textColor="@color/blanco"/>
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/presupuesto_texto0"
-            android:layout_width="359dp"
-            android:layout_height="68dp"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="65dp"
-            android:layout_marginEnd="38dp"
-            android:layout_marginBottom="601dp"
-            android:text="@string/presupuesto_texto1"
-            android:textColor="@color/negro"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="DuplicateIds" />
 
         <Switch
             android:id="@+id/presupuesto_texto4"
             android:layout_width="380dp"
             android:layout_height="48dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="198dp"
-            android:layout_marginEnd="27dp"
-            android:layout_marginBottom="506dp"
             android:text="@string/presupuesto_texto4"
+            android:textColor="@color/blanco"
             android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout12"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout12"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout12"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout12" />
 
         <TextView
             android:id="@+id/presupuesto_texto9"
@@ -150,13 +151,12 @@
             android:layout_marginStart="43dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="211dp"
-            android:layout_marginBottom="54dp"
             android:background="@drawable/background_dorado"
             android:onClick="botonConfirmar"
             android:text="@string/btn_presupuesto_b1"
             android:textColor="@color/blanco"
             android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/barraMenu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/presupuesto_texto8" />
@@ -183,35 +183,29 @@
             android:layout_marginStart="222dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="26dp"
-            android:layout_marginBottom="54dp"
             android:background="@drawable/background_dorado"
             android:onClick="botonCancelar"
             android:text="@string/btn_presupuesto_b2"
             android:textColor="@color/blanco"
             android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/barraMenu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/presupuesto_texto9" />
 
-        <TextView
-            android:id="@+id/presupuesto_textoo"
-            android:layout_width="197dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="136dp"
-            android:layout_marginBottom="671dp"
-            android:text="@string/presupuesto_texto00"
-            android:textColor="@color/negro"
-            android:textSize="28sp"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/barraMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/principal"
+            app:itemIconTint="@color/blanco"
+            app:itemTextColor="@color/blanco"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.458"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:menu="@menu/menu_home" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

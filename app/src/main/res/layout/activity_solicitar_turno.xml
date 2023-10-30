@@ -7,8 +7,9 @@
     tools:context=".SolicitarTurno">
 
     <LinearLayout
+        android:id="@+id/linearLayout11"
         android:layout_width="375dp"
-        android:layout_height="273dp"
+        android:layout_height="310dp"
         android:layout_marginStart="18dp"
         android:layout_marginTop="29dp"
         android:layout_marginEnd="18dp"
@@ -18,146 +19,177 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
 
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="385dp"
         android:layout_height="333dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="312dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="81dp"
+        android:layout_marginBottom="84dp"
         android:background="@drawable/background_dorado"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/barraMenu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout11"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/confirmar_turno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="667dp"
-        android:layout_marginEnd="255dp"
-        android:layout_marginBottom="16dp"
         android:background="@drawable/background_dorado"
         android:onClick="botonConfirmar"
         android:text="@string/btn_confirmar_turno"
         android:textColor="@color/blanco"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/barraMenu"
+        app:layout_constraintEnd_toStartOf="@+id/cancelar_turno"
+        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintStart_toStartOf="@+id/calendarView"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/cancelar_turno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="667dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="52dp"
         android:background="@drawable/background_dorado"
         android:onClick="botonCancelar"
         android:text="@string/btn_cancelar_turno"
         android:textColor="@color/blanco"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/barraMenu"
+        app:layout_constraintEnd_toEndOf="@+id/calendarView"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
         tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/seleccion_fecha_hora"
+        android:textColor="@color/negro"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout11"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout11"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout11" />
 
     <TextView
         android:id="@+id/servicioTurno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="43dp"
-        android:layout_marginEnd="316dp"
-        android:layout_marginBottom="669dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:text="@string/servicio_turno"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/negro"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout11"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
-        android:id="@+id/direccion_turno"
+        android:id="@+id/servicios_seleccionados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="89dp"
-        android:layout_marginEnd="308dp"
-        android:layout_marginBottom="623dp"
-        android:text="@string/direccion_turno"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="32dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/servicioTurno"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
-    <TextView
-        android:id="@+id/vehiculo_turno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="133dp"
-        android:layout_marginEnd="264dp"
-        android:layout_marginBottom="579dp"
-        android:text="@string/vehiculo_turno"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/fecha_turno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="183dp"
-        android:layout_marginEnd="327dp"
-        android:layout_marginBottom="529dp"
+        android:layout_marginTop="60dp"
         android:text="@string/fecha_turno"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/negro"
+        app:layout_constraintStart_toStartOf="@+id/servicioTurno"
+        app:layout_constraintTop_toBottomOf="@+id/servicioTurno"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/fecha_seleccionada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="60dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/fecha_turno"
+        app:layout_constraintTop_toBottomOf="@+id/servicioTurno" />
 
     <TextView
         android:id="@+id/precio_turno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="227dp"
-        android:layout_marginEnd="325dp"
-        android:layout_marginBottom="485dp"
+        android:layout_marginTop="24dp"
         android:text="@string/precio_turno"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/negro"
+        app:layout_constraintStart_toStartOf="@+id/fecha_turno"
+        app:layout_constraintTop_toBottomOf="@+id/fecha_turno"
         tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/textPrecioTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/precio_turno"
+        app:layout_constraintTop_toBottomOf="@+id/fecha_seleccionada" />
+
+    <TextView
+        android:id="@+id/btnHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="275dp"
+        android:padding="10dp"
+        android:textColor="@color/negro"
+        android:text="@string/elegir_horario"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout11"
+        app:layout_constraintStart_toStartOf="@+id/precio_turno"
+        app:layout_constraintTop_toBottomOf="@+id/precio_turno" />
+
+    <TextView
+        android:id="@+id/txtHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/hora_Turno"
+        android:textColor="@color/negro"
+        app:layout_constraintStart_toStartOf="@+id/btnHora"
+        app:layout_constraintTop_toBottomOf="@+id/btnHora" />
 
     <TextView
         android:id="@+id/hora_turno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="275dp"
-        android:layout_marginEnd="334dp"
-        android:layout_marginBottom="437dp"
-        android:text="@string/hora_turno"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="75dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout11"
+        app:layout_constraintStart_toEndOf="@+id/txtHora"
+        app:layout_constraintTop_toBottomOf="@+id/textPrecioTotal" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:menu="@menu/menu_home" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
