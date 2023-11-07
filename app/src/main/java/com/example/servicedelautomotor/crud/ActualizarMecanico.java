@@ -95,4 +95,9 @@ public class ActualizarMecanico extends AppCompatActivity {
         }
     }
 
+    public void botonCancelar(View V){
+        Intent intent=new Intent(this, ListaMecanicos.class);
+        startActivity(intent);
+    }
+
 }

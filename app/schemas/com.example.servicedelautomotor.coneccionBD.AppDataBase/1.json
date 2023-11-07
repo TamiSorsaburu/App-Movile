@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "8bf95b7c21462d237e357935c75b3319",
+    "identityHash": "5c1b24b5493ba8c6e3ae7fc060d128a7",
     "entities": [
       {
         "tableName": "Administrador",
@@ -50,17 +50,11 @@
       },
       {
         "tableName": "Cliente",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `usuarioClienteId` INTEGER NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, `idDireccion` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCliente` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `apellido` TEXT, `telefono` INTEGER NOT NULL, `imagen` TEXT, `usuarioClienteId` INTEGER NOT NULL, `idDireccion` INTEGER, `calle` TEXT, `altura` TEXT, `localidad` TEXT, `provincia` TEXT, `codigoPostal` INTEGER, `idVehiculo` INTEGER, `tipoVehiculo` TEXT, `patente` TEXT, `modelo` TEXT, `marca` TEXT)",
         "fields": [
           {
             "fieldPath": "idCliente",
             "columnName": "idCliente",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "usuarioClienteId",
-            "columnName": "usuarioClienteId",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -87,6 +81,12 @@
             "columnName": "imagen",
             "affinity": "TEXT",
             "notNull": false
+          },
+          {
+            "fieldPath": "usuarioClienteId",
+            "columnName": "usuarioClienteId",
+            "affinity": "INTEGER",
+            "notNull": true
           },
           {
             "fieldPath": "direccion.idDireccion",
@@ -122,6 +122,36 @@
             "fieldPath": "direccion.codigoPostal",
             "columnName": "codigoPostal",
             "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Vehiculo.idVehiculo",
+            "columnName": "idVehiculo",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Vehiculo.tipoVehiculo",
+            "columnName": "tipoVehiculo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Vehiculo.patente",
+            "columnName": "patente",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Vehiculo.modelo",
+            "columnName": "modelo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Vehiculo.marca",
+            "columnName": "marca",
+            "affinity": "TEXT",
             "notNull": false
           }
         ],
@@ -324,7 +354,7 @@
       },
       {
         "tableName": "Servicio",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idServicio` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `descripcion` TEXT, `precio` REAL NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idServicio` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `descripcion` TEXT, `precio` REAL NOT NULL, `image` TEXT)",
         "fields": [
           {
             "fieldPath": "idServicio",
@@ -349,6 +379,12 @@
             "columnName": "precio",
             "affinity": "REAL",
             "notNull": true
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "image",
+            "affinity": "TEXT",
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -436,7 +472,7 @@
       },
       {
         "tableName": "Turno",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idTurno` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `clienteTurnoId` INTEGER NOT NULL, `sucursalTurnoId` INTEGER NOT NULL, `dia` TEXT, `hora` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idTurno` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `clienteTurnoId` INTEGER NOT NULL, `sucursalTurnoId` INTEGER NOT NULL, `dia` TEXT, `hora` TEXT, `precio` TEXT, `servicios` TEXT)",
         "fields": [
           {
             "fieldPath": "idTurno",
@@ -465,6 +501,18 @@
           {
             "fieldPath": "hora",
             "columnName": "hora",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "precio",
+            "columnName": "precio",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "servicios",
+            "columnName": "servicios",
             "affinity": "TEXT",
             "notNull": false
           }
@@ -550,7 +598,7 @@
       },
       {
         "tableName": "Vehiculo",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idVehiculo` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `tipoVehiculo` TEXT, `patente` INTEGER NOT NULL, `modelo` TEXT, `marca` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idVehiculo` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `tipoVehiculo` TEXT, `patente` TEXT, `modelo` TEXT, `marca` TEXT)",
         "fields": [
           {
             "fieldPath": "idVehiculo",
@@ -567,8 +615,8 @@
           {
             "fieldPath": "patente",
             "columnName": "patente",
-            "affinity": "INTEGER",
-            "notNull": true
+            "affinity": "TEXT",
+            "notNull": false
           },
           {
             "fieldPath": "modelo",
@@ -596,9 +644,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8bf95b7c21462d237e357935c75b3319')"
-
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5c1b24b5493ba8c6e3ae7fc060d128a7')"
     ]
   }
 }

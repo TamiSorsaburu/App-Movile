@@ -5,6 +5,8 @@ import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -13,6 +15,7 @@ import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.entidades.Direccion;
 import com.example.servicedelautomotor.entidades.Mecanico;
 import com.example.servicedelautomotor.entidades.Sucursal;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AgregarSucursal extends AppCompatActivity {
 
@@ -31,6 +34,21 @@ public class AgregarSucursal extends AppCompatActivity {
         campoLocalidad = findViewById(R.id.campoLocalidad);
         campoProvincia = findViewById(R.id.campoProvincia);
         campoCP = findViewById(R.id.campoCP);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.barraMenu);
+        Menu menu = bottomNavigationView.getMenu();
+        menu.findItem(R.id.menu_exit).setVisible(false); // Oculta el ícono de cierre de sesión
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                if (item.getItemId() == R.id.menu_home) {
+                    Intent intent = new Intent(AgregarSucursal.this, Dashboard.class);
+                    startActivity(intent);
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
     public void onClick(View view) {

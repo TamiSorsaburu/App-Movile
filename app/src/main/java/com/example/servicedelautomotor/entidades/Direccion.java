@@ -24,4 +24,67 @@ public class Direccion implements Serializable {
         this.provincia = provincia;
         this.codigoPostal = codigoPostal;
     }
+
+    public Direccion() {
+    }
+
+    public long getIdDireccion() {
+        return idDireccion;
+    }
+
+    public void setIdDireccion(long idDireccion) {
+        this.idDireccion = idDireccion;
+    }
+
+    public String getCalle() {
+        return calle;
+    }
+
+    public void setCalle(String calle) {
+        this.calle = calle;
+    }
+
+    public String getAltura() {
+        return altura;
+    }
+
+    public void setAltura(String altura) {
+        this.altura = altura;
+    }
+
+    public String getLocalidad() {
+        return localidad;
+    }
+
+    public void setLocalidad(String localidad) {
+        this.localidad = localidad;
+    }
+
+    public String getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
+    }
+
+    public int getCodigoPostal() {
+        return codigoPostal;
+    }
+
+    public void setCodigoPostal(int codigoPostal) {
+        this.codigoPostal = codigoPostal;
+    }
+
+    @Override
+    public String toString() {
+        return "Direccion{" +
+                "idDireccion=" + idDireccion +
+                ", calle='" + calle + '\'' +
+                ", altura='" + altura + '\'' +
+                ", localidad='" + localidad + '\'' +
+                ", provincia='" + provincia + '\'' +
+                ", codigoPostal=" + codigoPostal +
+                '}';
+    }
 }

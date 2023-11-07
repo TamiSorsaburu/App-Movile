@@ -6,124 +6,212 @@
     android:layout_height="match_parent"
     tools:context=".ConfirmarTurno">
 
-    <LinearLayout
-        android:id="@+id/linearLayout8"
-        android:layout_width="244dp"
-        android:layout_height="236dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="315dp"
-        android:background="@drawable/estilo_bordes"
-        android:backgroundTint="#F6BB46"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="0dp"
+        android:layout_height="602dp"
+        app:layout_constraintBottom_toTopOf="@+id/barraMenu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/confirmar_turno5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/confirmar_turno5"
-        android:textColor="@color/secundario"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/confirmar_turno3"
-        app:layout_constraintEnd_toEndOf="@+id/confirmar_turno3"
-        app:layout_constraintStart_toStartOf="@+id/confirmar_turno3"
-        app:layout_constraintTop_toTopOf="@+id/confirmar_turno3" />
-
-    <TextView
-        android:id="@+id/confirmar_turno1"
-        android:layout_width="345dp"
-        android:layout_height="97dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="660dp"
-        android:text="@string/confirmar_turno1"
-        android:textColor="@color/negro"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.055">
+
+        <TextView
+            android:id="@+id/confirmar_turno1"
+            android:layout_width="345dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/confirmar_turno1"
+            android:textAlignment="center"
+            android:textColor="@color/negro"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Estos son los datos de tu turno"
+            android:textColor="@color/negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/confirmar_turno1"
+            app:layout_constraintTop_toBottomOf="@+id/confirmar_turno1" />
+
+        <TextView
+            android:id="@+id/textServicioElegido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="Servicios:"
+            android:textColor="@color/negro"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="@+id/confirmar_turno1"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <TextView
+            android:id="@+id/textServicios1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="64dp"
+            android:text=""
+            app:layout_constraintStart_toEndOf="@+id/textServicioElegido"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <TextView
+            android:id="@+id/textFechaElegida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Fecha:"
+            android:textColor="@color/negro"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="@+id/textServicioElegido"
+            app:layout_constraintTop_toBottomOf="@+id/textServicioElegido" />
+
+
+        <TextView
+            android:id="@+id/textFecha1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="60dp"
+            android:text=""
+            app:layout_constraintStart_toEndOf="@+id/textServicioElegido"
+            app:layout_constraintTop_toBottomOf="@+id/textServicioElegido" />
+
+        <TextView
+            android:id="@+id/textHoras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Hora:"
+            android:textColor="@color/negro"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="@+id/textFechaElegida"
+            app:layout_constraintTop_toBottomOf="@+id/textFechaElegida" />
+
+        <TextView
+            android:id="@+id/textHora1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/textFecha1"
+            app:layout_constraintTop_toBottomOf="@+id/textFecha1" />
+
+        <TextView
+            android:id="@+id/textPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Precio:"
+            android:textColor="@color/negro"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="@+id/textHoras"
+            app:layout_constraintTop_toBottomOf="@+id/textHoras" />
+
+        <TextView
+            android:id="@+id/textPrecio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/textHora1"
+            app:layout_constraintTop_toBottomOf="@+id/textHora1" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="121dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/estilo_bordes"
+            android:backgroundTint="#F6BB46"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPrecio" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="96dp"
+            android:layout_height="68dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout8"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout8"
+            app:srcCompat="@drawable/checkmark" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/confirmar_turno2"
+        android:id="@+id/textDescargar"
         android:layout_width="353dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/confirmar_turno2"
         android:textColor="@color/negro"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
     <TextView
-        android:id="@+id/confirmar_turno3"
+        android:id="@+id/textAqui"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="35dp"
+        android:clickable="true"
+        android:padding="10dp"
+        android:text="@string/confirmar_turno4"
+        android:textColor="@color/secundario"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textDescargar"
+        app:layout_constraintEnd_toEndOf="@+id/textDescargar"
+        app:layout_constraintTop_toTopOf="@+id/textDescargar" />
+
+    <TextView
+        android:id="@+id/textCancelarTurno"
         android:layout_width="362dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="8dp"
         android:text="@string/confirmar_turno3"
         android:textColor="@color/negro"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmar_turno2" />
-
-    <Button
-        android:id="@+id/btn_atras_turno"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/background_dorado"
-        android:onClick="botonCancelar"
-        android:text="@string/btn_atras_turno"
-        android:textColor="@color/blanco"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmar_turno3" />
+        app:layout_constraintBottom_toTopOf="@+id/barraMenu"
+        app:layout_constraintEnd_toEndOf="@+id/textDescargar"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/textDescargar"
+        app:layout_constraintTop_toBottomOf="@+id/textDescargar"
+        app:layout_constraintVertical_bias="0.376" />
 
     <TextView
-        android:id="@+id/onfirmar_turno4"
+        android:id="@+id/textCancelar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/confirmar_turno4"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/confirmar_turno5"
         android:textColor="@color/secundario"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/confirmar_turno2"
-        app:layout_constraintEnd_toEndOf="@+id/confirmar_turno2"
-        app:layout_constraintStart_toStartOf="@+id/confirmar_turno2"
-        app:layout_constraintTop_toTopOf="@+id/confirmar_turno2" />
+        app:layout_constraintBottom_toBottomOf="@+id/textCancelarTurno"
+        app:layout_constraintEnd_toEndOf="@+id/textCancelarTurno"
+        app:layout_constraintTop_toTopOf="@+id/textCancelarTurno" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="204dp"
-        android:layout_height="210dp"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="319dp"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barraMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/principal"
+        app:itemIconTint="@color/blanco"
+        app:itemTextColor="@color/blanco"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/checkmark" />
+        app:menu="@menu/menu_home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

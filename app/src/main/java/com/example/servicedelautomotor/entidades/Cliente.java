@@ -2,12 +2,17 @@ package com.example.servicedelautomotor.entidades;
 
 import androidx.room.Embedded;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
-@Entity
-public class Cliente implements Serializable {
+/*@Entity(tableName = "Cliente",foreignKeys = @ForeignKey(
+        entity = Usuario.class,
+        parentColumns = "idUsuario",
+        childColumns = "usuarioClienteId"
+))*/
+@Entity public class Cliente implements Serializable {
     @PrimaryKey(autoGenerate = true)
     public int idCliente;
 
@@ -16,21 +21,25 @@ public class Cliente implements Serializable {
     public int telefono;
     public String imagen;
 
+    public int usuarioClienteId;
+
     @Embedded
     public Direccion direccion;
 
     @Embedded
     public Vehiculo Vehiculo;
 
+
     public Cliente() {
     }
 
-    public Cliente(String nombre, String apellido, int telefono,String imagen, Direccion direccion, Vehiculo vehiculo) {
+    public Cliente(String nombre, String apellido, int telefono,String imagen, int usuarioClienteId, Direccion direccion, Vehiculo vehiculo) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.imagen = imagen;
+        this.usuarioClienteId = usuarioClienteId;
         this.direccion = direccion;
         Vehiculo = vehiculo;
     }

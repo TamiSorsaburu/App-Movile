@@ -10,6 +10,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import com.example.servicedelautomotor.Contacto;
 import com.example.servicedelautomotor.R;
 import com.example.servicedelautomotor.coneccionBD.AppDataBase;
 import com.example.servicedelautomotor.entidades.Cliente;
@@ -68,13 +69,13 @@ public class ActualizarCliente extends AppCompatActivity {
     }
 
     public void onClick(View v){
-        editarCliente();
+        //editarCliente();
         Intent intent = new Intent(this, ListaClientes.class);
         startActivity(intent);
     }
     
 
-    private void editarCliente(){
+ /*   private void editarCliente(){
         appDataBase.daoCliente().
                 actualizarCliente(cliente.idCliente,
                         aNombre.getText().toString(),
@@ -90,5 +91,12 @@ public class ActualizarCliente extends AppCompatActivity {
                         aMarca.getText().toString(),
                         aPatente.getText().toString());
 
+    }
+
+  */
+
+    public void botonCancelar(View V){
+        Intent intent=new Intent(this, ListaClientes.class);
+        startActivity(intent);
     }
 }
