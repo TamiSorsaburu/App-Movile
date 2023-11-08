@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".activity_video">
 
     <VideoView
@@ -14,28 +15,4 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="3dp" />
 
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="680dp"
-        android:text="Atrás"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/video" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="78dp"
-        android:text="Servicio de Grúa"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/video"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/backButton"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

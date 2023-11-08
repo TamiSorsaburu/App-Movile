@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
     tools:context=".SiniestrosActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -49,9 +49,9 @@
         map:cameraZoom="10"
         map:uiRotateGestures="true"
         map:uiZoomControls="true"
-        tools:ignore="FragmentTag"/>
+        tools:ignore="FragmentTag" />
 
-<!--    Falta implementar el boton para activar ubicacion y darle los permisos-->
+    <!--    Falta implementar el boton para activar ubicacion y darle los permisos-->
     <Button
         android:id="@+id/btnActivarUbicacion"
         android:layout_width="337dp"
@@ -60,7 +60,7 @@
         android:background="@drawable/background_dorado"
         android:backgroundTint="@color/secundario"
         android:text="@string/btn_ubicacion"
-        android:textColor="@color/blanco"
+        android:textColor="@color/negro"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,6 +93,7 @@
         android:layout_width="123dp"
         android:layout_height="74dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="Imagen de una grúa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.326"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,17 +131,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_home" >
+        app:menu="@menu/menu_home">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
+
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btn_video"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="80dp"
-        android:text="Ver Video"
+        android:background="@drawable/background_dorado"
+        android:onClick="verVideo"
+        android:text="@string/btn_video"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextUbicacion" />
 
