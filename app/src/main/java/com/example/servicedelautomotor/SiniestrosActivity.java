@@ -179,6 +179,12 @@ public class SiniestrosActivity extends AppCompatActivity implements OnMapReadyC
 
     }
 
+    public void btn(View V) {
+        Intent confirma = new Intent(this, activity_confirma_ayuda.class);
+        startActivity(confirma);
+
+    }
+
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
@@ -219,4 +225,11 @@ public class SiniestrosActivity extends AppCompatActivity implements OnMapReadyC
         mMap.addMarker(new MarkerOptions().position(argentina));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(argentina));
     }
+    public void verVideo(View V) {
+        Intent intent = new Intent(this, activity_video.class);
+        startActivity(intent);
+    }
 }
+
+
+
