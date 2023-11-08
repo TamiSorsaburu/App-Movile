@@ -79,8 +79,8 @@
 
     <TextView
         android:id="@+id/TextUbicacion"
-        android:layout_width="354dp"
-        android:layout_height="49dp"
+        android:layout_width="348dp"
+        android:layout_height="34dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:text=""
@@ -92,8 +92,9 @@
         android:id="@+id/imgGrua1"
         android:layout_width="123dp"
         android:layout_height="74dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.326"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextUbicacion"
         app:srcCompat="@drawable/tow_truck" />
@@ -129,15 +130,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_home" />
+        app:menu="@menu/menu_home" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
         android:text="Ver Video"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="627dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextUbicacion" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

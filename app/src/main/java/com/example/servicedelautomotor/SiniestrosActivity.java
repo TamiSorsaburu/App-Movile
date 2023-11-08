@@ -218,5 +218,25 @@ public class SiniestrosActivity extends AppCompatActivity implements OnMapReadyC
         LatLng argentina = new LatLng(latLng.latitude,latLng.longitude);
         mMap.addMarker(new MarkerOptions().position(argentina));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(argentina));
+
+
+        // botón "Ver Video" por su ID
+        Button btnVerVideo = findViewById(R.id.button5);
+
+        // Agregando un OnClickListener al botón para iniciar la actividad de video
+        btnVerVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // intención para iniciar la actividad "activity_video"
+                Intent intent = new Intent(SiniestrosActivity.this, activity_video.class);
+
+                // Inicia la nueva actividad
+                startActivity(intent);
+            }
+        });
     }
 }
+
+
+
+
