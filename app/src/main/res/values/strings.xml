@@ -253,4 +253,8 @@ Somos una solución que combina talleres mecánicos y servicios en una sola plat
     <string name="m_notificacion">Notificación</string>
     <string name="m_setting">Configuración</string>
     <string name="m_salir">Salir</string>
+
+    //Ver video
+    <string name="btn_video">Ver Video</string>
+
 </resources>
